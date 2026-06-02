@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horus Guide Travel — Discover Egypt with Local Experts</title>
+  <meta name="description" content="Discover Egypt with local experts. We create unforgettable journeys tailored just for you. Explore Cairo, Luxor, Aswan, Alexandria, Hurghada, and Sharm El Sheikh.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="media.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- ====== NAVBAR ====== -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="#" class="nav-logo">
+      <img src="logo.svg" alt="Horus Guide Travel" class="logo-img">
+      <div class="nav-logo-text">
+        <span class="logo-title">HORUS GUIDE</span>
+        <span class="logo-subtitle">TRAVEL</span>
+      </div>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#home" class="active" id="nav-home">Home</a>
+      <div class="nav-dropdown">
+        <a href="#destinations" id="nav-destinations">Destinations <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="cairo.html">Cairo</a>
+          <a href="giza.html">Giza</a>
+          <a href="alexandria.html">Alexandria</a>
+          <a href="luxor.html">Luxor</a>
+          <a href="aswan.html">Aswan</a>
+          <a href="hurghada.html">Hurghada</a>
+          <a href="sharm-el-sheikh.html">Sharm El Sheikh</a>
+          <a href="dahab.html">Dahab</a>
+          <a href="marsa-alam.html">Marsa Alam</a>
+          <a href="el-gouna.html">El Gouna</a>
+          <a href="siwa.html">Siwa Oasis</a>
+        </div>
+      </div>
+      <a href="#about" id="nav-about">About Us</a>
+      <a href="gallery.html" id="nav-gallery">Gallery</a>
+      <a href="#contact" id="nav-contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="plan-my-trip.html" class="nav-cta">Let's Plan My Trip</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ====== HERO ====== -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <div class="slide active" style="background-image: url('images/hero-pyramids-premium.png');" aria-label="Giza Pyramids landscape view"></div>
+    <div class="slide" style="background-image: url('images/hero-luxor.png');" aria-label="Luxor temple ruins landscape view"></div>
+    <div class="slide" style="background-image: url('images/hero-aswan.png');" aria-label="Aswan Nile felucca sailing landscape view"></div>
+    <div class="slide" style="background-image: url('images/hero-siwa.png');" aria-label="Siwa Oasis desert landscape view"></div>
+    <div class="hero-media-caption">Experience Egypt's Majesty</div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content">
+      <h1>Experience Egypt<br>Like Never Before</h1>
+      <p class="hero-sub"><em>From timeless wonders to hidden gems,<br>we create unforgettable journeys tailored<br>just for you.</em></p>
+      <div class="hero-buttons">
+        <a href="#destinations" class="btn btn-primary">Explore Egypt</a>
+        <a href="gallery.html#video" class="btn btn-video">
+          <span class="play-circle"><i class="fas fa-play"></i></span>
+          Watch Our Video
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-features">
+    <div class="hero-features-card">
+      <div class="hero-feature-item">
+        <div class="feature-icon"><i class="fas fa-tag"></i></div>
+        <div>
+          <h4>Best Price Guarantee</h4>
+          <p>We offer the best prices for unforgettable experiences.</p>
+        </div>
+      </div>
+      <div class="hero-feature-item">
+        <div class="feature-icon"><i class="fas fa-compass"></i></div>
+        <div>
+          <h4>Local Expertise</h4>
+          <p>Our local team knows Egypt inside and out.</p>
+        </div>
+      </div>
+      <div class="hero-feature-item">
+        <div class="feature-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+        <div>
+          <h4>Custom Plans</h4>
+          <p>Every trip is personalized just for you.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== DESTINATIONS ====== -->
+<section class="section" id="destinations">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="section-tag">Explore Egypt</span>
+      <h2>Discover Amazing Cities</h2>
+      <p>Click on any city to explore top attractions and experiences.</p>
+    </div>
+    <div class="cities-carousel-wrapper">
+      <button class="carousel-arrow carousel-prev" id="citiesPrev"><i class="fas fa-chevron-left"></i></button>
+      <div class="cities-carousel" id="citiesCarousel">
+        <a href="cairo.html" class="city-card fade-up">
+          <img src="images/city-cairo.png" alt="Cairo">
+          <div class="city-overlay">
+            <h3>Cairo</h3>
+            <p>The heart of Egypt</p>
+          </div>
+          <div class="city-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+        <a href="giza.html" class="city-card fade-up">
+          <img src="images/hero-giza.png" alt="Giza">
+          <div class="city-overlay">
+            <h3>Giza</h3>
+            <p>Land of the Pyramids</p>
+          </div>
+          <div class="city-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+        <a href="alexandria.html" class="city-card fade-up">
+          <img src="images/city-alexandria.png" alt="Alexandria">
+          <div class="city-overlay">
+            <h3>Alexandria</h3>
+            <p>The Pearl of the Mediterranean</p>
+          </div>
+          <div class="city-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+        <a href="luxor.html" class="city-card fade-up">
+          <img src="images/hero-luxor.png" alt="Luxor">
+          <div class="city-overlay">
+            <h3>Luxor</h3>
+            <p>The World's Greatest Open Air Museum</p>
+          </div>
+          <div class="city-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+        <a href="aswan.html" class="city-card fade-up">
+          <img src="images/city-aswan.png" alt="Aswan">
+          <div class="city-overlay">
+            <h3>Aswan</h3>
+            <p>The Jewel of the Nile</p>
+          </div>
+          <div class="city-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+        <a href="hurghada.html" class="city-card fade-up">
+          <img src="images/city-hurghada.png" alt="Hurghada">
+          <div class="city-overlay">
+            <h3>Hurghada</h3>
+            <p>Red Sea Paradise</p>
+          </div>
+          <div class="city-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+        <a href="sharm-el-sheikh.html" class="city-card fade-up">
+          <img src="images/hero-sharm.png" alt="Sharm El Sheikh">
+          <div class="city-overlay">
+            <h3>Sharm El Sheikh</h3>
+            <p>Where Desert Meets the Sea</p>
+          </div>
+          <div class="city-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+        <a href="dahab.html" class="city-card fade-up">
+          <img src="images/hero-dahab.png" alt="Dahab">
+          <div class="city-overlay">
+            <h3>Dahab</h3>
+            <p>The Bohemian Beach Town</p>
+          </div>
+          <div class="city-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+        <a href="marsa-alam.html" class="city-card fade-up">
+          <img src="images/hero-marsa-alam.png" alt="Marsa Alam">
+          <div class="city-overlay">
+            <h3>Marsa Alam</h3>
+            <p>The Untouched Red Sea</p>
+          </div>
+          <div class="city-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+        <a href="el-gouna.html" class="city-card fade-up">
+          <img src="images/hero-elgouna.png" alt="El Gouna">
+          <div class="city-overlay">
+            <h3>El Gouna</h3>
+            <p>Venice of the Red Sea</p>
+          </div>
+          <div class="city-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+        <a href="siwa.html" class="city-card fade-up">
+          <img src="images/hero-siwa.png" alt="Siwa Oasis">
+          <div class="city-overlay">
+            <h3>Siwa Oasis</h3>
+            <p>Egypt's Hidden Paradise</p>
+          </div>
+          <div class="city-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+      </div>
+      <button class="carousel-arrow carousel-next" id="citiesNext"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- ====== PLAN YOUR TRIP ====== -->
+<section class="section section-plan" id="plan">
+  <div class="container">
+    <div class="plan-grid">
+      <div class="plan-card fade-up">
+        <img src="Photos and Videos/photos/PHOTO-2025-12-05-14-30-07(1).jpg" alt="Nile cruise sundeck with Horus Guide Travel" class="plan-card-bg">
+        <div class="plan-card-overlay"></div>
+        <div class="plan-card-content">
+          <span class="plan-tag">IT'S TIME TO PLAN</span>
+          <h2>Let's Plan<br>Your Trip</h2>
+          <p>Answer a few simple questions and our experts will create the perfect plan for you.</p>
+          <a href="plan-my-trip.html" class="btn btn-primary">Let's Plan My Trip <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="plan-features">
+        <div class="plan-feature-card fade-up">
+          <div class="plan-feature-icon"><i class="fas fa-hand-holding-dollar"></i></div>
+          <h4>Best & Budget Friendly</h4>
+          <p>We offer the perfect balance of quality and affordability.</p>
+        </div>
+        <div class="plan-feature-card fade-up">
+          <div class="plan-feature-icon"><i class="fas fa-user-pen"></i></div>
+          <h4>Tailor Made For You</h4>
+          <p>Your trip is unique, just like you.</p>
+        </div>
+        <div class="plan-feature-card fade-up">
+          <div class="plan-feature-icon"><i class="fas fa-headset"></i></div>
+          <h4>24/7 Support</h4>
+          <p>We are here for you before, during, and after your trip.</p>
+        </div>
+        <div class="plan-feature-card fade-up">
+          <div class="plan-feature-icon"><i class="fas fa-users"></i></div>
+          <h4>Trusted Local Experts</h4>
+          <p>Our team is passionate about Egypt and dedicated to you.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== ORIGINAL HORUS MEDIA ====== -->
+<section class="section horus-real-section" id="real-moments">
+  <div class="container">
+    <div class="horus-home-story">
+      <div class="horus-home-copy fade-up">
+        <span class="horus-real-kicker"><i class="fas fa-camera-retro"></i> Real Trips, Real People</span>
+        <h2>Egypt as our guests actually experience it</h2>
+        <p>These are Horus Guide Travel moments from our own tours: pyramid mornings, Nile cruise decks, temple walks, Nubian welcomes, and the small human details that make a journey feel personal.</p>
+        <div class="horus-proof-strip" style="margin-bottom: 30px;">
+          <div class="horus-proof"><strong>100%</strong><span>Original Horus media used first</span></div>
+          <div class="horus-proof"><strong>Local</strong><span>Guides, hosts, and real trip moments</span></div>
+          <div class="horus-proof"><strong>Trust</strong><span>Faces and places visitors can recognize</span></div>
+        </div>
+        <a href="gallery.html" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;"><i class="fas fa-images"></i> View Full Gallery</a>
+      </div>
+      <div class="horus-media-mosaic fade-up" data-horus-home-grid></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== ABOUT / OUR STORY ====== -->
+<section class="section section-about-story" id="about">
+  <div class="container">
+    <div class="about-story-grid">
+      <!-- Story Content Column -->
+      <div class="about-story-content fade-up">
+        <div class="about-story-kicker">
+          <span>OUR STORY</span>
+          <span class="kicker-line"></span>
+        </div>
+        <h2>We Are More Than<br>Just a Travel Agency</h2>
+        <p>Horus Travel was founded with a simple belief: every traveler deserves an unforgettable experience in Egypt.</p>
+        <p>Our team of local experts and passionate guides work together to design journeys that are not only amazing but also budget-friendly.</p>
+        <div class="about-story-footer">
+          <span class="about-heart-icon"><i class="fa-regular fa-heart"></i></span>
+          <span class="about-footer-text">We treat every guest like family.</span>
+        </div>
+      </div>
+      <!-- Story Visual Column -->
+      <div class="about-story-visual-column fade-up">
+        <button class="about-story-visual-btn" type="button" data-horus-lightbox="true" data-horus-index="0" aria-label="Open team and guest photo in lightbox">
+          <div class="about-story-visual">
+            <img src="Photos and Videos/photos/PHOTO-2025-11-14-00-12-40(1).jpg" alt="Horus Guide Travel team and guests at the Giza Pyramids">
+            <div class="about-visual-overlay">
+              <i class="fas fa-expand-alt"></i>
+              <span>View Full Image</span>
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CTA BANNER ====== -->
+<section class="section cta-section">
+  <div class="container">
+    <div class="cta-banner fade-up">
+      <div class="cta-banner-text">
+        <span class="cta-tag">READY FOR YOUR ADVENTURE?</span>
+        <h2>Let Us Create Your<br>Perfect Egypt Experience</h2>
+      </div>
+      <a href="plan-my-trip.html" class="btn btn-cta">Let's Plan My Trip Now <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo">
+          <img src="logo.svg" alt="Horus Guide Travel" class="logo-img">
+          <div class="nav-logo-text">
+            <span class="logo-title">HORUS GUIDE</span>
+            <span class="logo-subtitle">TRAVEL</span>
+          </div>
+        </a>
+        <p>Discover Egypt with local experts. We create memories that last a lifetime. ✨</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/share/1JHrTsZytG/?mibextid=wwXIfr" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/horus_guide_travel/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://wa.me/201070430634" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#destinations">Destinations</a>
+        <a href="plan-my-trip.html">Plan My Trip</a>
+        <a href="#about">About Us</a>
+        <a href="#videos">Our Videos</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Top Destinations</h4>
+        <a href="cairo.html">Cairo</a>
+        <a href="luxor.html">Luxor</a>
+        <a href="aswan.html">Aswan</a>
+        <a href="alexandria.html">Alexandria</a>
+        <a href="hurghada.html">Hurghada</a>
+        <a href="sharm-el-sheikh.html">Sharm El Sheikh</a>
+      </div>
+      <div class="footer-col" id="contact">
+        <h4>Contact Us</h4>
+        <a href="tel:+201070430634"><i class="fas fa-phone"></i> +20 107 043 0634</a>
+        <a href="mailto:turkayduru7@gmail.com"><i class="fas fa-envelope"></i> turkayduru7@gmail.com</a>
+        <a href="#"><i class="fas fa-map-marker-alt"></i> Aswan, Egypt</a>
+        <a href="https://wa.me/201070430634"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p class="footer-newsletter-text">Get travel tips and special offers straight to your inbox.</p>
+        <div class="footer-newsletter">
+          <input type="email" placeholder="Your email">
+          <button>Subscribe</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Horus Guide Travel. All Rights Reserved.</p>
+      <div>
+        <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms & Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="media-library.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+

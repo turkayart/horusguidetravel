@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Trip Planner — Horus Guide Travel | Design Your Dream Egypt Adventure</title>
+    <meta name="description" content="Use our AI-powered trip planner to design your perfect Egypt adventure. Select cities, attractions, activities, and let our smart system create your ideal itinerary.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="ai-planner.css">
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <img src="logo.svg" alt="Horus Guide Travel" class="logo-img">
+                <div class="nav-logo-text"><span class="logo-title">HORUS GUIDE</span><span class="logo-subtitle">TRAVEL</span></div>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" id="nav-home">Home</a>
+                <div class="nav-dropdown">
+                    <a href="index.html#destinations" id="nav-destinations">Destinations <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="cairo.html">Cairo</a>
+                        <a href="giza.html">Giza</a>
+                        <a href="alexandria.html">Alexandria</a>
+                        <a href="luxor.html">Luxor</a>
+                        <a href="aswan.html">Aswan</a>
+                        <a href="hurghada.html">Hurghada</a>
+                        <a href="sharm-el-sheikh.html">Sharm El Sheikh</a>
+                        <a href="dahab.html">Dahab</a>
+                        <a href="marsa-alam.html">Marsa Alam</a>
+                        <a href="el-gouna.html">El Gouna</a>
+                        <a href="siwa.html">Siwa Oasis</a>
+                    </div>
+                </div>
+                <a href="index.html#about" id="nav-about">About Us</a>
+                <a href="gallery.html" id="nav-gallery">Gallery</a>
+                <a href="index.html#contact" id="nav-contact">Contact</a>
+            </div>
+            <div class="nav-right">
+                <a href="plan-my-trip.html" class="nav-cta">Let's Plan My Trip</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="aip-hero" id="hero">
+        <div class="aip-hero-bg">
+            <img src="images/plan-trip-hero.png" alt="Plan your Egypt adventure">
+            <div class="aip-hero-overlay"></div>
+        </div>
+        <div class="aip-hero-particles">
+            <span class="particle">𓂀</span>
+            <span class="particle">𓃭</span>
+            <span class="particle">𓆣</span>
+            <span class="particle">𓇳</span>
+            <span class="particle">𓂋</span>
+            <span class="particle">𓅃</span>
+            <span class="particle">𓃀</span>
+        </div>
+        <div class="aip-hero-content">
+            <div class="aip-hero-badge fade-up"><i class="fas fa-robot"></i> AI-Powered Trip Planning</div>
+            <h1 class="aip-hero-title fade-up">Design Your <em>Dream</em> Egypt Trip</h1>
+            <p class="aip-hero-subtitle fade-up">Tell us what you love, and our intelligent planner will craft a personalized itinerary that fits your style, budget, and timeline perfectly.</p>
+            <div class="aip-hero-stats fade-up">
+                <div class="aip-hero-stat"><i class="fas fa-map-marked-alt"></i><span>11 Destinations</span></div>
+                <div class="aip-hero-stat"><i class="fas fa-star"></i><span>30+ Attractions</span></div>
+                <div class="aip-hero-stat"><i class="fas fa-compass"></i><span>15 Activities</span></div>
+            </div>
+        </div>
+        <a href="#planner" class="aip-hero-scroll" aria-label="Start planning"><i class="fas fa-chevron-down"></i></a>
+    </section>
+
+    <!-- ===== PROGRESS STEPPER (sticky) ===== -->
+    <div class="aip-stepper-wrap" id="stepperWrap">
+        <div class="container">
+            <div class="aip-stepper" id="stepper">
+                <div class="aip-stepper-line"><div class="aip-stepper-line-fill" id="stepperFill"></div></div>
+                <div class="aip-stepper-step active" data-step="1">
+                    <div class="aip-step-circle">1</div>
+                    <span class="aip-step-label">Destinations</span>
+                </div>
+                <div class="aip-stepper-step" data-step="2">
+                    <div class="aip-step-circle">2</div>
+                    <span class="aip-step-label">Attractions</span>
+                </div>
+                <div class="aip-stepper-step" data-step="3">
+                    <div class="aip-step-circle">3</div>
+                    <span class="aip-step-label">Activities</span>
+                </div>
+                <div class="aip-stepper-step" data-step="4">
+                    <div class="aip-step-circle">4</div>
+                    <span class="aip-step-label">Style & Budget</span>
+                </div>
+                <div class="aip-stepper-step" data-step="5">
+                    <div class="aip-step-circle">5</div>
+                    <span class="aip-step-label">Your Details</span>
+                </div>
+                <div class="aip-stepper-step" data-step="6">
+                    <div class="aip-step-circle">6</div>
+                    <span class="aip-step-label">AI Review</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MAIN PLANNER AREA ===== -->
+    <section class="aip-main" id="planner">
+        <div class="container">
+            <div class="aip-layout">
+                <!-- Main step content area - JS will render step content here -->
+                <div class="aip-content" id="aipContent">
+                    <!-- Step content rendered dynamically by JS -->
+                    <div class="aip-step-container" id="stepContainer">
+                        <!-- JS renders each step here -->
+                    </div>
+                </div>
+
+                <!-- Floating sidebar -->
+                <aside class="aip-sidebar" id="aipSidebar">
+                    <div class="aip-sidebar-card">
+                        <div class="aip-sidebar-header">
+                            <h3><i class="fas fa-clipboard-list"></i> Trip Summary</h3>
+                            <span class="aip-sidebar-step">Step <span id="sidebarStepNum">1</span> of 6</span>
+                        </div>
+                        <div class="aip-sidebar-body" id="sidebarBody">
+                            <!-- JS renders summary items here -->
+                            <div class="aip-sb-item" id="sb-cities">
+                                <div class="aip-sb-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="aip-sb-content">
+                                    <strong>Cities</strong>
+                                    <span class="aip-sb-value" id="sbCitiesVal">None selected</span>
+                                </div>
+                            </div>
+                            <div class="aip-sb-item" id="sb-attractions">
+                                <div class="aip-sb-icon"><i class="fas fa-monument"></i></div>
+                                <div class="aip-sb-content">
+                                    <strong>Attractions</strong>
+                                    <span class="aip-sb-value" id="sbAttractionsVal">None selected</span>
+                                </div>
+                            </div>
+                            <div class="aip-sb-item" id="sb-activities">
+                                <div class="aip-sb-icon"><i class="fas fa-compass"></i></div>
+                                <div class="aip-sb-content">
+                                    <strong>Activities</strong>
+                                    <span class="aip-sb-value" id="sbActivitiesVal">None selected</span>
+                                </div>
+                            </div>
+                            <div class="aip-sb-item" id="sb-style">
+                                <div class="aip-sb-icon"><i class="fas fa-heart"></i></div>
+                                <div class="aip-sb-content">
+                                    <strong>Style</strong>
+                                    <span class="aip-sb-value" id="sbStyleVal">Not set</span>
+                                </div>
+                            </div>
+                            <div class="aip-sb-item" id="sb-details">
+                                <div class="aip-sb-icon"><i class="fas fa-calendar-alt"></i></div>
+                                <div class="aip-sb-content">
+                                    <strong>Trip Details</strong>
+                                    <span class="aip-sb-value" id="sbDetailsVal">2 travelers · 7 days</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI Suggestion card -->
+                    <div class="aip-sidebar-card aip-ai-card">
+                        <div class="aip-ai-icon"><i class="fas fa-robot"></i></div>
+                        <h4>AI Suggestion</h4>
+                        <p id="aiSuggestionText">Select your destinations to get personalized recommendations!</p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SUCCESS OVERLAY (hidden by default) ===== -->
+    <div class="aip-success-overlay" id="successOverlay">
+        <div class="aip-success-content">
+            <div class="aip-success-icon"><i class="fas fa-check"></i></div>
+            <h2>Your Dream Trip is <em>Ready!</em></h2>
+            <p class="aip-success-main">Our travel experts will review your AI-generated plan and contact you within 24 hours with a finalized itinerary and pricing.</p>
+            <p class="aip-success-sub">Check your email for a confirmation with all your trip details.</p>
+            <div class="aip-success-actions">
+                <a href="index.html" class="btn btn-primary"><i class="fas fa-home"></i> Back to Home</a>
+                <a href="https://wa.me/201070430634" target="_blank" class="btn btn-outline"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo"><img src="logo.svg" alt="Horus Guide Travel" class="logo-img"><div class="nav-logo-text"><span class="logo-title">HORUS GUIDE</span><span class="logo-subtitle">TRAVEL</span></div></a>
+                    <p>We create unforgettable Egypt experiences with the best value and personal touch.</p>
+                    <div class="footer-socials">
+                        <a href="https://www.facebook.com/share/1JHrTsZytG/?mibextid=wwXIfr" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/horus_guide_travel/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://wa.me/201070430634" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col"><h4>Quick Links</h4>
+                    <a href="index.html">Home</a><a href="index.html#destinations">Destinations</a><a href="activities.html">Activities</a><a href="ai-planner.html">AI Trip Planner</a><a href="index.html#contact">Contact</a>
+                </div>
+                <div class="footer-col"><h4>Top Destinations</h4>
+                    <a href="cairo.html">Cairo</a><a href="luxor.html">Luxor</a><a href="aswan.html">Aswan</a><a href="hurghada.html">Hurghada</a><a href="sharm-el-sheikh.html">Sharm El Sheikh</a>
+                </div>
+                <div class="footer-col"><h4>Contact Us</h4>
+                    <a href="tel:+201070430634"><i class="fas fa-phone"></i> +20 107 043 0634</a>
+                    <a href="mailto:turkayduru7@gmail.com"><i class="fas fa-envelope"></i> turkayduru7@gmail.com</a>
+                    <a href="#"><i class="fas fa-map-marker-alt"></i> Aswan, Egypt</a>
+                </div>
+                <div class="footer-col"><h4>Newsletter</h4>
+                    <p style="color: rgba(255,255,255,0.5); font-size: 0.88rem; margin-bottom: 16px;">Get exclusive deals and travel tips.</p>
+                    <div class="footer-newsletter"><input type="email" placeholder="Your email"><button>Subscribe</button></div>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2025 Horus Guide Travel. All Rights Reserved.</p><div><a href="#">Privacy Policy</a> | <a href="#">Terms &amp; Conditions</a></div></div>
+        </div>
+    </footer>
+
+    <script src="ai-planner.js"></script>
+</body>
+</html>
+
+
+
+
+

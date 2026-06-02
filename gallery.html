@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo & Video Gallery — Horus Guide Travel</title>
+    <meta name="description" content="Browse authentic travel photos and cinematic videos from our luxury tours across Egypt: Cairo, Giza, Luxor, Aswan, Nile Cruises, and Desert Safaris.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="gallery-shell">
+
+    <!-- ====== NAVBAR ====== -->
+    <nav class="navbar" id="navbar">
+      <div class="container">
+        <a href="index.html" class="nav-logo">
+          <img src="logo.svg" alt="Horus Guide Travel" class="logo-img">
+          <div class="nav-logo-text"><span class="logo-title">HORUS GUIDE</span><span class="logo-subtitle">TRAVEL</span></div>
+        </a>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" id="nav-home">Home</a>
+          <div class="nav-dropdown">
+            <a href="index.html#destinations" id="nav-destinations">Destinations <i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-menu">
+              <a href="cairo.html">Cairo</a>
+              <a href="giza.html">Giza</a>
+              <a href="alexandria.html">Alexandria</a>
+              <a href="luxor.html">Luxor</a>
+              <a href="aswan.html">Aswan</a>
+              <a href="hurghada.html">Hurghada</a>
+              <a href="sharm-el-sheikh.html">Sharm El Sheikh</a>
+              <a href="dahab.html">Dahab</a>
+              <a href="marsa-alam.html">Marsa Alam</a>
+              <a href="el-gouna.html">El Gouna</a>
+              <a href="siwa.html">Siwa Oasis</a>
+            </div>
+          </div>
+          <a href="index.html#about" id="nav-about">About Us</a>
+          <a href="gallery.html" id="nav-gallery" class="active">Gallery</a>
+          <a href="index.html#contact" id="nav-contact">Contact</a>
+        </div>
+        <div class="nav-right">
+          <a href="plan-my-trip.html" class="nav-cta">Let's Plan My Trip</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ====== CINEMATIC PAGE HERO ====== -->
+    <section class="horus-page-hero">
+        <div class="hero-video">
+            <video autoplay muted loop playsinline poster="images/hero-cairo.png">
+                <source src="Photos and Videos/videos/Journey in Egypt Mobile Video (1).mp4" type="video/mp4">
+            </video>
+        </div>
+        <span class="hero-media-caption">Egypt Through Our Eyes</span>
+        <div class="container">
+            <span class="horus-real-kicker"><i class="fas fa-camera-retro"></i> Cinematic Media</span>
+            <h1>Real Trips, Real People</h1>
+            <p>Browse authentic photos and high-definition video clips captured directly from our active tours. Experience Egypt just as our guests do.</p>
+        </div>
+    </section>
+
+    <!-- ====== GALLERY CONTAINER ====== -->
+    <section class="section" style="padding: 60px 0; min-height: 80vh;">
+        <div class="container">
+            <div class="gallery-intro fade-up" style="margin-bottom: 40px;">
+                <span class="section-tag" style="color: var(--gold); font-weight:700; text-transform:uppercase; letter-spacing:2px; font-size:0.8rem;">Explore the Magic</span>
+                <h2 style="font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); color: var(--text-dark); margin: 8px 0 12px;">Visual Journey</h2>
+                <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.6; max-width: 600px;">Filter by media type to preview the beauty and culture of your next adventure.</p>
+            </div>
+
+            <!-- Filter Sticky Controls -->
+            <div class="gallery-controls fade-up" style="margin-bottom: 40px;">
+                <!-- Media Type Filter Row -->
+                <div class="gallery-filter-row" id="typeFilters">
+                    <button class="gallery-filter is-active" data-type="all">All Media</button>
+                    <button class="gallery-filter" data-type="photo"><i class="fas fa-camera" style="margin-right: 6px;"></i> Photos</button>
+                    <button class="gallery-filter" data-type="video"><i class="fas fa-play" style="margin-right: 6px;"></i> Videos</button>
+                </div>
+                
+                <!-- Results Counter -->
+                <div class="gallery-result-note" id="galleryResultNote" style="font-weight: 500; font-size: 0.88rem; margin: 18px 0 0; color: var(--text-muted);">
+                    Showing 0 items
+                </div>
+            </div>
+
+            <!-- Dynamic Media Grid -->
+            <div class="gallery-grid stagger-children fade-up" id="galleryGrid" data-horus-media-scope="true">
+                <!-- Injected dynamically by gallery.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="nav-logo">
+              <img src="logo.svg" alt="Horus Guide Travel" class="logo-img">
+              <div class="nav-logo-text">
+                <span class="logo-title">HORUS GUIDE</span>
+                <span class="logo-subtitle">TRAVEL</span>
+              </div>
+            </a>
+            <p>Your premium gateway to the wonders of Egypt. Luxury tours, professional guides, and tailored travel experiences.</p>
+            <div class="footer-socials">
+              <a href="https://www.facebook.com/share/1JHrTsZytG/?mibextid=wwXIfr" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/horus_guide_travel/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="https://wa.me/201070430634" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="index.html#destinations">Destinations</a>
+            <a href="plan-my-trip.html">Plan My Trip</a>
+            <a href="index.html#about">About Us</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="index.html#contact">Contact</a>
+          </div>
+          <div class="footer-col">
+            <h4>Top Destinations</h4>
+            <a href="cairo.html">Cairo</a>
+            <a href="giza.html">Giza</a>
+            <a href="luxor.html">Luxor</a>
+            <a href="aswan.html">Aswan</a>
+            <a href="hurghada.html">Hurghada</a>
+            <a href="sharm-el-sheikh.html">Sharm El Sheikh</a>
+          </div>
+          <div class="footer-col" id="contact">
+            <h4>Contact Us</h4>
+            <a href="tel:+201070430634"><i class="fas fa-phone"></i> +20 107 043 0634</a>
+            <a href="mailto:turkayduru7@gmail.com"><i class="fas fa-envelope"></i> turkayduru7@gmail.com</a>
+            <a href="#"><i class="fas fa-map-marker-alt"></i> Aswan, Egypt</a>
+            <a href="https://wa.me/201070430634"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+          </div>
+          <div class="footer-col">
+            <h4>Newsletter</h4>
+            <p class="footer-newsletter-text">Get travel tips and special offers straight to your inbox.</p>
+            <div class="footer-newsletter">
+              <input type="email" placeholder="Your email">
+              <button>Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Horus Guide Travel. All Rights Reserved.</p>
+          <div>
+            <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms &amp; Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ====== CORE SCRIPTS ====== -->
+    <script src="media-library.js"></script>
+    <script src="gallery.js"></script>
+</body>
+</html>

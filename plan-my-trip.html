@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan My Trip — Horus Guide Travel | Your Personalized Egypt Adventure</title>
+  <meta name="description" content="Design your dream Egypt trip in minutes. Choose destinations, budget, travel style, and activities — we'll craft a personalized plan just for you.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="plan-trip.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- ====== NAVBAR ====== -->
+<nav class="navbar scrolled" id="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.svg" alt="Horus Guide Travel" class="logo-img">
+      <div class="nav-logo-text"><span class="logo-title">HORUS GUIDE</span><span class="logo-subtitle">TRAVEL</span></div>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" id="nav-home">Home</a>
+      <div class="nav-dropdown">
+        <a href="index.html#destinations" id="nav-destinations">Destinations <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="cairo.html">Cairo</a>
+          <a href="giza.html">Giza</a>
+          <a href="alexandria.html">Alexandria</a>
+          <a href="luxor.html">Luxor</a>
+          <a href="aswan.html">Aswan</a>
+          <a href="hurghada.html">Hurghada</a>
+          <a href="sharm-el-sheikh.html">Sharm El Sheikh</a>
+          <a href="dahab.html">Dahab</a>
+          <a href="marsa-alam.html">Marsa Alam</a>
+          <a href="el-gouna.html">El Gouna</a>
+          <a href="siwa.html">Siwa Oasis</a>
+        </div>
+      </div>
+      <a href="index.html#about" id="nav-about">About Us</a>
+      <a href="gallery.html" id="nav-gallery">Gallery</a>
+      <a href="index.html#contact" id="nav-contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="plan-my-trip.html" class="nav-cta active">Let's Plan My Trip</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ====== HERO ====== -->
+<section class="pt-hero" id="planHero">
+  <div class="pt-hero-bg">
+    <img src="images/plan-trip-hero.png" alt="Cinematic sunset over the Pyramids of Giza">
+  </div>
+  <div class="pt-hero-overlay"></div>
+  <div class="container">
+    <div class="pt-hero-content">
+      <div class="pt-hero-badge">YOUR JOURNEY, OUR PASSION ——</div>
+      <h1>Let's Plan<br>Your Perfect Trip</h1>
+      <p>Tell us your preferences and we will create<br>the best and most budget-friendly plan just for you.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====== PROGRESS BAR ====== -->
+<div class="pt-progress-wrapper">
+  <div class="container">
+    <div class="pt-progress" id="ptProgress">
+      <div class="pt-progress-line">
+        <div class="pt-progress-line-fill" id="progressLineFill"></div>
+      </div>
+      <div class="pt-progress-step active" data-step="1">
+        <div class="pt-step-number">1</div>
+        <div class="pt-step-info">
+          <div class="pt-step-icon"><i class="fas fa-sliders-h"></i></div>
+          <span class="pt-step-label">Trip Preferences</span>
+        </div>
+      </div>
+      <div class="pt-progress-step" data-step="2">
+        <div class="pt-step-number">2</div>
+        <div class="pt-step-info">
+          <span class="pt-step-label">Personal Details</span>
+        </div>
+      </div>
+      <div class="pt-progress-step" data-step="3">
+        <div class="pt-step-number">3</div>
+        <div class="pt-step-info">
+          <span class="pt-step-label">Contact Details</span>
+        </div>
+      </div>
+      <div class="pt-progress-step" data-step="4">
+        <div class="pt-step-number">4</div>
+        <div class="pt-step-info">
+          <span class="pt-step-label">Review & Submit</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== MAIN CONTENT: Form + Sidebar ====== -->
+<section class="pt-main">
+  <div class="container">
+    <div class="pt-layout">
+
+      <!-- ===== LEFT: FORM AREA ===== -->
+      <div class="pt-form-area" id="ptFormArea">
+
+        <!-- ==================== STEP 1: Trip Preferences ==================== -->
+        <div class="pt-step active" data-step="1">
+          <div class="pt-step-title">
+            <h2>Step 1: Trip Preferences</h2>
+            <p>Help us design the perfect Egypt experience for you.</p>
+          </div>
+
+          <!-- Destinations -->
+          <div class="pt-field-group">
+            <div class="pt-field-label">
+              <span class="pt-field-bullet"></span>
+              <div>
+                <strong>Which places do you want to visit?</strong>
+                <small>You can select more than one</small>
+              </div>
+            </div>
+            <div class="pt-dest-grid" id="destGrid">
+              <label class="pt-dest-option">
+                <input type="checkbox" name="destination" value="Cairo">
+                <div class="pt-dest-card">
+                  <img src="images/city-cairo.png" alt="Cairo">
+                  <div class="pt-dest-check"><i class="fas fa-check"></i></div>
+                  <span class="pt-dest-name">Cairo</span>
+                </div>
+              </label>
+              <label class="pt-dest-option">
+                <input type="checkbox" name="destination" value="Giza">
+                <div class="pt-dest-card">
+                  <img src="images/hero-giza.png" alt="Giza">
+                  <div class="pt-dest-check"><i class="fas fa-check"></i></div>
+                  <span class="pt-dest-name">Giza</span>
+                </div>
+              </label>
+              <label class="pt-dest-option">
+                <input type="checkbox" name="destination" value="Alexandria">
+                <div class="pt-dest-card">
+                  <img src="images/city-alexandria.png" alt="Alexandria">
+                  <div class="pt-dest-check"><i class="fas fa-check"></i></div>
+                  <span class="pt-dest-name">Alexandria</span>
+                </div>
+              </label>
+              <label class="pt-dest-option">
+                <input type="checkbox" name="destination" value="Luxor">
+                <div class="pt-dest-card">
+                  <img src="images/hero-luxor.png" alt="Luxor">
+                  <div class="pt-dest-check"><i class="fas fa-check"></i></div>
+                  <span class="pt-dest-name">Luxor</span>
+                </div>
+              </label>
+              <label class="pt-dest-option">
+                <input type="checkbox" name="destination" value="Aswan">
+                <div class="pt-dest-card">
+                  <img src="images/city-aswan.png" alt="Aswan">
+                  <div class="pt-dest-check"><i class="fas fa-check"></i></div>
+                  <span class="pt-dest-name">Aswan</span>
+                </div>
+              </label>
+              <label class="pt-dest-option">
+                <input type="checkbox" name="destination" value="Hurghada">
+                <div class="pt-dest-card">
+                  <img src="images/city-hurghada.png" alt="Hurghada">
+                  <div class="pt-dest-check"><i class="fas fa-check"></i></div>
+                  <span class="pt-dest-name">Hurghada</span>
+                </div>
+              </label>
+              <label class="pt-dest-option">
+                <input type="checkbox" name="destination" value="Sharm El Sheikh">
+                <div class="pt-dest-card">
+                  <img src="images/hero-sharm.png" alt="Sharm El Sheikh">
+                  <div class="pt-dest-check"><i class="fas fa-check"></i></div>
+                  <span class="pt-dest-name">Sharm El Sheikh</span>
+                </div>
+              </label>
+              <label class="pt-dest-option">
+                <input type="checkbox" name="destination" value="Dahab">
+                <div class="pt-dest-card">
+                  <img src="images/hero-dahab.png" alt="Dahab">
+                  <div class="pt-dest-check"><i class="fas fa-check"></i></div>
+                  <span class="pt-dest-name">Dahab</span>
+                </div>
+              </label>
+              <label class="pt-dest-option">
+                <input type="checkbox" name="destination" value="Marsa Alam">
+                <div class="pt-dest-card">
+                  <img src="images/hero-marsa-alam.png" alt="Marsa Alam">
+                  <div class="pt-dest-check"><i class="fas fa-check"></i></div>
+                  <span class="pt-dest-name">Marsa Alam</span>
+                </div>
+              </label>
+              <label class="pt-dest-option">
+                <input type="checkbox" name="destination" value="El Gouna">
+                <div class="pt-dest-card">
+                  <img src="images/hero-elgouna.png" alt="El Gouna">
+                  <div class="pt-dest-check"><i class="fas fa-check"></i></div>
+                  <span class="pt-dest-name">El Gouna</span>
+                </div>
+              </label>
+              <label class="pt-dest-option">
+                <input type="checkbox" name="destination" value="Siwa Oasis">
+                <div class="pt-dest-card">
+                  <img src="images/hero-siwa.png" alt="Siwa Oasis">
+                  <div class="pt-dest-check"><i class="fas fa-check"></i></div>
+                  <span class="pt-dest-name">Siwa Oasis</span>
+                </div>
+              </label>
+              <label class="pt-dest-option">
+                <input type="checkbox" name="destination" value="Other">
+                <div class="pt-dest-card pt-dest-other">
+                  <div class="pt-dest-other-icon"><i class="fas fa-plus"></i></div>
+                  <div class="pt-dest-check"><i class="fas fa-check"></i></div>
+                  <span class="pt-dest-name">Other</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Budget -->
+          <div class="pt-field-group">
+            <div class="pt-field-label">
+              <span class="pt-field-bullet"></span>
+              <strong>What is your budget range?</strong>
+            </div>
+            <div class="pt-radio-row" id="budgetRow">
+              <label class="pt-radio-option">
+                <input type="radio" name="budget" value="Budget">
+                <div class="pt-radio-card">
+                  <div class="pt-radio-dot"></div>
+                  <div>
+                    <strong>Budget</strong>
+                    <small>Best value for money</small>
+                  </div>
+                </div>
+              </label>
+              <label class="pt-radio-option">
+                <input type="radio" name="budget" value="Mid-range">
+                <div class="pt-radio-card">
+                  <div class="pt-radio-dot"></div>
+                  <div>
+                    <strong>Mid-range</strong>
+                    <small>Comfortable & balanced</small>
+                  </div>
+                </div>
+              </label>
+              <label class="pt-radio-option">
+                <input type="radio" name="budget" value="Luxury">
+                <div class="pt-radio-card">
+                  <div class="pt-radio-dot"></div>
+                  <div>
+                    <strong>Luxury</strong>
+                    <small>Premium experience</small>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Travel Style -->
+          <div class="pt-field-group">
+            <div class="pt-field-label">
+              <span class="pt-field-bullet"></span>
+              <strong>What type of travel experience do you prefer?</strong>
+            </div>
+            <div class="pt-radio-row pt-radio-row-4" id="styleRow">
+              <label class="pt-radio-option">
+                <input type="radio" name="style" value="Cultural & Historical">
+                <div class="pt-radio-card">
+                  <div class="pt-radio-dot"></div>
+                  <div>
+                    <strong>Cultural<br>& Historical</strong>
+                  </div>
+                </div>
+              </label>
+              <label class="pt-radio-option">
+                <input type="radio" name="style" value="Adventure & Nature">
+                <div class="pt-radio-card">
+                  <div class="pt-radio-dot"></div>
+                  <div>
+                    <strong>Adventure<br>& Nature</strong>
+                  </div>
+                </div>
+              </label>
+              <label class="pt-radio-option">
+                <input type="radio" name="style" value="Relaxation & Beach">
+                <div class="pt-radio-card">
+                  <div class="pt-radio-dot"></div>
+                  <div>
+                    <strong>Relaxation<br>& Beach</strong>
+                  </div>
+                </div>
+              </label>
+              <label class="pt-radio-option">
+                <input type="radio" name="style" value="Family Friendly">
+                <div class="pt-radio-card">
+                  <div class="pt-radio-dot"></div>
+                  <div>
+                    <strong>Family<br>Friendly</strong>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- People & Days -->
+          <div class="pt-field-group">
+            <div class="pt-select-row">
+              <div class="pt-select-group">
+                <div class="pt-field-label">
+                  <span class="pt-field-bullet"></span>
+                  <strong>How many people are traveling?</strong>
+                </div>
+                <div class="pt-select-wrap">
+                  <select id="selectPeople">
+                    <option value="1">1 Person</option>
+                    <option value="2" selected>2 People</option>
+                    <option value="3">3 People</option>
+                    <option value="4">4 People</option>
+                    <option value="5">5 People</option>
+                    <option value="6">6 People</option>
+                    <option value="7">7 People</option>
+                    <option value="8">8 People</option>
+                    <option value="9">9 People</option>
+                    <option value="10+">10+ People</option>
+                  </select>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+              </div>
+              <div class="pt-select-group">
+                <div class="pt-field-label">
+                  <span class="pt-field-bullet"></span>
+                  <strong>How many days will you stay?</strong>
+                </div>
+                <div class="pt-select-wrap">
+                  <select id="selectDays">
+                    <option value="3">3 Days</option>
+                    <option value="5">5 Days</option>
+                    <option value="7" selected>7 Days</option>
+                    <option value="10">10 Days</option>
+                    <option value="14">14 Days</option>
+                    <option value="21">21 Days</option>
+                    <option value="30+">30+ Days</option>
+                  </select>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accommodation -->
+          <div class="pt-field-group">
+            <div class="pt-field-label">
+              <span class="pt-field-bullet"></span>
+              <strong>What is your preferred accommodation style?</strong>
+            </div>
+            <div class="pt-radio-row" id="accomRow">
+              <label class="pt-radio-option">
+                <input type="radio" name="accommodation" value="Budget">
+                <div class="pt-radio-card">
+                  <div class="pt-radio-dot"></div>
+                  <div>
+                    <strong>Budget</strong>
+                    <small>3★ Hotels or similar</small>
+                  </div>
+                </div>
+              </label>
+              <label class="pt-radio-option">
+                <input type="radio" name="accommodation" value="Mid-range">
+                <div class="pt-radio-card">
+                  <div class="pt-radio-dot"></div>
+                  <div>
+                    <strong>Mid-range</strong>
+                    <small>4★ Hotels or similar</small>
+                  </div>
+                </div>
+              </label>
+              <label class="pt-radio-option">
+                <input type="radio" name="accommodation" value="Luxury">
+                <div class="pt-radio-card">
+                  <div class="pt-radio-dot"></div>
+                  <div>
+                    <strong>Luxury</strong>
+                    <small>5★ Hotels & Resorts</small>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Special Requests -->
+          <div class="pt-field-group">
+            <div class="pt-field-label">
+              <span class="pt-field-bullet"></span>
+              <strong>Any special requests? <span class="pt-optional">(Optional)</span></strong>
+            </div>
+            <textarea class="pt-textarea" id="specialRequests" placeholder="e.g. Dietary requirements, activities, special occasions..."></textarea>
+          </div>
+
+          <div class="pt-step-nav">
+            <button type="button" class="pt-btn-next" onclick="nextStep()">
+              Next Step <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- ==================== STEP 2: Personal Details ==================== -->
+        <div class="pt-step" data-step="2">
+          <div class="pt-step-title">
+            <h2>Step 2: Personal Details</h2>
+            <p>Tell us a bit about yourself so we can personalize your trip.</p>
+          </div>
+
+          <div class="pt-form-row">
+            <div class="pt-form-group">
+              <label for="firstName">First Name <span class="pt-req">*</span></label>
+              <input type="text" class="pt-input" id="firstName" placeholder="Your first name" required>
+            </div>
+            <div class="pt-form-group">
+              <label for="lastName">Last Name <span class="pt-req">*</span></label>
+              <input type="text" class="pt-input" id="lastName" placeholder="Your last name" required>
+            </div>
+          </div>
+          <div class="pt-form-row">
+            <div class="pt-form-group">
+              <label for="nationality">Nationality</label>
+              <input type="text" class="pt-input" id="nationality" placeholder="Your nationality">
+            </div>
+            <div class="pt-form-group">
+              <label for="travelDate">Preferred Travel Date</label>
+              <input type="date" class="pt-input" id="travelDate">
+            </div>
+          </div>
+          <div class="pt-form-group">
+            <label for="ageGroup">Age Group</label>
+            <div class="pt-select-wrap pt-select-full">
+              <select id="ageGroup">
+                <option value="">Select age group</option>
+                <option value="18-25">18 – 25</option>
+                <option value="26-35">26 – 35</option>
+                <option value="36-50">36 – 50</option>
+                <option value="51-65">51 – 65</option>
+                <option value="65+">65+</option>
+              </select>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+
+          <div class="pt-step-nav">
+            <button type="button" class="pt-btn-back" onclick="prevStep()">
+              <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <button type="button" class="pt-btn-next" onclick="nextStep()">
+              Next Step <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- ==================== STEP 3: Contact Details ==================== -->
+        <div class="pt-step" data-step="3">
+          <div class="pt-step-title">
+            <h2>Step 3: Contact Details</h2>
+            <p>How can we reach you with your personalized travel plan?</p>
+          </div>
+
+          <div class="pt-form-row">
+            <div class="pt-form-group">
+              <label for="email">Email Address <span class="pt-req">*</span></label>
+              <input type="email" class="pt-input" id="email" placeholder="your@email.com" required>
+            </div>
+            <div class="pt-form-group">
+              <label for="phone">Phone / WhatsApp <span class="pt-req">*</span></label>
+              <input type="tel" class="pt-input" id="phone" placeholder="+1 234 567 890" required>
+            </div>
+          </div>
+          <div class="pt-form-group">
+            <label for="preferredContact">Preferred Contact Method</label>
+            <div class="pt-select-wrap pt-select-full">
+              <select id="preferredContact">
+                <option value="WhatsApp">WhatsApp</option>
+                <option value="Email">Email</option>
+                <option value="Phone Call">Phone Call</option>
+              </select>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+
+          <div class="pt-step-nav">
+            <button type="button" class="pt-btn-back" onclick="prevStep()">
+              <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <button type="button" class="pt-btn-next" onclick="nextStep()">
+              Next Step <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- ==================== STEP 4: Review & Submit ==================== -->
+        <div class="pt-step" data-step="4">
+          <div class="pt-step-title">
+            <h2>Step 4: Review & Submit</h2>
+            <p>Review your selections below before submitting.</p>
+          </div>
+
+          <div class="pt-review-card" id="reviewCard">
+            <!-- Filled by JS -->
+          </div>
+
+          <div class="pt-step-nav">
+            <button type="button" class="pt-btn-back" onclick="prevStep()">
+              <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <button type="button" class="pt-btn-submit" onclick="submitForm()">
+              <i class="fas fa-paper-plane"></i> Submit My Trip Plan
+            </button>
+          </div>
+        </div>
+
+        <!-- ==================== SUCCESS ==================== -->
+        <div class="pt-step pt-success-panel" id="successPanel">
+          <div class="pt-success-icon"><i class="fas fa-check"></i></div>
+          <h2>Your Trip Plan is <em>On Its Way!</em></h2>
+          <p class="pt-success-main">Thank you! Our team will contact you soon with your personalized Egypt travel plan.</p>
+          <p class="pt-success-sub">We typically respond within 24 hours. Check your inbox for a confirmation.</p>
+          <div class="pt-success-actions">
+            <a href="index.html" class="pt-btn-next"><i class="fas fa-home"></i> Back to Home</a>
+            <a href="#" id="success-wa-btn" target="_blank" class="pt-btn-wa">
+              <i class="fab fa-whatsapp"></i> Send on WhatsApp
+            </a>
+            <a href="#" id="success-mail-btn" target="_blank" class="pt-btn-mail">
+              <i class="fas fa-envelope"></i> Send via Email
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ===== RIGHT: SIDEBAR ===== -->
+      <aside class="pt-sidebar" id="ptSidebar">
+
+        <!-- Trip Overview -->
+        <div class="pt-sidebar-card pt-overview">
+          <h3><i class="fas fa-clipboard-list"></i> Your Trip Overview</h3>
+          <p class="pt-overview-subtitle">This is a summary of your selections.</p>
+          <div class="pt-overview-items">
+            <div class="pt-overview-item" id="ov-destinations">
+              <div class="pt-ov-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="pt-ov-content">
+                <strong>Destinations</strong>
+                <span>Not selected yet</span>
+              </div>
+              <button class="pt-ov-edit" onclick="goToStep(1)" aria-label="Edit destinations"><i class="fas fa-pen"></i></button>
+            </div>
+            <div class="pt-overview-item" id="ov-budget">
+              <div class="pt-ov-icon"><i class="fas fa-wallet"></i></div>
+              <div class="pt-ov-content">
+                <strong>Budget</strong>
+                <span>Not selected yet</span>
+              </div>
+              <button class="pt-ov-edit" onclick="goToStep(1)" aria-label="Edit budget"><i class="fas fa-pen"></i></button>
+            </div>
+            <div class="pt-overview-item" id="ov-style">
+              <div class="pt-ov-icon"><i class="fas fa-compass"></i></div>
+              <div class="pt-ov-content">
+                <strong>Travel Style</strong>
+                <span>Not selected yet</span>
+              </div>
+              <button class="pt-ov-edit" onclick="goToStep(1)" aria-label="Edit style"><i class="fas fa-pen"></i></button>
+            </div>
+            <div class="pt-overview-item" id="ov-people">
+              <div class="pt-ov-icon"><i class="fas fa-users"></i></div>
+              <div class="pt-ov-content">
+                <strong>People</strong>
+                <span>Not selected yet</span>
+              </div>
+              <button class="pt-ov-edit" onclick="goToStep(1)" aria-label="Edit people"><i class="fas fa-pen"></i></button>
+            </div>
+            <div class="pt-overview-item" id="ov-duration">
+              <div class="pt-ov-icon"><i class="fas fa-calendar-alt"></i></div>
+              <div class="pt-ov-content">
+                <strong>Duration</strong>
+                <span>Not selected yet</span>
+              </div>
+              <button class="pt-ov-edit" onclick="goToStep(1)" aria-label="Edit duration"><i class="fas fa-pen"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Itinerary Promo -->
+        <div class="pt-sidebar-card pt-promo">
+          <div class="pt-promo-bg">
+            <img src="images/city-aswan.png" alt="Hot air balloons over Egypt">
+          </div>
+          <div class="pt-promo-content">
+            <h3>We'll Create Your Perfect Itinerary</h3>
+            <p>Our local experts will design a personalized plan that fits your style and budget.</p>
+          </div>
+        </div>
+
+        <!-- Why Plan With Us -->
+        <div class="pt-sidebar-card pt-why">
+          <h3>Why Plan With Horus Guide Travel?</h3>
+          <div class="pt-why-items">
+            <div class="pt-why-item">
+              <div class="pt-why-icon"><i class="fas fa-map-marked-alt"></i></div>
+              <div>
+                <strong>Local Experts</strong>
+                <p>We are Egyptians, we know Egypt best.</p>
+              </div>
+            </div>
+            <div class="pt-why-item">
+              <div class="pt-why-icon"><i class="fas fa-tag"></i></div>
+              <div>
+                <strong>Best Price Guarantee</strong>
+                <p>We offer the best prices and no hidden fees.</p>
+              </div>
+            </div>
+            <div class="pt-why-item">
+              <div class="pt-why-icon"><i class="fas fa-drafting-compass"></i></div>
+              <div>
+                <strong>Custom Made Trips</strong>
+                <p>Every trip is unique, just like you.</p>
+              </div>
+            </div>
+            <div class="pt-why-item">
+              <div class="pt-why-icon"><i class="fas fa-headset"></i></div>
+              <div>
+                <strong>24/7 Support</strong>
+                <p>We are with you before, during and after your trip.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====== TRUST BADGES ====== -->
+<section class="pt-trust">
+  <div class="container">
+    <div class="pt-trust-grid">
+      <div class="pt-trust-item">
+        <div class="pt-trust-icon"><i class="fas fa-gem"></i></div>
+        <div>
+          <strong>100% Tailor Made</strong>
+          <p>Every detail is customized for you.</p>
+        </div>
+      </div>
+      <div class="pt-trust-item">
+        <div class="pt-trust-icon"><i class="fas fa-tag"></i></div>
+        <div>
+          <strong>Best & Budget Friendly</strong>
+          <p>Quality experiences at the best prices.</p>
+        </div>
+      </div>
+      <div class="pt-trust-item">
+        <div class="pt-trust-icon"><i class="fas fa-heart"></i></div>
+        <div>
+          <strong>Trusted by Travelers</strong>
+          <p>Hundreds of happy travelers from around the world.</p>
+        </div>
+      </div>
+      <div class="pt-trust-item">
+        <div class="pt-trust-icon"><i class="fas fa-shield-alt"></i></div>
+        <div>
+          <strong>Safe & Secure</strong>
+          <p>Your safety and comfort are our priorities.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <img src="logo.svg" alt="Horus Guide Travel" class="logo-img">
+          <div class="nav-logo-text"><span class="logo-title">HORUS GUIDE</span><span class="logo-subtitle">TRAVEL</span></div>
+        </a>
+        <p>We create unforgettable Egypt experiences with the best value and personal touch.</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/share/1JHrTsZytG/?mibextid=wwXIfr" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/horus_guide_travel/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://wa.me/201070430634" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="index.html#destinations">Destinations</a>
+        <a href="plan-my-trip.html">Plan My Trip</a>
+        <a href="index.html#about">About Us</a>
+        <a href="index.html#videos">Our Videos</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Top Destinations</h4>
+        <a href="#">Cairo</a>
+        <a href="#">Luxor</a>
+        <a href="#">Aswan</a>
+        <a href="#">Alexandria</a>
+        <a href="#">Hurghada</a>
+        <a href="#">Sharm El Sheikh</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <a href="tel:+201070430634"><i class="fas fa-phone"></i> +20 107 043 0634</a>
+        <a href="mailto:turkayduru7@gmail.com"><i class="fas fa-envelope"></i> turkayduru7@gmail.com</a>
+        <a href="#"><i class="fas fa-map-marker-alt"></i> Aswan, Egypt</a>
+        <a href="https://wa.me/201070430634"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p style="color: rgba(255,255,255,0.6); font-size: 0.88rem; margin-bottom: 16px;">Get travel tips and special offers straight to your inbox.</p>
+        <div class="footer-newsletter">
+          <input type="email" placeholder="Your email">
+          <button>Subscribe</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Horus Guide Travel. All Rights Reserved.</p>
+      <div>
+        <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms & Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<canvas id="confettiCanvas"></canvas>
+<script src="plan-trip.js"></script>
+</body>
+</html>
+
+
+
+
+

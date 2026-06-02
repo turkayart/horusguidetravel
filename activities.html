@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egypt Activities & Experiences — Horus Guide Travel</title>
+    <meta name="description" content="Discover unforgettable activities in Egypt: desert safaris, Red Sea diving, Nile cruises, hot air balloon rides, camel treks, historical tours, and more.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="activities.css">
+</head>
+<body>
+
+    <!-- ═══════════ NAVBAR ═══════════ -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <img src="logo.svg" alt="Horus Guide Travel" class="logo-img">
+                <div class="nav-logo-text"><span class="logo-title">HORUS GUIDE</span><span class="logo-subtitle">TRAVEL</span></div>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" id="nav-home">Home</a>
+                <div class="nav-dropdown">
+                    <a href="index.html#destinations" id="nav-destinations">Destinations <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="cairo.html">Cairo</a>
+                        <a href="giza.html">Giza</a>
+                        <a href="alexandria.html">Alexandria</a>
+                        <a href="luxor.html">Luxor</a>
+                        <a href="aswan.html">Aswan</a>
+                        <a href="hurghada.html">Hurghada</a>
+                        <a href="sharm-el-sheikh.html">Sharm El Sheikh</a>
+                        <a href="dahab.html">Dahab</a>
+                        <a href="marsa-alam.html">Marsa Alam</a>
+                        <a href="el-gouna.html">El Gouna</a>
+                        <a href="siwa.html">Siwa Oasis</a>
+                    </div>
+                </div>
+                <a href="index.html#about" id="nav-about">About Us</a>
+                <a href="gallery.html" id="nav-gallery">Gallery</a>
+                <a href="index.html#contact" id="nav-contact">Contact</a>
+            </div>
+            <div class="nav-right">
+                <a href="plan-my-trip.html" class="nav-cta">Let's Plan My Trip</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="act-hero" id="hero">
+        <div class="act-hero-bg">
+            <img src="images/gallery-luxor-balloons.png" alt="Hot Air Balloon over Luxor">
+            <div class="act-hero-overlay"></div>
+        </div>
+        <div class="act-hero-particles">
+            <span class="particle">𓂀</span>
+            <span class="particle">𓃭</span>
+            <span class="particle">𓆣</span>
+            <span class="particle">𓇳</span>
+            <span class="particle">𓂋</span>
+            <span class="particle">𓅃</span>
+            <span class="particle">𓃀</span>
+        </div>
+        <div class="act-hero-content">
+            <div class="act-hero-badge fade-up"><i class="fas fa-compass"></i> Adventures & Experiences</div>
+            <h1 class="act-hero-title fade-up">Live the <em>Egyptian</em> Adventure</h1>
+            <p class="act-hero-subtitle fade-up">From soaring over ancient temples at sunrise to diving crystal reefs at sunset — every moment in Egypt becomes a story worth telling forever.</p>
+            <div class="act-hero-stats fade-up">
+                <div class="act-hero-stat">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <span class="stat-value">11 Categories</span>
+                </div>
+                <div class="act-hero-stat">
+                    <i class="fas fa-star"></i>
+                    <span class="stat-value">50+ Experiences</span>
+                </div>
+                <div class="act-hero-stat">
+                    <i class="fas fa-heart"></i>
+                    <span class="stat-value">100% Handpicked</span>
+                </div>
+            </div>
+        </div>
+        <a href="#activities" class="act-hero-scroll" aria-label="Scroll down"><i class="fas fa-chevron-down"></i></a>
+    </section>
+
+    <!-- ═══════════ HIGHLIGHTS STRIP ═══════════ -->
+    <div class="act-highlights fade-up">
+        <div class="container">
+            <div class="act-highlight-item"><i class="fas fa-shield-alt"></i> Licensed & Insured Operators</div>
+            <div class="act-highlight-dot"></div>
+            <div class="act-highlight-item"><i class="fas fa-medal"></i> Expert Local Guides</div>
+            <div class="act-highlight-dot"></div>
+            <div class="act-highlight-item"><i class="fas fa-undo"></i> Free Cancellation</div>
+            <div class="act-highlight-dot"></div>
+            <div class="act-highlight-item"><i class="fas fa-headset"></i> 24/7 Travel Support</div>
+        </div>
+    </div>
+
+    <!-- ═══════════ FILTER BAR ═══════════ -->
+    <div class="act-filter" id="filterBar">
+        <div class="container">
+            <button class="act-filter-pill active" data-category="all"><i class="fas fa-th"></i> All Activities <span class="act-filter-count">11</span></button>
+            <button class="act-filter-pill" data-category="historical"><i class="fas fa-landmark"></i> Historical</button>
+            <button class="act-filter-pill" data-category="desert"><i class="fas fa-sun"></i> Desert</button>
+            <button class="act-filter-pill" data-category="diving"><i class="fas fa-water"></i> Diving</button>
+            <button class="act-filter-pill" data-category="snorkeling"><i class="fas fa-fish"></i> Snorkeling</button>
+            <button class="act-filter-pill" data-category="yacht"><i class="fas fa-ship"></i> Yacht</button>
+            <button class="act-filter-pill" data-category="camel"><i class="fas fa-horse"></i> Camel</button>
+            <button class="act-filter-pill" data-category="quad"><i class="fas fa-motorcycle"></i> Quad</button>
+            <button class="act-filter-pill" data-category="balloon"><i class="fas fa-hot-air-balloon"></i> Balloon</button>
+            <button class="act-filter-pill" data-category="food"><i class="fas fa-utensils"></i> Food</button>
+            <button class="act-filter-pill" data-category="cruise"><i class="fas fa-anchor"></i> Cruise</button>
+            <button class="act-filter-pill" data-category="cultural"><i class="fas fa-theater-masks"></i> Cultural</button>
+        </div>
+    </div>
+
+    <!-- ═══════════ ACTIVITIES GRID ═══════════ -->
+    <section class="act-section" id="activities">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-tag">Explore</span>
+                <h2 class="section-title">Unforgettable <em>Experiences</em></h2>
+                <p class="section-subtitle">Hand-selected adventures across the land of pharaohs, from adrenaline-pumping desert rides to soul-stirring historical journeys.</p>
+            </div>
+
+            <!-- Legend -->
+            <div class="act-legend fade-up">
+                <div class="act-legend-group">
+                    <span class="act-legend-title">Difficulty:</span>
+                    <span class="act-legend-item"><span class="act-legend-dot easy"></span> Easy</span>
+                    <span class="act-legend-item"><span class="act-legend-dot moderate"></span> Moderate</span>
+                    <span class="act-legend-item"><span class="act-legend-dot challenging"></span> Challenging</span>
+                </div>
+                <div class="act-legend-group">
+                    <span class="act-legend-title">Budget:</span>
+                    <span class="act-legend-item">💰 Budget</span>
+                    <span class="act-legend-item">💰💰 Mid-Range</span>
+                    <span class="act-legend-item">💰💰💰 Premium</span>
+                </div>
+            </div>
+
+            <div class="act-grid stagger-children" id="actGrid">
+
+                <!-- ═══ 1. HISTORICAL TOURS ═══ -->
+                <div class="act-card act-card-featured fade-up" data-category="historical">
+                    <div class="act-card-img">
+                        <img src="aswan-luxor/dmitrii-zhodzishskii-5aEHOQrb2Qk-unsplash.jpg" alt="Ancient Egyptian Temple" loading="lazy">
+                        <div class="act-card-img-overlay"></div>
+                        <span class="act-card-category"><i class="fas fa-landmark"></i> Historical Tours</span>
+                        <div class="act-card-badges">
+                            <span class="act-badge act-badge-difficulty easy">Easy</span>
+                            <span class="act-badge act-badge-budget">💰💰 Mid-Range</span>
+                        </div>
+                        <span class="act-card-duration"><i class="fas fa-clock"></i> 4–8 hours</span>
+                    </div>
+                    <div class="act-card-body">
+                        <h3>Walk Where Pharaohs Ruled</h3>
+                        <p>Step through the corridors of temples where incense once curled toward painted ceilings, where pharaohs were crowned and gods were worshipped. From the colossal pylons of Karnak to the hidden tombs of the Valley of the Kings, every stone whispers a story that's been waiting 4,000 years for you to hear.</p>
+                        <div class="act-card-meta">
+                            <div class="act-card-meta-left">
+                                <span class="act-card-meta-item"><i class="fas fa-map-marker-alt"></i> Luxor, Giza, Cairo</span>
+                                <span class="act-card-meta-item"><i class="fas fa-star"></i> 4.9</span>
+                            </div>
+                            <a href="attractions/karnak-temple.html" class="act-card-cta">Explore <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ═══ 2. DESERT SAFARI ═══ -->
+                <div class="act-card fade-up" data-category="desert">
+                    <div class="act-card-img">
+                        <img src="aswan-luxor/pexels-alexey-k-458081116-36336671.jpg" alt="Desert Safari" loading="lazy">
+                        <div class="act-card-img-overlay"></div>
+                        <span class="act-card-category"><i class="fas fa-sun"></i> Desert Safari</span>
+                        <div class="act-card-badges">
+                            <span class="act-badge act-badge-difficulty moderate">Moderate</span>
+                            <span class="act-badge act-badge-budget">💰💰 Mid-Range</span>
+                        </div>
+                        <span class="act-card-duration"><i class="fas fa-clock"></i> Half Day</span>
+                    </div>
+                    <div class="act-card-body">
+                        <h3>Conquer the Golden Dunes</h3>
+                        <p>Feel the adrenaline surge as your 4x4 crests a towering sand dune, the endless Sahara unfolding beneath you. Camp under a blanket of stars, sip Bedouin tea by firelight, and sandboard down slopes older than civilization.</p>
+                        <div class="act-card-meta">
+                            <div class="act-card-meta-left">
+                                <span class="act-card-meta-item"><i class="fas fa-map-marker-alt"></i> Siwa, Hurghada</span>
+                                <span class="act-card-meta-item"><i class="fas fa-star"></i> 4.7</span>
+                            </div>
+                            <a href="attractions/siwa-oasis.html" class="act-card-cta">Explore <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ═══ 3. DIVING ═══ -->
+                <div class="act-card fade-up" data-category="diving">
+                    <div class="act-card-img">
+                        <img src="images/gallery-sharm-diving.png" alt="Red Sea Diving" loading="lazy">
+                        <div class="act-card-img-overlay"></div>
+                        <span class="act-card-category"><i class="fas fa-water"></i> Scuba Diving</span>
+                        <div class="act-card-badges">
+                            <span class="act-badge act-badge-difficulty moderate">Moderate</span>
+                            <span class="act-badge act-badge-budget">💰💰 Mid-Range</span>
+                        </div>
+                        <span class="act-card-duration"><i class="fas fa-clock"></i> Half Day</span>
+                    </div>
+                    <div class="act-card-body">
+                        <h3>Dive Into a Hidden World</h3>
+                        <p>Descend into waters so clear you'll forget where air ends and ocean begins. The Red Sea's kaleidoscopic coral gardens teem with over 1,000 species — from dancing clownfish to gliding manta rays. This is diving at its absolute finest.</p>
+                        <div class="act-card-meta">
+                            <div class="act-card-meta-left">
+                                <span class="act-card-meta-item"><i class="fas fa-map-marker-alt"></i> Hurghada, Sharm, Dahab</span>
+                                <span class="act-card-meta-item"><i class="fas fa-star"></i> 4.9</span>
+                            </div>
+                            <a href="attractions/red-sea-diving.html" class="act-card-cta">Explore <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ═══ 4. SNORKELING ═══ -->
+                <div class="act-card fade-up" data-category="snorkeling">
+                    <div class="act-card-img">
+                        <img src="images/gallery-hurghada-reef.png" alt="Snorkeling in Red Sea" loading="lazy">
+                        <div class="act-card-img-overlay"></div>
+                        <span class="act-card-category"><i class="fas fa-fish"></i> Snorkeling</span>
+                        <div class="act-card-badges">
+                            <span class="act-badge act-badge-difficulty easy">Easy</span>
+                            <span class="act-badge act-badge-budget">💰 Budget</span>
+                        </div>
+                        <span class="act-card-duration"><i class="fas fa-clock"></i> 3–4 hours</span>
+                    </div>
+                    <div class="act-card-body">
+                        <h3>Float Over Living Rainbows</h3>
+                        <p>No certification needed — just slip on a mask and enter a world of electric blues, neon yellows, and impossible purples. Pristine reefs just meters from the shore make Egypt's Red Sea the world's most accessible underwater paradise.</p>
+                        <div class="act-card-meta">
+                            <div class="act-card-meta-left">
+                                <span class="act-card-meta-item"><i class="fas fa-map-marker-alt"></i> Hurghada, Marsa Alam</span>
+                                <span class="act-card-meta-item"><i class="fas fa-star"></i> 4.8</span>
+                            </div>
+                            <a href="hurghada.html" class="act-card-cta">Explore <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ═══ 5. YACHT TOURS ═══ -->
+                <div class="act-card fade-up" data-category="yacht">
+                    <div class="act-card-img">
+                        <img src="hurgada/omar-elsharawy-Figb0H3ExRw-unsplash.jpg" alt="Luxury Yacht Tour" loading="lazy">
+                        <div class="act-card-img-overlay"></div>
+                        <span class="act-card-category"><i class="fas fa-ship"></i> Yacht Tours</span>
+                        <div class="act-card-badges">
+                            <span class="act-badge act-badge-difficulty easy">Easy</span>
+                            <span class="act-badge act-badge-budget">💰💰💰 Premium</span>
+                        </div>
+                        <span class="act-card-duration"><i class="fas fa-clock"></i> Full Day</span>
+                    </div>
+                    <div class="act-card-body">
+                        <h3>Sail in Pure Luxury</h3>
+                        <p>Champagne in hand, turquoise water beneath, and the Egyptian coastline glittering in the distance. Private yacht excursions to pristine islands, gourmet seafood lunches on deck, and secret snorkeling spots reserved just for you.</p>
+                        <div class="act-card-meta">
+                            <div class="act-card-meta-left">
+                                <span class="act-card-meta-item"><i class="fas fa-map-marker-alt"></i> El Gouna, Hurghada</span>
+                                <span class="act-card-meta-item"><i class="fas fa-star"></i> 4.8</span>
+                            </div>
+                            <a href="el-gouna.html" class="act-card-cta">Explore <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ═══ 6. CAMEL RIDING ═══ -->
+                <div class="act-card fade-up" data-category="camel">
+                    <div class="act-card-img">
+                        <img src="cairo/andres-dallimonti-00Xo8z-bimM-unsplash.jpg" alt="Camel Riding at Pyramids" loading="lazy">
+                        <div class="act-card-img-overlay"></div>
+                        <span class="act-card-category"><i class="fas fa-horse"></i> Camel Riding</span>
+                        <div class="act-card-badges">
+                            <span class="act-badge act-badge-difficulty easy">Easy</span>
+                            <span class="act-badge act-badge-budget">💰 Budget</span>
+                        </div>
+                        <span class="act-card-duration"><i class="fas fa-clock"></i> 1–2 hours</span>
+                    </div>
+                    <div class="act-card-body">
+                        <h3>Ride Like the Ancients</h3>
+                        <p>Sway gently atop a camel as the Pyramids of Giza paint their silhouettes against a blazing sunset sky. It's the photograph you've dreamed of, the feeling of timelessness you can't find anywhere else on Earth.</p>
+                        <div class="act-card-meta">
+                            <div class="act-card-meta-left">
+                                <span class="act-card-meta-item"><i class="fas fa-map-marker-alt"></i> Giza, Siwa, Luxor</span>
+                                <span class="act-card-meta-item"><i class="fas fa-star"></i> 4.6</span>
+                            </div>
+                            <a href="attractions/pyramids-of-giza.html" class="act-card-cta">Explore <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ═══ 7. QUAD BIKING ═══ -->
+                <div class="act-card fade-up" data-category="quad">
+                    <div class="act-card-img">
+                        <img src="hurgada/pexels-vika-glitter-392079-31166931.jpg" alt="Quad Biking in Desert" loading="lazy">
+                        <div class="act-card-img-overlay"></div>
+                        <span class="act-card-category"><i class="fas fa-motorcycle"></i> Quad Biking</span>
+                        <div class="act-card-badges">
+                            <span class="act-badge act-badge-difficulty moderate">Moderate</span>
+                            <span class="act-badge act-badge-budget">💰 Budget</span>
+                        </div>
+                        <span class="act-card-duration"><i class="fas fa-clock"></i> 2–3 hours</span>
+                    </div>
+                    <div class="act-card-body">
+                        <h3>Tear Through the Desert</h3>
+                        <p>Engine roaring, dust flying, the vast Eastern Desert stretching endlessly ahead. Quad biking through Egypt's rugged terrain is pure, unfiltered adrenaline — culminating at a Bedouin camp where sweet tea and stargazing await.</p>
+                        <div class="act-card-meta">
+                            <div class="act-card-meta-left">
+                                <span class="act-card-meta-item"><i class="fas fa-map-marker-alt"></i> Hurghada, Sharm</span>
+                                <span class="act-card-meta-item"><i class="fas fa-star"></i> 4.5</span>
+                            </div>
+                            <a href="hurghada.html" class="act-card-cta">Explore <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ═══ 8. HOT AIR BALLOON ═══ -->
+                <div class="act-card act-card-featured fade-up" data-category="balloon">
+                    <div class="act-card-img">
+                        <img src="images/gallery-luxor-balloons.png" alt="Hot Air Balloon over Luxor" loading="lazy">
+                        <div class="act-card-img-overlay"></div>
+                        <span class="act-card-category"><i class="fas fa-cloud"></i> Hot Air Balloon</span>
+                        <div class="act-card-badges">
+                            <span class="act-badge act-badge-difficulty easy">Easy</span>
+                            <span class="act-badge act-badge-budget">💰💰 Mid-Range</span>
+                        </div>
+                        <span class="act-card-duration"><i class="fas fa-clock"></i> 1–2 hours</span>
+                    </div>
+                    <div class="act-card-body">
+                        <h3>Soar Over Ancient Wonders at Sunrise</h3>
+                        <p>As the first light of dawn spills over the Theban mountains, you'll rise silently above the Valley of the Kings, Hatshepsut's Temple, and the emerald ribbon of the Nile. It's Egypt's most breathtaking perspective — a view the pharaohs themselves never knew. Time stands still at 300 meters above the world's greatest open-air museum.</p>
+                        <div class="act-card-meta">
+                            <div class="act-card-meta-left">
+                                <span class="act-card-meta-item"><i class="fas fa-map-marker-alt"></i> Luxor (West Bank)</span>
+                                <span class="act-card-meta-item"><i class="fas fa-star"></i> 4.9</span>
+                            </div>
+                            <a href="luxor.html" class="act-card-cta">Explore <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ═══ 9. LOCAL FOOD TOURS ═══ -->
+                <div class="act-card fade-up" data-category="food">
+                    <div class="act-card-img">
+                        <img src="cairo/omar-adel-fJKMxGgJuHk-unsplash.jpg" alt="Egyptian Food Tour" loading="lazy">
+                        <div class="act-card-img-overlay"></div>
+                        <span class="act-card-category"><i class="fas fa-utensils"></i> Food Tours</span>
+                        <div class="act-card-badges">
+                            <span class="act-badge act-badge-difficulty easy">Easy</span>
+                            <span class="act-badge act-badge-budget">💰 Budget</span>
+                        </div>
+                        <span class="act-card-duration"><i class="fas fa-clock"></i> 3–4 hours</span>
+                    </div>
+                    <div class="act-card-body">
+                        <h3>Taste the Soul of Egypt</h3>
+                        <p>Follow your nose through the winding alleys of Cairo, where sizzling koshari, smoky grilled kofta, and warm fresh-baked baladi bread fill the air. Every bite tells a story of 7,000 years of culinary tradition passed down through generations.</p>
+                        <div class="act-card-meta">
+                            <div class="act-card-meta-left">
+                                <span class="act-card-meta-item"><i class="fas fa-map-marker-alt"></i> Cairo, Alexandria</span>
+                                <span class="act-card-meta-item"><i class="fas fa-star"></i> 4.7</span>
+                            </div>
+                            <a href="attractions/khan-el-khalili.html" class="act-card-cta">Explore <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ═══ 10. LUXURY NILE CRUISES ═══ -->
+                <div class="act-card act-card-featured fade-up" data-category="cruise">
+                    <div class="act-card-img">
+                        <img src="aswan-luxor/kevin-et-laurianne-langlais-pvFtrzwuc6g-unsplash.jpg" alt="Luxury Nile Cruise" loading="lazy">
+                        <div class="act-card-img-overlay"></div>
+                        <span class="act-card-category"><i class="fas fa-anchor"></i> Luxury Nile Cruise</span>
+                        <div class="act-card-badges">
+                            <span class="act-badge act-badge-difficulty easy">Easy</span>
+                            <span class="act-badge act-badge-budget">💰💰💰 Premium</span>
+                        </div>
+                        <span class="act-card-duration"><i class="fas fa-clock"></i> 3–7 Days</span>
+                    </div>
+                    <div class="act-card-body">
+                        <h3>Drift Through 5,000 Years of History</h3>
+                        <p>There is no more magical way to experience Egypt than gliding down the Nile aboard a luxury cruise ship. Watch golden sunsets paint ancient temples, dine under candle-lit stars on the sundeck, and wake each morning to a new 3,000-year-old wonder waiting at the riverbank. This is travel elevated to art.</p>
+                        <div class="act-card-meta">
+                            <div class="act-card-meta-left">
+                                <span class="act-card-meta-item"><i class="fas fa-map-marker-alt"></i> Luxor – Aswan</span>
+                                <span class="act-card-meta-item"><i class="fas fa-star"></i> 4.9</span>
+                            </div>
+                            <a href="attractions/nile-cruises.html" class="act-card-cta">Explore <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ═══ 11. CULTURAL EXPERIENCES ═══ -->
+                <div class="act-card fade-up" data-category="cultural">
+                    <div class="act-card-img">
+                        <img src="images/gallery-aswan-nubian.png" alt="Nubian Cultural Experience" loading="lazy">
+                        <div class="act-card-img-overlay"></div>
+                        <span class="act-card-category"><i class="fas fa-theater-masks"></i> Cultural Experiences</span>
+                        <div class="act-card-badges">
+                            <span class="act-badge act-badge-difficulty easy">Easy</span>
+                            <span class="act-badge act-badge-budget">💰 Budget</span>
+                        </div>
+                        <span class="act-card-duration"><i class="fas fa-clock"></i> Half Day</span>
+                    </div>
+                    <div class="act-card-body">
+                        <h3>Connect With Living Traditions</h3>
+                        <p>Join Nubian families in their rainbow-painted homes for traditional tea, learn henna art passed down for centuries, and dance to the hypnotic rhythms of Sufi whirling dervishes in Cairo's ancient mosques. These encounters touch the soul.</p>
+                        <div class="act-card-meta">
+                            <div class="act-card-meta-left">
+                                <span class="act-card-meta-item"><i class="fas fa-map-marker-alt"></i> Aswan, Cairo, Siwa</span>
+                                <span class="act-card-meta-item"><i class="fas fa-star"></i> 4.8</span>
+                            </div>
+                            <a href="aswan.html" class="act-card-cta">Explore <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- No results message -->
+                <div class="act-no-results">
+                    <i class="fas fa-search"></i>
+                    <h3>No Activities Found</h3>
+                    <p>Try selecting a different category above.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ POPULAR COMBOS ═══════════ -->
+    <section class="act-section act-section-alt" id="combos">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-tag">Curated Packages</span>
+                <h2 class="section-title">Popular <em>Combinations</em></h2>
+                <p class="section-subtitle">Save time and money with our expertly curated multi-activity packages.</p>
+            </div>
+            <div class="act-combo-grid stagger-children">
+
+                <div class="act-combo-card fade-up">
+                    <span class="act-combo-tag"><i class="fas fa-fire"></i> Most Popular</span>
+                    <h4>The Classic Egypt Experience</h4>
+                    <p>The ultimate combination for first-time visitors. Witness the Pyramids, explore ancient Luxor, and cruise the Nile in ultimate luxury.</p>
+                    <div class="act-combo-activities">
+                        <span class="act-combo-pill"><i class="fas fa-landmark"></i> Pyramids Tour</span>
+                        <span class="act-combo-pill"><i class="fas fa-anchor"></i> Nile Cruise</span>
+                        <span class="act-combo-pill"><i class="fas fa-cloud"></i> Balloon Ride</span>
+                        <span class="act-combo-pill"><i class="fas fa-horse"></i> Camel Trek</span>
+                    </div>
+                    <div class="act-combo-footer">
+                        <span class="act-combo-price">From $899 <span>/ person</span></span>
+                        <span class="act-combo-duration"><i class="fas fa-calendar"></i> 7 Days</span>
+                    </div>
+                </div>
+
+                <div class="act-combo-card fade-up">
+                    <span class="act-combo-tag"><i class="fas fa-water"></i> Adventure</span>
+                    <h4>Red Sea Adrenaline Rush</h4>
+                    <p>For thrill seekers. Dive pristine reefs, tear across the desert on a quad bike, and sail turquoise waters on a private yacht.</p>
+                    <div class="act-combo-activities">
+                        <span class="act-combo-pill"><i class="fas fa-water"></i> Scuba Diving</span>
+                        <span class="act-combo-pill"><i class="fas fa-motorcycle"></i> Quad Biking</span>
+                        <span class="act-combo-pill"><i class="fas fa-ship"></i> Yacht Tour</span>
+                        <span class="act-combo-pill"><i class="fas fa-fish"></i> Snorkeling</span>
+                    </div>
+                    <div class="act-combo-footer">
+                        <span class="act-combo-price">From $649 <span>/ person</span></span>
+                        <span class="act-combo-duration"><i class="fas fa-calendar"></i> 5 Days</span>
+                    </div>
+                </div>
+
+                <div class="act-combo-card fade-up">
+                    <span class="act-combo-tag"><i class="fas fa-gem"></i> Premium</span>
+                    <h4>Soul of the Desert</h4>
+                    <p>An unforgettable journey into Egypt's wild heart. Explore Siwa's hidden oasis, camp under Saharan stars, and taste authentic Bedouin culture.</p>
+                    <div class="act-combo-activities">
+                        <span class="act-combo-pill"><i class="fas fa-sun"></i> Desert Safari</span>
+                        <span class="act-combo-pill"><i class="fas fa-horse"></i> Camel Trek</span>
+                        <span class="act-combo-pill"><i class="fas fa-utensils"></i> Food Tour</span>
+                        <span class="act-combo-pill"><i class="fas fa-theater-masks"></i> Cultural Visit</span>
+                    </div>
+                    <div class="act-combo-footer">
+                        <span class="act-combo-price">From $749 <span>/ person</span></span>
+                        <span class="act-combo-duration"><i class="fas fa-calendar"></i> 6 Days</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ WHY CHOOSE US ═══════════ -->
+    <section class="act-section act-section-dark" id="why">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-tag">Why Horus</span>
+                <h2 class="section-title">The Horus <em>Difference</em></h2>
+                <p class="section-subtitle">What sets our experiences apart from the rest.</p>
+            </div>
+            <div class="act-why-grid stagger-children">
+                <div class="act-why-card fade-up">
+                    <div class="act-why-icon"><i class="fas fa-user-shield"></i></div>
+                    <h4>Safety Certified</h4>
+                    <p>Every operator is licensed, insured, and regularly audited. Your safety is non-negotiable.</p>
+                </div>
+                <div class="act-why-card fade-up">
+                    <div class="act-why-icon"><i class="fas fa-heart"></i></div>
+                    <h4>Handpicked Experiences</h4>
+                    <p>We personally vet every activity. Only the top 5% of operators make it to our platform.</p>
+                </div>
+                <div class="act-why-card fade-up">
+                    <div class="act-why-icon"><i class="fas fa-comments"></i></div>
+                    <h4>Local Expert Guides</h4>
+                    <p>Born and raised in Egypt, our guides turn tours into unforgettable storytelling experiences.</p>
+                </div>
+                <div class="act-why-card fade-up">
+                    <div class="act-why-icon"><i class="fas fa-undo-alt"></i></div>
+                    <h4>Flexible Cancellation</h4>
+                    <p>Plans change. Cancel up to 24 hours before any activity for a full refund. No questions asked.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ CTA ═══════════ -->
+    <section class="dest-cta">
+        <div class="dest-cta-bg">
+            <img src="images/hero-pyramids.png" alt="Egypt Adventures">
+            <div class="dest-cta-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="dest-cta-content fade-up">
+                <h2>Ready for the adventure of a <em>lifetime</em>?</h2>
+                <p>Tell us your dream experience and we'll craft the perfect Egyptian itinerary — tailored entirely to you.</p>
+                <div class="dest-cta-buttons">
+                    <a href="plan-my-trip.html" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Plan My Adventure</a>
+                    <a href="index.html#contact" class="btn btn-outline"><i class="fas fa-phone"></i> Talk to an Expert</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo"><img src="logo.svg" alt="Horus Guide Travel" class="logo-img"><div class="nav-logo-text"><span class="logo-title">HORUS GUIDE</span><span class="logo-subtitle">TRAVEL</span></div></a>
+                    <p>We create unforgettable Egypt experiences with the best value and personal touch.</p>
+                    <div class="footer-socials">
+                        <a href="https://www.facebook.com/share/1JHrTsZytG/?mibextid=wwXIfr" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/horus_guide_travel/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://wa.me/201070430634" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="index.html#destinations">Destinations</a>
+                    <a href="activities.html">Activities</a>
+                    <a href="plan-my-trip.html">Plan My Trip</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Top Activities</h4>
+                    <a href="attractions/pyramids-of-giza.html">Pyramids Tour</a>
+                    <a href="attractions/nile-cruises.html">Nile Cruises</a>
+                    <a href="attractions/red-sea-diving.html">Red Sea Diving</a>
+                    <a href="attractions/karnak-temple.html">Temple Tours</a>
+                    <a href="attractions/siwa-oasis.html">Desert Safari</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <a href="tel:+201070430634"><i class="fas fa-phone"></i> +20 107 043 0634</a>
+                    <a href="mailto:turkayduru7@gmail.com"><i class="fas fa-envelope"></i> turkayduru7@gmail.com</a>
+                    <a href="#"><i class="fas fa-map-marker-alt"></i> Aswan, Egypt</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p style="color: rgba(255,255,255,0.5); font-size: 0.88rem; margin-bottom: 16px;">Get exclusive deals and travel tips.</p>
+                    <div class="footer-newsletter">
+                        <input type="email" placeholder="Your email">
+                        <button>Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Horus Guide Travel. All Rights Reserved.</p>
+                <div><a href="#">Privacy Policy</a> | <a href="#">Terms &amp; Conditions</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="activities.js"></script>
+
+</body>
+</html>
+
+
+
+
+

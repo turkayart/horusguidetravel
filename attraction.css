@@ -1,0 +1,2011 @@
+﻿@import url('destination.css');
+
+/* ============================================================
+   HORUS TRAVEL — INDIVIDUAL ATTRACTION DETAIL PAGES
+   Luxury Cinematic Desert Aesthetic · Glassmorphism
+   ============================================================
+   Inherits: variables, navbar, footer, lightbox, buttons,
+             animations, video-showcase, tip-card from destination.css
+   ============================================================ */
+
+
+/* ============================================================
+   1. ATTRACTION HERO
+   Full viewport cinematic hero with Ken Burns animation
+   ============================================================ */
+.attr-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: var(--midnight);
+}
+
+/* Background image with Ken Burns zoom */
+.attr-hero-bg {
+  position: absolute;
+  inset: 0;
+}
+.attr-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: attrKenBurns 35s ease-in-out infinite alternate;
+  will-change: transform;
+}
+@keyframes attrKenBurns {
+  0%   { transform: scale(1) translate(0, 0); }
+  33%  { transform: scale(1.08) translate(-0.8%, -0.4%); }
+  66%  { transform: scale(1.04) translate(0.4%, -0.6%); }
+  100% { transform: scale(1.12) translate(-1.2%, 0.2%); }
+}
+
+/* Dark gradient overlay */
+.attr-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top,
+      rgba(6, 13, 26, 0.98) 0%,
+      rgba(6, 13, 26, 0.65) 22%,
+      rgba(6, 13, 26, 0.12) 50%,
+      rgba(6, 13, 26, 0.30) 100%
+    );
+  z-index: 1;
+}
+
+/* Floating hieroglyph particles */
+.attr-hero-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+  pointer-events: none;
+}
+.attr-hero-particles .hero-particle {
+  position: absolute;
+  color: rgba(200, 162, 78, 0.10);
+  font-size: 1.5rem;
+  animation: attrParticleFloat linear infinite;
+  will-change: transform;
+}
+.attr-hero-particles .hero-particle:nth-child(1)  { left: 4%;  animation-duration: 24s; animation-delay: 0s;    font-size: 1.1rem; }
+.attr-hero-particles .hero-particle:nth-child(2)  { left: 14%; animation-duration: 30s; animation-delay: -5s;   font-size: 1.6rem; }
+.attr-hero-particles .hero-particle:nth-child(3)  { left: 28%; animation-duration: 22s; animation-delay: -9s;   font-size: 0.95rem; }
+.attr-hero-particles .hero-particle:nth-child(4)  { left: 42%; animation-duration: 27s; animation-delay: -3s;   font-size: 1.4rem; }
+.attr-hero-particles .hero-particle:nth-child(5)  { left: 56%; animation-duration: 32s; animation-delay: -7s;   font-size: 1.2rem; }
+.attr-hero-particles .hero-particle:nth-child(6)  { left: 70%; animation-duration: 25s; animation-delay: -12s;  font-size: 1.7rem; }
+.attr-hero-particles .hero-particle:nth-child(7)  { left: 83%; animation-duration: 28s; animation-delay: -4s;   font-size: 1.05rem; }
+.attr-hero-particles .hero-particle:nth-child(8)  { left: 93%; animation-duration: 26s; animation-delay: -10s;  font-size: 1.3rem; }
+
+@keyframes attrParticleFloat {
+  0%   { transform: translateY(105vh) rotate(0deg);   opacity: 0; }
+  8%   { opacity: 0.8; }
+  92%  { opacity: 0.8; }
+  100% { transform: translateY(-12vh) rotate(360deg);  opacity: 0; }
+}
+
+/* Hero content wrapper */
+.attr-hero-content {
+  position: relative;
+  z-index: 3;
+  padding: 0 0 80px;
+  max-width: 900px;
+  width: 100%;
+}
+
+/* Breadcrumb */
+.attr-hero-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+.attr-hero-breadcrumb a {
+  color: rgba(255, 255, 255, 0.55);
+  transition: var(--transition-fast);
+}
+.attr-hero-breadcrumb a:hover {
+  color: var(--gold);
+}
+.attr-hero-breadcrumb .breadcrumb-sep {
+  color: var(--gold);
+  font-size: 0.65rem;
+  opacity: 0.5;
+}
+.attr-hero-breadcrumb .breadcrumb-current {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* Category badge */
+.attr-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 20px;
+  border-radius: 50px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(200, 162, 78, 0.10);
+  border: 1px solid rgba(200, 162, 78, 0.22);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  margin-bottom: 22px;
+}
+.attr-hero-badge i {
+  font-size: 0.8rem;
+}
+
+/* Display title with gold gradient text */
+.attr-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 7.5vw, 5rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  text-shadow: 0 6px 50px rgba(0, 0, 0, 0.45);
+}
+.attr-hero-title em,
+.attr-hero-title .gold {
+  font-style: normal;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Subtitle */
+.attr-hero-subtitle {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 1.15rem;
+  max-width: 640px;
+  line-height: 1.85;
+  margin-bottom: 30px;
+}
+
+/* Meta row: rating, duration, price, location */
+.attr-hero-meta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.attr-hero-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  transition: var(--transition);
+}
+.attr-hero-meta-item:hover {
+  background: rgba(200, 162, 78, 0.10);
+  border-color: rgba(200, 162, 78, 0.22);
+  transform: translateY(-3px);
+}
+.attr-hero-meta-item i {
+  color: var(--gold);
+  font-size: 1rem;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: rgba(200, 162, 78, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.attr-hero-meta-item .meta-label {
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.42);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+}
+.attr-hero-meta-item .meta-value {
+  font-size: 0.92rem;
+  color: #fff;
+  font-weight: 600;
+  font-family: var(--font-display);
+}
+
+/* Scroll indicator for attr-hero */
+.attr-hero-scroll {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  color: var(--gold);
+  font-size: 1.3rem;
+  animation: scrollBounce 2.5s ease-in-out infinite;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(200, 162, 78, 0.08);
+  border: 1px solid rgba(200, 162, 78, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+
+/* ============================================================
+   2. QUICK INFO BAR — Sticky glassmorphism strip
+   ============================================================ */
+.attr-quick-info {
+  position: sticky;
+  top: 68px;
+  z-index: 100;
+  background: rgba(6, 13, 26, 0.92);
+  backdrop-filter: blur(28px) saturate(1.4);
+  -webkit-backdrop-filter: blur(28px) saturate(1.4);
+  border-bottom: 1px solid rgba(200, 162, 78, 0.10);
+  padding: 14px 0;
+  transition: var(--transition);
+}
+.attr-quick-info .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.attr-info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 22px;
+  border-radius: 50px;
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  white-space: nowrap;
+  transition: var(--transition);
+}
+.attr-info-item:hover {
+  color: var(--gold);
+  border-color: rgba(200, 162, 78, 0.22);
+  background: rgba(200, 162, 78, 0.06);
+}
+.attr-info-item i {
+  color: var(--gold);
+  font-size: 0.88rem;
+}
+.attr-info-item .info-label {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-right: 4px;
+}
+.attr-info-item .info-value {
+  color: #fff;
+  font-weight: 600;
+}
+
+
+/* ============================================================
+   3. SECTION COMMON (attraction-scoped)
+   ============================================================ */
+.attr-section {
+  padding: 110px 0;
+  position: relative;
+}
+.attr-section-alt {
+  background: var(--papyrus);
+}
+.attr-section-dark {
+  background: var(--navy);
+}
+.attr-section-dark .section-tag   { color: var(--gold-light); }
+.attr-section-dark .section-title { color: #fff; }
+.attr-section-dark .section-subtitle { color: var(--text-light); }
+
+
+/* ============================================================
+   4. HIGHLIGHT STRIP
+   Horizontal strip with gold separator dots
+   ============================================================ */
+.attr-highlight-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+  padding: 28px 0;
+  background: linear-gradient(135deg, rgba(200, 162, 78, 0.05), rgba(200, 162, 78, 0.02));
+  border-top: 1px solid rgba(200, 162, 78, 0.10);
+  border-bottom: 1px solid rgba(200, 162, 78, 0.10);
+}
+.attr-highlight-strip .strip-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 28px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  font-family: var(--font-display);
+  white-space: nowrap;
+}
+.attr-highlight-strip .strip-item i {
+  color: var(--gold);
+  font-size: 1rem;
+}
+.attr-highlight-strip .strip-sep {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  opacity: 0.45;
+  flex-shrink: 0;
+}
+
+
+/* ============================================================
+   5. OVERVIEW SECTION — Two-column layout
+   ============================================================ */
+.attr-overview {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* — Content column — */
+.attr-overview-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 22px;
+  color: var(--text-dark);
+}
+.attr-overview-content h2 em {
+  font-style: normal;
+  color: var(--gold);
+}
+.attr-overview-content p {
+  color: var(--text-muted);
+  font-size: 1.02rem;
+  line-height: 1.9;
+  margin-bottom: 18px;
+}
+.attr-overview-content h3 {
+  font-size: 1.35rem;
+  margin: 36px 0 18px;
+  color: var(--text-dark);
+}
+
+/* — Sidebar column — */
+.attr-overview-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: sticky;
+  top: 140px;
+}
+
+/* Fact Cards — glassmorphism */
+.attr-fact-card {
+  padding: 28px 26px;
+  background: #fff;
+  border: 1px solid rgba(200, 162, 78, 0.10);
+  border-radius: var(--radius-lg);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.attr-fact-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
+  opacity: 0;
+  transition: var(--transition);
+}
+.attr-fact-card:hover {
+  border-color: rgba(200, 162, 78, 0.22);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-6px);
+}
+.attr-fact-card:hover::before {
+  opacity: 1;
+}
+.attr-fact-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: rgba(200, 162, 78, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  color: var(--gold);
+  font-size: 1.2rem;
+}
+.attr-fact-card h4 {
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+.attr-fact-card p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+/* Info grid inside sidebar */
+.attr-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.attr-info-grid .info-cell {
+  padding: 18px 16px;
+  background: rgba(200, 162, 78, 0.04);
+  border: 1px solid rgba(200, 162, 78, 0.08);
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+.attr-info-grid .info-cell:hover {
+  border-color: rgba(200, 162, 78, 0.20);
+  background: rgba(200, 162, 78, 0.07);
+}
+.attr-info-grid .info-cell i {
+  color: var(--gold);
+  font-size: 1rem;
+  margin-bottom: 8px;
+  display: block;
+}
+.attr-info-grid .info-cell .cell-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+.attr-info-grid .info-cell .cell-value {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  font-family: var(--font-display);
+}
+
+/* Map placeholder */
+.attr-map-placeholder {
+  width: 100%;
+  height: 200px;
+  border-radius: var(--radius);
+  background: var(--papyrus);
+  border: 1px solid rgba(200, 162, 78, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  gap: 8px;
+  overflow: hidden;
+}
+.attr-map-placeholder i {
+  color: var(--gold);
+  font-size: 1.2rem;
+}
+.attr-map-placeholder iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: var(--radius);
+}
+
+
+/* ============================================================
+   5b. TIMELINE — Vertical timeline for historical milestones
+   ============================================================ */
+.attr-timeline {
+  position: relative;
+  padding-left: 36px;
+  margin: 40px 0 24px;
+}
+.attr-timeline::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--gold), rgba(200, 162, 78, 0.15));
+  border-radius: 2px;
+}
+
+.attr-timeline-item {
+  position: relative;
+  padding-bottom: 32px;
+}
+.attr-timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+/* Timeline dot */
+.attr-timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -30px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 3px solid var(--warm-white);
+  box-shadow: 0 0 0 3px rgba(200, 162, 78, 0.20),
+              0 2px 8px rgba(200, 162, 78, 0.30);
+  z-index: 1;
+}
+
+.attr-timeline-item .timeline-date {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+  display: block;
+}
+.attr-timeline-item .timeline-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+.attr-timeline-item .timeline-text {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+
+/* ============================================================
+   6. PHOTO GALLERY — Masonry-style CSS Grid
+   ============================================================ */
+.attr-gallery {
+  padding: 110px 0;
+  position: relative;
+}
+
+.attr-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 260px;
+  gap: 16px;
+}
+
+/* Varying sizes for masonry feel */
+.attr-gallery-item {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+}
+.attr-gallery-item.span-2-col {
+  grid-column: span 2;
+}
+.attr-gallery-item.span-2-row {
+  grid-row: span 2;
+}
+.attr-gallery-item.span-2-col.span-2-row {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.attr-gallery-item:first-child {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.attr-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease, filter 0.5s ease;
+}
+.attr-gallery-item:hover img {
+  transform: scale(1.08);
+  filter: brightness(1.08) saturate(1.1);
+}
+
+/* Hover overlay with zoom icon and caption */
+.attr-gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(6, 13, 26, 0.80) 0%, rgba(6, 13, 26, 0.08) 50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  opacity: 0;
+  transition: var(--transition);
+}
+.attr-gallery-item:hover .attr-gallery-overlay {
+  opacity: 1;
+}
+.attr-gallery-overlay i {
+  color: var(--gold);
+  font-size: 1.3rem;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: rgba(200, 162, 78, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(200, 162, 78, 0.30);
+  transition: var(--transition);
+}
+.attr-gallery-item:hover .attr-gallery-overlay i {
+  transform: scale(1.12);
+  background: rgba(200, 162, 78, 0.28);
+}
+.attr-gallery-overlay span {
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 500;
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  right: 18px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  line-height: 1.4;
+}
+
+
+/* ============================================================
+   7. ACTIVITIES SECTION — Grid of activity cards
+   ============================================================ */
+.attr-activities {
+  padding: 110px 0;
+  position: relative;
+}
+
+.attr-activities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.attr-activity-card {
+  padding: 36px 30px;
+  background: #fff;
+  border: 1px solid rgba(200, 162, 78, 0.08);
+  border-radius: var(--radius-lg);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.attr-activity-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
+  opacity: 0;
+  transition: var(--transition);
+}
+.attr-activity-card:hover {
+  border-color: rgba(200, 162, 78, 0.22);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-8px);
+}
+.attr-activity-card:hover::before {
+  opacity: 1;
+}
+
+.attr-activity-card .activity-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(200, 162, 78, 0.10), rgba(200, 162, 78, 0.04));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: var(--gold);
+  font-size: 1.4rem;
+  transition: var(--transition);
+}
+.attr-activity-card:hover .activity-icon {
+  background: linear-gradient(135deg, rgba(200, 162, 78, 0.20), rgba(200, 162, 78, 0.08));
+  transform: scale(1.08);
+}
+
+.attr-activity-card h4 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+.attr-activity-card p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.attr-activity-card .activity-meta {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-top: 16px;
+  border-top: 1px solid #f0ebe3;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+.attr-activity-card .activity-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.attr-activity-card .activity-meta span i {
+  color: var(--gold);
+  font-size: 0.85rem;
+}
+
+/* Difficulty indicator */
+.attr-difficulty {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.attr-difficulty-dots {
+  display: flex;
+  gap: 4px;
+}
+.attr-difficulty-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ddd;
+  transition: var(--transition-fast);
+}
+
+/* Easy: 1 green dot */
+.attr-difficulty.easy .attr-difficulty-dot:nth-child(1) {
+  background: #22c55e;
+  box-shadow: 0 0 6px rgba(34, 197, 94, 0.35);
+}
+.attr-difficulty.easy { color: #22c55e; }
+
+/* Moderate: 2 amber dots */
+.attr-difficulty.moderate .attr-difficulty-dot:nth-child(1),
+.attr-difficulty.moderate .attr-difficulty-dot:nth-child(2) {
+  background: #f59e0b;
+  box-shadow: 0 0 6px rgba(245, 158, 11, 0.35);
+}
+.attr-difficulty.moderate { color: #f59e0b; }
+
+/* Challenging: 3 red dots */
+.attr-difficulty.challenging .attr-difficulty-dot:nth-child(1),
+.attr-difficulty.challenging .attr-difficulty-dot:nth-child(2),
+.attr-difficulty.challenging .attr-difficulty-dot:nth-child(3) {
+  background: #ef4444;
+  box-shadow: 0 0 6px rgba(239, 68, 68, 0.35);
+}
+.attr-difficulty.challenging { color: #ef4444; }
+
+
+/* ============================================================
+   8. VISITOR TIPS SECTION
+   ============================================================ */
+.attr-tips-section {
+  padding: 110px 0;
+  position: relative;
+}
+
+.attr-tips-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.attr-tips-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* Tip card — inherits base from destination.css .tip-card, with attraction overrides */
+.attr-tip-card {
+  padding: 30px 26px;
+  background: #fff;
+  border: 1px solid rgba(200, 162, 78, 0.08);
+  border-radius: var(--radius-lg);
+  transition: var(--transition);
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+.attr-tip-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--gold), var(--gold-light));
+  opacity: 0;
+  transition: var(--transition);
+}
+.attr-tip-card:hover {
+  border-color: rgba(200, 162, 78, 0.20);
+  box-shadow: var(--shadow-md);
+  transform: translateX(6px);
+}
+.attr-tip-card:hover::before {
+  opacity: 1;
+}
+.attr-tip-card .tip-emoji {
+  font-size: 2rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.attr-tip-card h4 {
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+.attr-tip-card p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+/* Best Time to Visit — Special card */
+.attr-best-time {
+  padding: 32px 28px;
+  background: #fff;
+  border: 1px solid rgba(200, 162, 78, 0.10);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  position: sticky;
+  top: 140px;
+}
+.attr-best-time h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+.attr-best-time > p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+/* Monthly calendar visualization */
+.attr-month-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.attr-month {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 8px;
+  border-radius: 12px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: rgba(200, 162, 78, 0.04);
+  border: 1px solid rgba(200, 162, 78, 0.08);
+  transition: var(--transition);
+  cursor: default;
+}
+.attr-month:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+.attr-month .month-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+.attr-month .month-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 6px;
+  transition: var(--transition);
+}
+
+/* Color states */
+.attr-month.best {
+  background: rgba(34, 197, 94, 0.08);
+  border-color: rgba(34, 197, 94, 0.20);
+  color: #16a34a;
+}
+.attr-month.best .month-indicator {
+  background: #22c55e;
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.4);
+}
+
+.attr-month.good {
+  background: rgba(245, 158, 11, 0.06);
+  border-color: rgba(245, 158, 11, 0.18);
+  color: #d97706;
+}
+.attr-month.good .month-indicator {
+  background: #f59e0b;
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.35);
+}
+
+.attr-month.avoid {
+  background: rgba(239, 68, 68, 0.06);
+  border-color: rgba(239, 68, 68, 0.18);
+  color: #dc2626;
+}
+.attr-month.avoid .month-indicator {
+  background: #ef4444;
+  box-shadow: 0 0 8px rgba(239, 68, 68, 0.35);
+}
+
+/* Calendar legend */
+.attr-month-legend {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin-top: 18px;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+.attr-month-legend span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.attr-month-legend .legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.attr-month-legend .legend-dot.best  { background: #22c55e; }
+.attr-month-legend .legend-dot.good  { background: #f59e0b; }
+.attr-month-legend .legend-dot.avoid { background: #ef4444; }
+
+
+/* ============================================================
+   9. VIDEO SECTION — Full-width cinematic dark bg
+   Reuses .video-showcase, .video-wrapper from destination.css
+   ============================================================ */
+.attr-video {
+  padding: 110px 0;
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
+}
+.attr-video::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200, 162, 78, 0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+.attr-video .section-tag   { color: var(--gold-light); }
+.attr-video .section-title { color: #fff; }
+.attr-video .section-subtitle { color: var(--text-light); }
+
+
+/* ============================================================
+   10. RELATED ATTRACTIONS
+   ============================================================ */
+.attr-related {
+  padding: 110px 0;
+  position: relative;
+}
+
+.attr-related-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* Horizontal scroll variant */
+.attr-related-scroll {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(200, 162, 78, 0.3) transparent;
+}
+.attr-related-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.attr-related-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.attr-related-scroll::-webkit-scrollbar-thumb {
+  background: rgba(200, 162, 78, 0.3);
+  border-radius: 3px;
+}
+.attr-related-scroll .attr-related-card {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+}
+
+/* Related attraction card */
+.attr-related-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #fff;
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
+  position: relative;
+}
+.attr-related-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(200, 162, 78, 0), rgba(200, 162, 78, 0));
+  z-index: 0;
+  transition: var(--transition);
+  pointer-events: none;
+}
+.attr-related-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+.attr-related-card:hover::before {
+  background: linear-gradient(135deg, rgba(200, 162, 78, 0.28), rgba(200, 162, 78, 0.04));
+}
+
+.attr-related-card-img {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+.attr-related-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+.attr-related-card:hover .attr-related-card-img img {
+  transform: scale(1.1);
+}
+
+.attr-related-card-img .location-tag {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 14px;
+  border-radius: 50px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(6, 13, 26, 0.70);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.attr-related-card-img .location-tag i {
+  color: var(--gold);
+  font-size: 0.7rem;
+}
+
+.attr-related-card-body {
+  padding: 22px;
+  position: relative;
+  z-index: 1;
+  background: #fff;
+}
+.attr-related-card-body h4 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+.attr-related-card-body .related-rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.attr-related-card-body .related-rating i {
+  color: var(--gold);
+  font-size: 0.75rem;
+}
+.attr-related-card-body .related-rating span {
+  margin-left: 8px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--text-dark);
+}
+
+
+/* ============================================================
+   11. REVIEW STARS
+   ============================================================ */
+.attr-review-stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+.attr-review-stars i {
+  color: var(--gold);
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+.attr-review-stars i:hover {
+  transform: scale(1.2);
+}
+.attr-review-stars i.half {
+  position: relative;
+  color: #ddd;
+}
+.attr-review-stars i.half::before {
+  content: '\f005';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  overflow: hidden;
+  color: var(--gold);
+}
+.attr-review-stars i.empty {
+  color: #ddd;
+}
+.attr-review-stars .rating-number {
+  margin-left: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  font-family: var(--font-display);
+}
+.attr-review-stars .rating-count {
+  margin-left: 4px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+
+/* ============================================================
+   ALT BACKGROUND VARIANTS
+   ============================================================ */
+.attr-section-alt .attr-fact-card,
+.attr-section-alt .attr-tip-card,
+.attr-section-alt .attr-activity-card,
+.attr-section-alt .attr-best-time,
+.attr-section-alt .attr-related-card {
+  background: #fff;
+}
+
+.attr-section-dark .attr-fact-card,
+.attr-section-dark .attr-activity-card,
+.attr-section-dark .attr-tip-card {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.06);
+}
+.attr-section-dark .attr-fact-card h4,
+.attr-section-dark .attr-activity-card h4,
+.attr-section-dark .attr-tip-card h4 {
+  color: #fff;
+}
+.attr-section-dark .attr-fact-card p,
+.attr-section-dark .attr-activity-card p,
+.attr-section-dark .attr-tip-card p {
+  color: var(--text-light);
+}
+.attr-section-dark .attr-timeline-item .timeline-title {
+  color: #fff;
+}
+.attr-section-dark .attr-timeline-item .timeline-text {
+  color: var(--text-light);
+}
+.attr-section-dark .attr-timeline::before {
+  background: linear-gradient(to bottom, var(--gold-light), rgba(200, 162, 78, 0.10));
+}
+.attr-section-dark .attr-timeline-item::before {
+  border-color: var(--navy);
+}
+
+
+/* ============================================================
+   RESPONSIVE — TABLET (≤ 1024px)
+   ============================================================ */
+@media (max-width: 1024px) {
+  .attr-overview {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .attr-overview-sidebar {
+    position: static;
+  }
+
+  .attr-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 220px;
+  }
+  .attr-gallery-item:first-child {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  .attr-gallery-item.span-2-row {
+    grid-row: span 1;
+  }
+
+  .attr-activities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .attr-related-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .attr-tips-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .attr-best-time {
+    position: static;
+  }
+}
+
+
+/* ============================================================
+   RESPONSIVE — MOBILE (≤ 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+  .attr-hero {
+    min-height: 88vh;
+  }
+  .attr-hero-title {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+  .attr-hero-subtitle {
+    font-size: 1rem;
+  }
+  .attr-hero-content {
+    padding-bottom: 60px;
+  }
+  .attr-hero-meta {
+    gap: 10px;
+  }
+  .attr-hero-meta-item {
+    padding: 10px 16px;
+  }
+  .attr-hero-meta-item i {
+    width: 28px;
+    height: 28px;
+    font-size: 0.88rem;
+  }
+  .attr-hero-meta-item .meta-value {
+    font-size: 0.82rem;
+  }
+  .attr-hero-breadcrumb {
+    font-size: 0.75rem;
+  }
+
+  /* Quick info */
+  .attr-quick-info .container {
+    gap: 6px;
+  }
+  .attr-info-item {
+    padding: 8px 14px;
+    font-size: 0.76rem;
+  }
+
+  /* Highlight strip */
+  .attr-highlight-strip {
+    flex-direction: column;
+    gap: 2px;
+    padding: 22px 0;
+  }
+  .attr-highlight-strip .strip-sep {
+    display: none;
+  }
+  .attr-highlight-strip .strip-item {
+    padding: 8px 20px;
+    font-size: 0.88rem;
+  }
+
+  /* Sections */
+  .attr-section,
+  .attr-gallery,
+  .attr-activities,
+  .attr-tips-section,
+  .attr-video,
+  .attr-related {
+    padding: 70px 0;
+  }
+
+  /* Overview */
+  .attr-overview {
+    gap: 36px;
+  }
+  .attr-overview-content h2 {
+    font-size: 1.7rem;
+  }
+  .attr-info-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Gallery */
+  .attr-gallery-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+  .attr-gallery-item,
+  .attr-gallery-item:first-child,
+  .attr-gallery-item.span-2-col {
+    grid-column: span 1;
+    grid-row: span 1;
+    height: 240px;
+  }
+
+  /* Activities */
+  .attr-activities-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  /* Related */
+  .attr-related-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Month grid */
+  .attr-month-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  .attr-month {
+    padding: 12px 6px;
+  }
+
+  /* Timeline */
+  .attr-timeline {
+    padding-left: 28px;
+  }
+  .attr-timeline-item::before {
+    left: -22px;
+    width: 12px;
+    height: 12px;
+  }
+  .attr-timeline::before {
+    left: 8px;
+  }
+}
+
+
+/* ============================================================
+   RESPONSIVE — SMALL MOBILE (≤ 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+  .attr-hero {
+    min-height: 78vh;
+  }
+  .attr-hero-title {
+    font-size: clamp(1.7rem, 9vw, 2.4rem);
+  }
+  .attr-hero-subtitle {
+    font-size: 0.92rem;
+    margin-bottom: 22px;
+  }
+  .attr-hero-meta {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .attr-hero-meta-item {
+    width: 100%;
+  }
+  .attr-hero-badge {
+    font-size: 0.65rem;
+    padding: 6px 16px;
+  }
+  .attr-hero-breadcrumb {
+    flex-wrap: wrap;
+    gap: 6px;
+    font-size: 0.7rem;
+  }
+
+  /* Quick info */
+  .attr-quick-info .container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+  .attr-info-item {
+    width: 100%;
+    justify-content: center;
+    border-radius: 10px;
+  }
+
+  /* Gallery items full width */
+  .attr-gallery-item {
+    height: 200px;
+  }
+
+  /* Info grid single column */
+  .attr-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Activity cards compact */
+  .attr-activity-card {
+    padding: 26px 22px;
+  }
+  .attr-activity-card .activity-meta {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  /* Tip cards */
+  .attr-tip-card {
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px 20px;
+  }
+
+  /* Best time card */
+  .attr-best-time {
+    padding: 24px 20px;
+  }
+  .attr-month-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .attr-month-legend {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* Related cards */
+  .attr-related-card-img {
+    height: 170px;
+  }
+
+  /* Sections minimal padding */
+  .attr-section,
+  .attr-gallery,
+  .attr-activities,
+  .attr-tips-section,
+  .attr-video,
+  .attr-related {
+    padding: 50px 0;
+  }
+
+  /* Overview */
+  .attr-overview-content h2 {
+    font-size: 1.45rem;
+  }
+  .attr-overview-content p {
+    font-size: 0.94rem;
+  }
+
+  /* Fact cards compact */
+  .attr-fact-card {
+    padding: 22px 20px;
+  }
+
+  /* Review stars smaller */
+  .attr-review-stars i {
+    font-size: 0.85rem;
+  }
+  .attr-review-stars .rating-number {
+    font-size: 0.85rem;
+  }
+}
+
+
+/* ============================================================
+   UTILITY: Glassmorphism modifiers for dark sections
+   ============================================================ */
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px) saturate(1.3);
+  -webkit-backdrop-filter: blur(20px) saturate(1.3);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-lg);
+}
+.glass-card-gold {
+  background: rgba(200, 162, 78, 0.06);
+  backdrop-filter: blur(20px) saturate(1.3);
+  -webkit-backdrop-filter: blur(20px) saturate(1.3);
+  border: 1px solid rgba(200, 162, 78, 0.12);
+  border-radius: var(--radius-lg);
+}
+
+
+/* ============================================================
+   PRINT STYLES
+   ============================================================ */
+@media print {
+  .attr-hero,
+  .attr-quick-info,
+  .attr-hero-particles,
+  .attr-hero-scroll,
+  .navbar {
+    display: none !important;
+  }
+  .attr-section,
+  .attr-gallery,
+  .attr-activities,
+  .attr-tips-section,
+  .attr-video,
+  .attr-related {
+    padding: 30px 0;
+    break-inside: avoid;
+  }
+}
+
+
+/* ============================================================
+   GENERATOR-HTML CLASS BRIDGES
+   Maps class names used in generate_attractions.js HTML to
+   the CSS component selectors above.
+   ============================================================ */
+
+/* === Hero Meta Row === */
+.attr-hero-meta-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.attr-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.75);
+  transition: var(--transition);
+}
+.attr-meta-item:hover {
+  background: rgba(200, 162, 78, 0.10);
+  border-color: rgba(200, 162, 78, 0.22);
+  transform: translateY(-3px);
+}
+.attr-meta-item i {
+  color: var(--gold);
+  font-size: 0.85rem;
+}
+.attr-meta-item strong {
+  color: #fff;
+  font-weight: 700;
+}
+
+/* === Particles inside .attr-hero (inheriting from dest-hero-particles) === */
+.attr-hero .dest-hero-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* === Highlight Strip items (generator uses plain <span>) === */
+.attr-highlight-strip > span:not(.strip-dot) {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 28px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  font-family: var(--font-display);
+  white-space: nowrap;
+}
+.attr-highlight-strip > span:not(.strip-dot) i {
+  color: var(--gold);
+  font-size: 1rem;
+}
+.strip-dot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  color: var(--gold);
+  opacity: 0.5;
+  font-size: 0.6rem;
+}
+
+/* === Activity Icon + Meta (generator class names) === */
+.attr-activity-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(200, 162, 78, 0.10), rgba(200, 162, 78, 0.04));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: var(--gold);
+  font-size: 1.4rem;
+  transition: var(--transition);
+}
+.attr-activity-card:hover .attr-activity-icon {
+  background: linear-gradient(135deg, rgba(200, 162, 78, 0.20), rgba(200, 162, 78, 0.08));
+  transform: scale(1.08);
+}
+.attr-activity-meta {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-top: 16px;
+  border-top: 1px solid #f0ebe3;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+.attr-activity-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.attr-activity-meta span i {
+  color: var(--gold);
+  font-size: 0.85rem;
+}
+
+/* === Difficulty dot === */
+.diff-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 4px;
+  background: #ddd;
+}
+.attr-difficulty.easy .diff-dot {
+  background: #22c55e;
+  box-shadow: 0 0 6px rgba(34, 197, 94, 0.35);
+}
+.attr-difficulty.moderate .diff-dot {
+  background: #f59e0b;
+  box-shadow: 0 0 6px rgba(245, 158, 11, 0.35);
+}
+.attr-difficulty.challenging .diff-dot {
+  background: #ef4444;
+  box-shadow: 0 0 6px rgba(239, 68, 68, 0.35);
+}
+
+/* === Timeline (generator uses attr-timeline-date / attr-timeline-text) === */
+.attr-timeline-date {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+  display: block;
+}
+.attr-timeline-text {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+/* === Fact items in sidebar (generator uses attr-fact-item) === */
+.attr-fact-item {
+  padding: 16px 14px;
+  background: rgba(200, 162, 78, 0.04);
+  border: 1px solid rgba(200, 162, 78, 0.08);
+  border-radius: var(--radius);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.attr-fact-item:hover {
+  border-color: rgba(200, 162, 78, 0.20);
+  background: rgba(200, 162, 78, 0.07);
+}
+.attr-fact-item i {
+  color: var(--gold);
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+.fact-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+.fact-value {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  font-family: var(--font-display);
+}
+
+/* === Gallery — generator uses attr-gallery-large + gallery-overlay === */
+.attr-gallery-large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(6, 13, 26, 0.80) 0%, rgba(6, 13, 26, 0.08) 50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  opacity: 0;
+  transition: var(--transition);
+}
+.attr-gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+.gallery-overlay i {
+  color: var(--gold);
+  font-size: 1.3rem;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: rgba(200, 162, 78, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(200, 162, 78, 0.30);
+  transition: var(--transition);
+}
+.attr-gallery-item:hover .gallery-overlay i {
+  transform: scale(1.12);
+  background: rgba(200, 162, 78, 0.28);
+}
+.gallery-overlay span {
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 500;
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  right: 18px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  line-height: 1.4;
+}
+
+/* === Month label (generator uses attr-month-label) === */
+.attr-month-label {
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* === Related cards (generator uses simple img + attr-related-overlay) === */
+.attr-related-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--navy);
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
+  position: relative;
+  display: block;
+  text-decoration: none;
+  height: 280px;
+}
+.attr-related-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+.attr-related-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+.attr-related-card:hover img {
+  transform: scale(1.1);
+}
+.attr-related-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(6, 13, 26, 0.92) 0%, rgba(6, 13, 26, 0.1) 55%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  transition: var(--transition);
+}
+.attr-related-card:hover .attr-related-overlay {
+  background: linear-gradient(to top, rgba(6, 13, 26, 0.96) 0%, rgba(6, 13, 26, 0.2) 60%);
+}
+.attr-related-overlay h4 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+  font-family: var(--font-display);
+}
+.attr-related-overlay span {
+  color: var(--gold-light);
+  font-size: 0.78rem;
+  opacity: 0.7;
+  transition: var(--transition);
+}
+.attr-related-card:hover .attr-related-overlay span {
+  opacity: 1;
+}
+.attr-related-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--gold);
+  background: rgba(200, 162, 78, 0.12);
+  border: 1px solid rgba(200, 162, 78, 0.2);
+  margin-bottom: 10px;
+  width: fit-content;
+}
+.attr-related-rating i {
+  color: var(--gold);
+  font-size: 0.72rem;
+}
+
+/* === Related grid (generator uses 3 cards, auto-fit) === */
+.attr-related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* === Scroll bounce animation === */
+@keyframes scrollBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(12px); }
+}
+
+/* === Tips layout that works with destination.css tips-grid === */
+.attr-tips-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* === Responsive overrides for new bridge classes === */
+@media (max-width: 1024px) {
+  .attr-tips-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .attr-gallery-large {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+}
+@media (max-width: 768px) {
+  .attr-hero-meta-row {
+    gap: 8px;
+  }
+  .attr-meta-item {
+    padding: 8px 14px;
+    font-size: 0.78rem;
+  }
+  .attr-gallery-large {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  .attr-related-card {
+    height: 220px;
+  }
+  .attr-related-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .attr-hero-meta-row {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .attr-meta-item {
+    width: 100%;
+  }
+  .attr-related-card {
+    height: 200px;
+  }
+  .attr-fact-item {
+    padding: 12px 10px;
+  }
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.logo-img:hover {
+  transform: scale(1.08);
+}
+
+
+/* --- HORUS GUIDE TRAVEL BRANDING --- */
+.logo-title {
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  display: block;
+}
+.logo-subtitle {
+  color: var(--gold);
+  font-family: var(--font-body);
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  line-height: 1.4;
+  display: block;
+  margin-top: 2px;
+}

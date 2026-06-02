@@ -1,0 +1,1013 @@
+@import url('destination.css');
+
+/* ============================================================
+   HORUS TRAVEL — ACTIVITIES PAGE
+   Luxury Cinematic Desert Aesthetic
+   ============================================================
+   Inherits: variables, navbar, footer, buttons, animations
+   from destination.css
+   ============================================================ */
+
+
+/* ============================================================
+   1. ACTIVITIES HERO
+   ============================================================ */
+.act-hero {
+  position: relative;
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--midnight);
+  text-align: center;
+}
+.act-hero-bg {
+  position: absolute;
+  inset: 0;
+}
+.act-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: heroKenBurns 40s ease-in-out infinite alternate;
+  will-change: transform;
+}
+@keyframes heroKenBurns {
+  0%   { transform: scale(1) translate(0, 0); }
+  50%  { transform: scale(1.08) translate(-0.5%, -0.3%); }
+  100% { transform: scale(1.12) translate(-1%, 0.2%); }
+}
+.act-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top,
+      rgba(6, 13, 26, 0.98) 0%,
+      rgba(6, 13, 26, 0.60) 35%,
+      rgba(6, 13, 26, 0.25) 55%,
+      rgba(6, 13, 26, 0.45) 100%
+    );
+  z-index: 1;
+}
+.act-hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 820px;
+  padding: 0 20px;
+}
+.act-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 22px;
+  border-radius: 50px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(200, 162, 78, 0.10);
+  border: 1px solid rgba(200, 162, 78, 0.22);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  margin-bottom: 28px;
+}
+.act-hero-badge i { font-size: 0.85rem; }
+.act-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 7vw, 4.5rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 22px;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  text-shadow: 0 6px 50px rgba(0, 0, 0, 0.45);
+}
+.act-hero-title em {
+  font-style: normal;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.act-hero-subtitle {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 1.15rem;
+  max-width: 620px;
+  margin: 0 auto 38px;
+  line-height: 1.85;
+}
+.act-hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.act-hero-stat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  transition: var(--transition);
+}
+.act-hero-stat:hover {
+  background: rgba(200, 162, 78, 0.10);
+  border-color: rgba(200, 162, 78, 0.22);
+  transform: translateY(-3px);
+}
+.act-hero-stat i {
+  color: var(--gold);
+  font-size: 1rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(200, 162, 78, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.act-hero-stat .stat-value {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #fff;
+}
+.act-hero-scroll {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  color: var(--gold);
+  font-size: 1.3rem;
+  animation: actScrollBounce 2.5s ease-in-out infinite;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(200, 162, 78, 0.08);
+  border: 1px solid rgba(200, 162, 78, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  text-decoration: none;
+}
+@keyframes actScrollBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(12px); }
+}
+
+/* Particles */
+.act-hero-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+  pointer-events: none;
+}
+.act-hero-particles .particle {
+  position: absolute;
+  color: rgba(200, 162, 78, 0.10);
+  font-size: 1.5rem;
+  animation: particleFloat linear infinite;
+  will-change: transform;
+}
+.act-hero-particles .particle:nth-child(1) { left: 6%;  animation-duration: 26s; animation-delay: 0s;   font-size: 1.1rem; }
+.act-hero-particles .particle:nth-child(2) { left: 18%; animation-duration: 32s; animation-delay: -5s;  font-size: 1.6rem; }
+.act-hero-particles .particle:nth-child(3) { left: 32%; animation-duration: 24s; animation-delay: -9s;  font-size: 0.95rem; }
+.act-hero-particles .particle:nth-child(4) { left: 48%; animation-duration: 28s; animation-delay: -3s;  font-size: 1.4rem; }
+.act-hero-particles .particle:nth-child(5) { left: 62%; animation-duration: 34s; animation-delay: -7s;  font-size: 1.2rem; }
+.act-hero-particles .particle:nth-child(6) { left: 78%; animation-duration: 27s; animation-delay: -12s; font-size: 1.7rem; }
+.act-hero-particles .particle:nth-child(7) { left: 90%; animation-duration: 30s; animation-delay: -4s;  font-size: 1.05rem; }
+@keyframes particleFloat {
+  0%   { transform: translateY(105vh) rotate(0deg);   opacity: 0; }
+  8%   { opacity: 0.8; }
+  92%  { opacity: 0.8; }
+  100% { transform: translateY(-12vh) rotate(360deg);  opacity: 0; }
+}
+
+
+/* ============================================================
+   2. CATEGORY FILTER BAR
+   ============================================================ */
+.act-filter {
+  padding: 0;
+  background: var(--warm-white);
+  border-bottom: 1px solid rgba(200, 162, 78, 0.08);
+  position: sticky;
+  top: 68px;
+  z-index: 99;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.act-filter .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 16px 20px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.act-filter .container::-webkit-scrollbar { display: none; }
+.act-filter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 20px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1.5px solid rgba(200, 162, 78, 0.10);
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+  font-family: var(--font-body);
+}
+.act-filter-pill:hover {
+  color: var(--gold-dark);
+  border-color: rgba(200, 162, 78, 0.30);
+  background: rgba(200, 162, 78, 0.05);
+  transform: translateY(-2px);
+}
+.act-filter-pill.active {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: var(--navy);
+  border-color: var(--gold);
+  box-shadow: 0 4px 16px rgba(200, 162, 78, 0.25);
+}
+.act-filter-pill i {
+  font-size: 0.85rem;
+}
+.act-filter-count {
+  font-size: 0.68rem;
+  padding: 2px 7px;
+  border-radius: 50px;
+  background: rgba(200, 162, 78, 0.12);
+  color: var(--gold-dark);
+  font-weight: 700;
+  margin-left: 2px;
+}
+.act-filter-pill.active .act-filter-count {
+  background: rgba(10, 22, 40, 0.15);
+  color: var(--navy);
+}
+
+
+/* ============================================================
+   3. SECTION HEADER (overrides for activities)
+   ============================================================ */
+.act-section {
+  padding: 100px 0;
+  position: relative;
+}
+.act-section-alt {
+  background: var(--papyrus);
+}
+.act-section-dark {
+  background: var(--navy);
+}
+.act-section-dark .section-tag   { color: var(--gold-light); }
+.act-section-dark .section-title { color: #fff; }
+.act-section-dark .section-subtitle { color: rgba(255,255,255,0.55); }
+
+
+/* ============================================================
+   4. ACTIVITY CARDS — MAIN GRID
+   ============================================================ */
+.act-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.act-grid.two-col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* --- Individual Activity Card --- */
+.act-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(200, 162, 78, 0.06);
+  transition: var(--transition);
+  cursor: pointer;
+}
+.act-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
+  opacity: 0;
+  transition: var(--transition);
+  z-index: 3;
+}
+.act-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 24px 60px rgba(10, 22, 40, 0.16);
+  border-color: rgba(200, 162, 78, 0.18);
+}
+.act-card:hover::before {
+  opacity: 1;
+}
+
+/* Card Image */
+.act-card-img {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+}
+.act-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease), filter 0.5s ease;
+}
+.act-card:hover .act-card-img img {
+  transform: scale(1.12);
+  filter: brightness(1.05) saturate(1.1);
+}
+.act-card-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top,
+    rgba(6, 13, 26, 0.70) 0%,
+    rgba(6, 13, 26, 0) 45%
+  );
+  z-index: 1;
+  transition: var(--transition);
+}
+.act-card:hover .act-card-img-overlay {
+  background: linear-gradient(to top,
+    rgba(6, 13, 26, 0.80) 0%,
+    rgba(6, 13, 26, 0.05) 50%
+  );
+}
+
+/* Category badge on image */
+.act-card-category {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba(6, 13, 26, 0.60);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.act-card-category i { font-size: 0.75rem; color: var(--gold-light); }
+
+/* Difficulty & budget badges on image */
+.act-card-badges {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-end;
+}
+.act-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: 50px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+.act-badge-difficulty {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.act-badge-difficulty.easy {
+  background: rgba(34, 197, 94, 0.20);
+  color: #4ade80;
+}
+.act-badge-difficulty.moderate {
+  background: rgba(245, 158, 11, 0.20);
+  color: #fbbf24;
+}
+.act-badge-difficulty.challenging {
+  background: rgba(239, 68, 68, 0.20);
+  color: #f87171;
+}
+.act-badge-budget {
+  background: rgba(200, 162, 78, 0.18);
+  color: var(--gold-light);
+  font-size: 0.72rem;
+  letter-spacing: 0;
+}
+
+/* Duration on image bottom */
+.act-card-duration {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(6, 13, 26, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.act-card-duration i {
+  color: var(--gold-light);
+  font-size: 0.7rem;
+}
+
+/* Card Body */
+.act-card-body {
+  padding: 28px 26px;
+}
+.act-card-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  transition: var(--transition);
+}
+.act-card:hover .act-card-body h3 {
+  color: var(--gold-dark);
+}
+.act-card-body p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+
+/* Card footer meta */
+.act-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+  border-top: 1px solid rgba(200, 162, 78, 0.08);
+}
+.act-card-meta-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.act-card-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+.act-card-meta-item i {
+  color: var(--gold);
+  font-size: 0.8rem;
+}
+.act-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gold-dark);
+  transition: var(--transition);
+  text-decoration: none;
+}
+.act-card-cta i {
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+}
+.act-card:hover .act-card-cta {
+  color: var(--gold);
+}
+.act-card:hover .act-card-cta i {
+  transform: translateX(4px);
+}
+
+/* --- Featured / Large Card Variant --- */
+.act-card-featured {
+  grid-column: span 2;
+}
+.act-card-featured .act-card-img {
+  height: 340px;
+}
+.act-card-featured .act-card-body h3 {
+  font-size: 1.5rem;
+}
+
+/* --- Shimmer loading animation for images --- */
+.act-card-img.loading::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(200, 162, 78, 0.08) 50%,
+    transparent 100%
+  );
+  animation: shimmer 1.5s infinite;
+}
+@keyframes shimmer {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+
+/* ============================================================
+   5. EXPERIENCE HIGHLIGHTS STRIP
+   ============================================================ */
+.act-highlights {
+  padding: 40px 0;
+  background: linear-gradient(135deg, rgba(200, 162, 78, 0.04), rgba(200, 162, 78, 0.01));
+  border-top: 1px solid rgba(200, 162, 78, 0.08);
+  border-bottom: 1px solid rgba(200, 162, 78, 0.08);
+}
+.act-highlights .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+.act-highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 32px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  font-family: var(--font-display);
+  white-space: nowrap;
+}
+.act-highlight-item i {
+  color: var(--gold);
+  font-size: 1.1rem;
+}
+.act-highlight-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  opacity: 0.4;
+  flex-shrink: 0;
+}
+
+
+/* ============================================================
+   6. DIFFICULTY & BUDGET LEGEND
+   ============================================================ */
+.act-legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  padding: 24px;
+  margin-bottom: 50px;
+  background: rgba(200, 162, 78, 0.03);
+  border: 1px solid rgba(200, 162, 78, 0.08);
+  border-radius: var(--radius-lg);
+}
+.act-legend-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.act-legend-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  margin-right: 4px;
+}
+.act-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: var(--text-body);
+}
+.act-legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.act-legend-dot.easy { background: #22c55e; box-shadow: 0 0 6px rgba(34,197,94,0.3); }
+.act-legend-dot.moderate { background: #f59e0b; box-shadow: 0 0 6px rgba(245,158,11,0.3); }
+.act-legend-dot.challenging { background: #ef4444; box-shadow: 0 0 6px rgba(239,68,68,0.3); }
+
+
+/* ============================================================
+   7. WHY CHOOSE US SECTION
+   ============================================================ */
+.act-why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+.act-why-card {
+  padding: 40px 28px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.act-why-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  opacity: 0;
+  transition: var(--transition);
+}
+.act-why-card:hover {
+  background: rgba(200, 162, 78, 0.06);
+  border-color: rgba(200, 162, 78, 0.15);
+  transform: translateY(-8px);
+}
+.act-why-card:hover::before { opacity: 1; }
+.act-why-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: rgba(200, 162, 78, 0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 22px;
+  color: var(--gold);
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+.act-why-card:hover .act-why-icon {
+  background: rgba(200, 162, 78, 0.18);
+  transform: scale(1.1);
+}
+.act-why-card h4 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.act-why-card p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+
+/* ============================================================
+   8. POPULAR COMBOS SECTION
+   ============================================================ */
+.act-combo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.act-combo-card {
+  padding: 36px 28px;
+  background: #fff;
+  border: 1px solid rgba(200, 162, 78, 0.08);
+  border-radius: var(--radius-lg);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.act-combo-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
+  opacity: 0;
+  transition: var(--transition);
+}
+.act-combo-card:hover {
+  border-color: rgba(200, 162, 78, 0.20);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-8px);
+}
+.act-combo-card:hover::before { opacity: 1; }
+.act-combo-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--gold-dark);
+  background: rgba(200, 162, 78, 0.08);
+  margin-bottom: 16px;
+}
+.act-combo-card h4 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+.act-combo-card p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.act-combo-activities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+.act-combo-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 14px;
+  border-radius: 50px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-body);
+  background: rgba(200, 162, 78, 0.06);
+  border: 1px solid rgba(200, 162, 78, 0.10);
+}
+.act-combo-pill i { color: var(--gold); font-size: 0.7rem; }
+.act-combo-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+  border-top: 1px solid rgba(200, 162, 78, 0.08);
+}
+.act-combo-price {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--gold-dark);
+}
+.act-combo-price span {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+}
+.act-combo-duration {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+.act-combo-duration i { color: var(--gold); }
+
+
+/* ============================================================
+   9. CTA SECTION (reuse dest-cta from destination.css)
+   ============================================================ */
+/* Already inherited. Additional spacing adjustments: */
+.act-cta { position: relative; }
+
+
+/* ============================================================
+   10. ANIMATIONS & TRANSITIONS
+   ============================================================ */
+/* Filter transition for cards */
+.act-card.hidden {
+  opacity: 0;
+  transform: scale(0.9) translateY(20px);
+  pointer-events: none;
+  position: absolute;
+  visibility: hidden;
+}
+.act-card.showing {
+  animation: cardAppear 0.5s var(--ease-bounce) forwards;
+}
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* No-results message */
+.act-no-results {
+  display: none;
+  text-align: center;
+  padding: 80px 20px;
+  grid-column: 1 / -1;
+}
+.act-no-results.visible {
+  display: block;
+}
+.act-no-results i {
+  font-size: 3rem;
+  color: var(--gold);
+  margin-bottom: 20px;
+  opacity: 0.4;
+}
+.act-no-results h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+.act-no-results p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+
+/* ============================================================
+   RESPONSIVE — TABLET (≤ 1024px)
+   ============================================================ */
+@media (max-width: 1024px) {
+  .act-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .act-card-featured {
+    grid-column: span 2;
+  }
+  .act-why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .act-combo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* ============================================================
+   RESPONSIVE — MOBILE (≤ 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+  .act-hero {
+    min-height: 65vh;
+  }
+  .act-hero-title {
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
+  .act-hero-subtitle {
+    font-size: 1rem;
+  }
+  .act-hero-stats {
+    gap: 8px;
+  }
+  .act-hero-stat {
+    padding: 10px 16px;
+  }
+  .act-hero-stat i { width: 30px; height: 30px; font-size: 0.9rem; }
+  .act-hero-stat .stat-value { font-size: 0.82rem; }
+
+  .act-filter .container {
+    justify-content: flex-start;
+    padding: 12px 16px;
+    gap: 6px;
+  }
+  .act-filter-pill {
+    padding: 7px 14px;
+    font-size: 0.74rem;
+  }
+
+  .act-section {
+    padding: 70px 0;
+  }
+
+  .act-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .act-card-featured {
+    grid-column: span 1;
+  }
+  .act-card-featured .act-card-img {
+    height: 260px;
+  }
+  .act-card-img {
+    height: 220px;
+  }
+
+  .act-highlights .container {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .act-highlight-dot { display: none; }
+  .act-highlight-item {
+    padding: 10px 20px;
+    font-size: 0.88rem;
+  }
+
+  .act-legend {
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .act-why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .act-combo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ============================================================
+   RESPONSIVE — SMALL MOBILE (≤ 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+  .act-hero {
+    min-height: 60vh;
+  }
+  .act-hero-stats {
+    flex-direction: column;
+  }
+  .act-hero-stat {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .act-card-body {
+    padding: 22px 20px;
+  }
+  .act-card-body h3 {
+    font-size: 1.1rem;
+  }
+  .act-card-body p {
+    font-size: 0.85rem;
+  }
+
+  .act-card-meta {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .act-combo-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.logo-img:hover {
+  transform: scale(1.08);
+}
