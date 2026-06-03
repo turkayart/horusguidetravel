@@ -40,6 +40,28 @@ if (navToggle && navLinks) {
       spans[2].style.transform = '';
     });
   });
+
+  // ====== Dynamic Mobile CTA Injection ======
+  const desktopCta = document.querySelector('.nav-cta');
+  if (desktopCta) {
+    const mobileCtaExists = navLinks.querySelector('.nav-mobile-cta');
+    if (!mobileCtaExists) {
+      const mobileCta = document.createElement('a');
+      mobileCta.href = desktopCta.getAttribute('href');
+      mobileCta.className = 'nav-mobile-cta';
+      mobileCta.innerHTML = desktopCta.innerHTML;
+      navLinks.appendChild(mobileCta);
+      
+      // Close mobile nav when clicking the injected CTA
+      mobileCta.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        const spans = navToggle.querySelectorAll('span');
+        spans[0].style.transform = '';
+        spans[1].style.opacity = '';
+        spans[2].style.transform = '';
+      });
+    }
+  }
 }
 
 // ====== Dropdown Navigation ======

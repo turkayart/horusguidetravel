@@ -15,10 +15,32 @@ navToggle.addEventListener('click', () => {
 // Close mobile nav on link click
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
+    if (link.parentElement.classList.contains('nav-dropdown') && window.innerWidth <= 768) {
+      return;
+    }
     navLinks.classList.remove('active');
     navToggle.classList.remove('active');
   });
 });
+
+// ====== Dynamic Mobile CTA Injection ======
+const desktopCta = document.querySelector('.nav-cta');
+if (desktopCta && navLinks) {
+  const mobileCtaExists = navLinks.querySelector('.nav-mobile-cta');
+  if (!mobileCtaExists) {
+    const mobileCta = document.createElement('a');
+    mobileCta.href = desktopCta.getAttribute('href');
+    mobileCta.className = 'nav-mobile-cta';
+    mobileCta.innerHTML = desktopCta.innerHTML;
+    navLinks.appendChild(mobileCta);
+    
+    // Close mobile nav when clicking the injected CTA
+    mobileCta.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      navToggle.classList.remove('active');
+    });
+  }
+}
 
 // ====== Dropdown Navigation ======
 const dropdowns = document.querySelectorAll('.nav-dropdown');

@@ -54,6 +54,7 @@ a { text-decoration: none; color: inherit; transition: var(--transition-fast); }
 img { max-width: 100%; display: block; }
 ul { list-style: none; }
 .container { max-width: 1280px; margin: 0 auto; padding: 0 28px; }
+.nav-mobile-cta { display: none; }
 
 /* ============================================================
    NAVBAR
@@ -1103,7 +1104,7 @@ ul { list-style: none; }
 
 @media (max-width: 768px) {
   .container { padding: 0 20px; }
-  .nav-links { display: none; }
+  .nav-links, .nav-right { display: none; }
   .nav-toggle { display: flex; }
   .nav-links.active {
     display: flex; flex-direction: column;
@@ -1114,6 +1115,22 @@ ul { list-style: none; }
     padding: 28px; gap: 18px;
     border-bottom: 1px solid rgba(200,162,78,0.1);
   }
+  .nav-mobile-cta {
+    display: block;
+    text-align: center;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: var(--navy) !important;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-top: 8px;
+    box-shadow: 0 4px 15px rgba(200,162,78,0.25);
+    transition: var(--transition);
+  }
+  .nav-mobile-cta:hover {
+    transform: translateY(-2px);
+  }
   .dest-hero { min-height: 85vh; }
   .dest-hero-title { font-size: clamp(2.4rem, 10vw, 3.5rem); }
   .dest-hero-content { padding-bottom: 70px; }
@@ -1122,7 +1139,16 @@ ul { list-style: none; }
   .dest-hero-stat i { width: 30px; height: 30px; font-size: 0.95rem; }
   .dest-hero-stat .stat-value { font-size: 0.85rem; }
   .dest-hero-meta { gap: 14px; }
-  .quick-nav .container { gap: 6px; }
+  .quick-nav .container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 4px 10px;
+    scrollbar-width: none;
+    gap: 6px;
+  }
+  .quick-nav .container::-webkit-scrollbar { display: none; }
   .quick-nav-pill { padding: 8px 14px; font-size: 0.76rem; }
   .dest-section { padding: 70px 0; }
   .section-header { margin-bottom: 44px; }
@@ -1149,7 +1175,6 @@ ul { list-style: none; }
   .dest-hero { min-height: 75vh; }
   .dest-hero-stats { flex-direction: column; }
   .dest-hero-meta { flex-direction: column; gap: 10px; }
-  .other-cities-grid { grid-template-columns: 1fr; }
   .dest-cta-buttons { flex-direction: column; align-items: center; }
   .lightbox-prev, .lightbox-next { display: none; }
   .dest-cta-content h2 { font-size: 1.6rem; }

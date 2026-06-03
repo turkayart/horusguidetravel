@@ -910,6 +910,7 @@
   .act-hero-stat .stat-value { font-size: 0.82rem; }
 
   .act-filter .container {
+    flex-wrap: nowrap;
     justify-content: flex-start;
     padding: 12px 16px;
     gap: 6px;

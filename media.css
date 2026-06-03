@@ -616,7 +616,16 @@
   }
 
   .horus-proof-strip {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 8px;
+    scrollbar-width: none;
+  }
+  .horus-proof-strip::-webkit-scrollbar { display: none; }
+  .horus-proof {
+    flex: 0 0 150px;
+    padding: 12px;
   }
 
   .horus-media-mosaic,

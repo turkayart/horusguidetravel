@@ -32,6 +32,9 @@ if (navToggle && navLinks) {
 
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
+      if (link.parentElement.classList.contains('nav-dropdown') && window.innerWidth <= 768) {
+        return;
+      }
       navLinks.classList.remove('active');
       navToggle.querySelectorAll('span').forEach(s => {
         s.style.transform = '';
@@ -39,6 +42,28 @@ if (navToggle && navLinks) {
       });
     });
   });
+
+  // ====== Dynamic Mobile CTA Injection ======
+  const desktopCta = document.querySelector('.nav-cta');
+  if (desktopCta) {
+    const mobileCtaExists = navLinks.querySelector('.nav-mobile-cta');
+    if (!mobileCtaExists) {
+      const mobileCta = document.createElement('a');
+      mobileCta.href = desktopCta.getAttribute('href');
+      mobileCta.className = 'nav-mobile-cta';
+      mobileCta.innerHTML = desktopCta.innerHTML;
+      navLinks.appendChild(mobileCta);
+      
+      // Close mobile nav when clicking the injected CTA
+      mobileCta.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        navToggle.querySelectorAll('span').forEach(s => {
+          s.style.transform = '';
+          s.style.opacity = '';
+        });
+      });
+    }
+  }
 }
 
 // ====== Dropdown Navigation ======
