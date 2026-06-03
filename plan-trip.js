@@ -3,6 +3,10 @@
 //  4-Step: Trip Preferences → Personal → Contact → Review
 // ====================================================
 
+// --- Configuration ---
+// Get your free access key from https://web3forms.com/ (no registration needed, just enter your email)
+const WEB3FORMS_ACCESS_KEY = "257b75cc-fd58-464d-b43e-0e6758aa52a4";
+
 let currentStep = 1;
 const totalSteps = 4;
 
@@ -352,8 +356,14 @@ function buildReview() {
   `;
 }
 
-function submitForm() {
-  // Extract all selections for WhatsApp and Email dispatch
+async function submitForm() {
+  const submitBtn = document.querySelector('.pt-btn-submit');
+  if (!submitBtn) return;
+
+  // Prevent double submissions
+  if (submitBtn.disabled) return;
+
+  // Extract all selections
   const dests = Array.from(document.querySelectorAll('input[name="destination"]:checked')).map(c => c.value);
   const budget = document.querySelector('input[name="budget"]:checked')?.value || '—';
   const style = document.querySelector('input[name="style"]:checked')?.value || '—';
@@ -373,7 +383,7 @@ function submitForm() {
   
   const fullName = `${firstName} ${lastName}`;
 
-  // Formulate elegant, structured text block
+  // Formulate elegant, structured text block for WhatsApp / Email Fallback
   let messageText = `𓂀 *Horus Guide Travel — New Trip Plan Request* 𓂀\n\n`;
   messageText += `👤 *Name:* ${fullName}\n`;
   messageText += `✉️ *Email:* ${email}\n`;
@@ -392,7 +402,7 @@ function submitForm() {
 
   const subjectText = `Horus Guide Travel - New Trip Plan Request (${fullName})`;
 
-  // Construct final APIs URLs
+  // Construct links
   const waUrl = `https://wa.me/201070430634?text=${encodeURIComponent(messageText)}`;
   const mailtoUrl = `mailto:turkayduru7@gmail.com?subject=${encodeURIComponent(subjectText)}&body=${encodeURIComponent(messageText)}`;
 
@@ -403,22 +413,89 @@ function submitForm() {
   const mailBtn = document.getElementById('success-mail-btn');
   if (mailBtn) mailBtn.href = mailtoUrl;
 
-  // Open WhatsApp in a new tab (user-initiated click event ignores popups blocks)
-  window.open(waUrl, '_blank');
+  // If the user hasn't changed the default placeholder key, fallback to local client immediately
+  if (!WEB3FORMS_ACCESS_KEY || WEB3FORMS_ACCESS_KEY === "YOUR_WEB3FORMS_ACCESS_KEY") {
+    // Open WhatsApp in a new tab
+    window.open(waUrl, '_blank');
+    // Trigger default system Email client composer
+    window.location.href = mailtoUrl;
 
-  // Trigger default system Email client composer
-  window.location.href = mailtoUrl;
+    showSuccessState();
+    return;
+  }
 
+  // Show Loading State on submit button
+  const originalBtnHtml = submitBtn.innerHTML;
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Sending Request...`;
+  submitBtn.style.opacity = '0.7';
+  submitBtn.style.cursor = 'not-allowed';
+
+  try {
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        access_key: WEB3FORMS_ACCESS_KEY,
+        subject: subjectText,
+        from_name: "Horus Guide Travel Website",
+        name: fullName,
+        email: email,
+        phone: phone,
+        preferred_contact: preferredContact,
+        destinations: dests.join(', ') || 'None',
+        budget: budget,
+        travel_style: style,
+        accommodation: accommodation,
+        travelers: peopleText,
+        duration: daysText,
+        special_requests: requests || "None"
+      })
+    });
+
+    const result = await response.json();
+
+    if (response.ok) {
+      showSuccessState();
+    } else {
+      console.warn("Web3Forms API error, falling back to mailto/whatsapp:", result);
+      // Fallback
+      window.open(waUrl, '_blank');
+      window.location.href = mailtoUrl;
+      showSuccessState();
+    }
+  } catch (error) {
+    console.warn("Network error, falling back to mailto/whatsapp:", error);
+    // Fallback
+    window.open(waUrl, '_blank');
+    window.location.href = mailtoUrl;
+    showSuccessState();
+  } finally {
+    // Reset button state
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = originalBtnHtml;
+    submitBtn.style.opacity = '';
+    submitBtn.style.cursor = '';
+  }
+}
+
+function showSuccessState() {
   // Hide all steps
   document.querySelectorAll('.pt-step').forEach(s => s.classList.remove('active'));
 
   // Show success
   const successEl = document.getElementById('successPanel');
-  successEl.classList.add('active');
+  if (successEl) successEl.classList.add('active');
 
   // Hide progress
-  document.getElementById('ptProgress').style.opacity = '0.3';
-  document.getElementById('ptProgress').style.pointerEvents = 'none';
+  const progressEl = document.getElementById('ptProgress');
+  if (progressEl) {
+    progressEl.style.opacity = '0.3';
+    progressEl.style.pointerEvents = 'none';
+  }
 
   // Scroll to top
   document.getElementById('ptFormArea').scrollIntoView({ behavior: 'smooth', block: 'start' });
