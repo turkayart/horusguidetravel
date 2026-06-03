@@ -80,21 +80,32 @@ const animObserver = new IntersectionObserver((entries) => {
   rootMargin: '0px 0px -50px 0px'
 });
 
+window.animObserver = animObserver;
+
 document.querySelectorAll('.fade-up, .fade-left, .fade-right, .scale-in').forEach(el => {
   animObserver.observe(el);
 });
 
 // ====== Quick Nav Active State ======
-const quickNavPills = document.querySelectorAll('.quick-nav-pill');
-const trackedSections = [];
+let quickNavPills = [];
+let trackedSections = [];
 
-quickNavPills.forEach(pill => {
-  const href = pill.getAttribute('href');
-  if (href && href.startsWith('#')) {
-    const section = document.querySelector(href);
-    if (section) trackedSections.push({ pill, section });
-  }
-});
+function initQuickNav() {
+  quickNavPills = document.querySelectorAll('.quick-nav-pill');
+  trackedSections = [];
+  quickNavPills.forEach(pill => {
+    const href = pill.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      const section = document.querySelector(href);
+      if (section) trackedSections.push({ pill, section });
+    }
+  });
+}
+
+// Initial binding of static pills
+initQuickNav();
+// Re-bind when dynamically injected pills are present on full page load
+window.addEventListener('load', initQuickNav);
 
 function updateActiveNav() {
   const scrollPos = window.scrollY + 220;
@@ -116,16 +127,17 @@ function updateActiveNav() {
 window.addEventListener('scroll', updateActiveNav, { passive: true });
 
 // ====== Smooth Scroll for Anchor Links ======
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    const target = document.querySelector(this.getAttribute('href'));
+document.addEventListener('click', function (e) {
+  const anchor = e.target.closest('a[href^="#"]');
+  if (anchor) {
+    const target = document.querySelector(anchor.getAttribute('href'));
     if (target) {
       e.preventDefault();
       const offset = 90;
       const top = target.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top, behavior: 'smooth' });
     }
-  });
+  }
 });
 
 // ====== Gallery Lightbox ======

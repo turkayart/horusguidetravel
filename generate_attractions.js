@@ -19,9 +19,9 @@ const attractions = [
     subtitle: "The Last Surviving Wonder of the Ancient World",
     badge: "UNESCO Heritage",
     badgeIcon: "landmark",
-    city: "Giza",
-    cityPage: "giza.html",
-    heroImg: "../images/hero-giza.png",
+    city: "Cairo",
+    cityPage: "cairo.html",
+    heroImg: "../images/hero-pyramids-premium.jpg",
     rating: "4.9",
     reviewCount: "48,200",
     duration: "3-4 hours",
@@ -56,12 +56,12 @@ const attractions = [
       {icon: "fa-binoculars", name: "Sphinx Exploration", desc: "Get up close to the Great Sphinx, the 73-meter limestone statue guarding the Giza plateau.", duration: "30 min", difficulty: "Easy"}
     ],
     gallery: [
-      {src: "../cairo/spencer-davis-ONVA6s03hg8-unsplash.jpg", caption: "Great Pyramid of Khufu"},
-      {src: "../cairo/spencer-davis-TBNbpd6Xs_4-unsplash.jpg", caption: "The Great Sphinx"},
-      {src: "../images/hero-giza.png", caption: "Giza Plateau at Sunset"},
-      {src: "../cairo/andres-dallimonti-00Xo8z-bimM-unsplash.jpg", caption: "Camel Ride"},
-      {src: "../cairo/alex-azabache-hz4tKDvQHoo-unsplash.jpg", caption: "Pyramid Complex"},
-      {src: "../cairo/spencer-davis-MVW_MUwusDs-unsplash.jpg", caption: "Solar Boat Museum"}
+      {src: "../images/hero-pyramids.jpg", caption: "Great Pyramid of Khufu"},
+      {src: "../images/sphinx.jpg", caption: "The Great Sphinx"},
+      {src: "../images/hero-giza.jpg", caption: "Giza Plateau at Sunset"},
+      {src: "../images/hero-pyramids-premium.jpg", caption: "Camel Ride"},
+      {src: "../images/hero-pyramids.jpg", caption: "Pyramid Complex"},
+      {src: "../images/hero-pyramids.jpg", caption: "Solar Boat Museum"}
     ],
     tips: [
       {icon: "🌅", title: "Arrive at 7 AM", desc: "Beat the crowds and the heat by arriving right at opening. The light is magical for photos."},
@@ -75,9 +75,9 @@ const attractions = [
     bestTimeNote: "October to March offers the most comfortable weather for exploring the plateau.",
     videoHighlights: ["4,500 years of history", "Last surviving Ancient Wonder", "Iconic sunset camel rides", "Mysterious interior chambers"],
     related: [
-      {id: "sphinx", name: "The Great Sphinx", city: "Giza", img: "../cairo/spencer-davis-TBNbpd6Xs_4-unsplash.jpg", rating: "4.9"},
-      {id: "egyptian-museum", name: "Egyptian Museum", city: "Cairo", img: "../cairo/osama-elsayed-vqRMXgVtGXM-unsplash.jpg", rating: "4.8"},
-      {id: "khan-el-khalili", name: "Khan El Khalili", city: "Cairo", img: "../images/gallery-cairo-khan.png", rating: "4.6"}
+      {id: "sphinx", name: "The Great Sphinx", city: "Cairo", img: "../images/sphinx.jpg", rating: "4.9"},
+      {id: "egyptian-museum", name: "Egyptian Museum", city: "Cairo", img: "../images/grand_egyptian_museum.jpg", rating: "4.8"},
+      {id: "khan-el-khalili", name: "Khan El Khalili", city: "Cairo", img: "../images/gallery-cairo-khan.jpg", rating: "4.6"}
     ]
   },
   {
@@ -86,9 +86,9 @@ const attractions = [
     subtitle: "The Enigmatic Guardian of the Giza Plateau",
     badge: "Iconic Landmark",
     badgeIcon: "monument",
-    city: "Giza",
-    cityPage: "giza.html",
-    heroImg: "../cairo/spencer-davis-TBNbpd6Xs_4-unsplash.jpg",
+    city: "Cairo",
+    cityPage: "cairo.html",
+    heroImg: "../images/sphinx.jpg",
     rating: "4.9",
     reviewCount: "35,800",
     duration: "1-2 hours",
@@ -123,12 +123,12 @@ const attractions = [
       {icon: "fa-map", name: "Full Plateau Tour", desc: "Combine with a walking tour of the entire Giza Necropolis for the complete experience.", duration: "4 hrs", difficulty: "Moderate"}
     ],
     gallery: [
-      {src: "../cairo/spencer-davis-TBNbpd6Xs_4-unsplash.jpg", caption: "The Great Sphinx"},
-      {src: "../cairo/spencer-davis-ONVA6s03hg8-unsplash.jpg", caption: "Sphinx and Pyramids"},
-      {src: "../images/hero-giza.png", caption: "Giza Plateau View"},
-      {src: "../cairo/alex-azabache-hz4tKDvQHoo-unsplash.jpg", caption: "Sphinx at Dusk"},
-      {src: "../cairo/andres-dallimonti-00Xo8z-bimM-unsplash.jpg", caption: "Desert Panorama"},
-      {src: "../images/hero-pyramids.png", caption: "Giza Complex"}
+      {src: "../images/sphinx.jpg", caption: "The Great Sphinx"},
+      {src: "../images/hero-pyramids.jpg", caption: "Sphinx and Pyramids"},
+      {src: "../images/hero-giza.jpg", caption: "Giza Plateau View"},
+      {src: "../images/hero-pyramids.jpg", caption: "Sphinx at Dusk"},
+      {src: "../images/hero-pyramids-premium.jpg", caption: "Desert Panorama"},
+      {src: "../images/hero-pyramids.jpg", caption: "Giza Complex"}
     ],
     tips: [
       {icon: "📸", title: "Best Photo Angle", desc: "The most iconic angle is from the southeast, where the Sphinx aligns with Khafre's Pyramid."},
@@ -142,9 +142,9 @@ const attractions = [
     bestTimeNote: "October to March for comfortable temperatures. Sunrise visits year-round are magical.",
     videoHighlights: ["World's largest monolith statue", "4,500 years of silent watch", "Enigmatic missing nose mystery", "Dramatic Sound & Light Show"],
     related: [
-      {id: "pyramids-of-giza", name: "Pyramids of Giza", city: "Giza", img: "../cairo/spencer-davis-ONVA6s03hg8-unsplash.jpg", rating: "4.9"},
-      {id: "egyptian-museum", name: "Egyptian Museum", city: "Cairo", img: "../cairo/osama-elsayed-vqRMXgVtGXM-unsplash.jpg", rating: "4.8"},
-      {id: "karnak-temple", name: "Karnak Temple", city: "Luxor", img: "../images/gallery-luxor-temple.png", rating: "4.9"}
+      {id: "pyramids-of-giza", name: "Pyramids of Giza", city: "Cairo", img: "../images/hero-pyramids.jpg", rating: "4.9"},
+      {id: "egyptian-museum", name: "Egyptian Museum", city: "Cairo", img: "../images/grand_egyptian_museum.jpg", rating: "4.8"},
+      {id: "karnak-temple", name: "Karnak Temple", city: "Luxor", img: "../images/Karnak-temple.jpg", rating: "4.9"}
     ]
   },
   {
@@ -155,7 +155,7 @@ const attractions = [
     badgeIcon: "gopuram",
     city: "Luxor",
     cityPage: "luxor.html",
-    heroImg: "../images/gallery-luxor-temple.png",
+    heroImg: "../images/Karnak-temple.jpg",
     rating: "4.9",
     reviewCount: "32,600",
     duration: "2-3 hours",
@@ -190,12 +190,12 @@ const attractions = [
       {icon: "fa-compass", name: "Open Air Museum", desc: "Explore the smaller chapels and reconstructed structures in the on-site open air museum.", duration: "45 min", difficulty: "Easy"}
     ],
     gallery: [
-      {src: "../images/gallery-luxor-temple.png", caption: "Great Hypostyle Hall"},
-      {src: "../aswan-luxor/dmitrii-zhodzishskii-5aEHOQrb2Qk-unsplash.jpg", caption: "Temple Columns at Sunset"},
-      {src: "../images/hero-luxor.png", caption: "Karnak Complex"},
-      {src: "../aswan-luxor/dmitrii-zhodzishskii-2K5kuh3NRvk-unsplash.jpg", caption: "Ancient Carvings"},
-      {src: "../aswan-luxor/kevin-et-laurianne-langlais-QveJH1hA2sI-unsplash.jpg", caption: "Sacred Obelisks"},
-      {src: "../aswan-luxor/dmitrii-zhodzishskii-cOihXsrJFRc-unsplash.jpg", caption: "Temple Detail"}
+      {src: "../images/gallery-luxor-temple.jpg", caption: "Great Hypostyle Hall"},
+      {src: "../images/gallery-luxor-temple.jpg", caption: "Temple Columns at Sunset"},
+      {src: "../images/hero-luxor.jpg", caption: "Karnak Complex"},
+      {src: "../Real Moments/PHOTO-2026-01-19-20-26-36(3).jpg", caption: "Ancient Carvings"},
+      {src: "../images/gallery-luxor-temple.jpg", caption: "Sacred Obelisks"},
+      {src: "../images/hero-luxor.jpg", caption: "Temple Detail"}
     ],
     tips: [
       {icon: "🌅", title: "Go Early", desc: "Arrive at 6 AM opening to photograph the Hypostyle Hall bathed in golden sunrise light."},
@@ -209,9 +209,9 @@ const attractions = [
     bestTimeNote: "November to February for pleasant weather. Early morning visits are best year-round.",
     videoHighlights: ["134 massive stone columns", "2,000 years of construction", "Sacred Lake rituals", "Avenue of Sphinxes"],
     related: [
-      {id: "luxor-temple", name: "Luxor Temple", city: "Luxor", img: "../aswan-luxor/dmitrii-zhodzishskii-5aEHOQrb2Qk-unsplash.jpg", rating: "4.7"},
-      {id: "valley-of-kings", name: "Valley of the Kings", city: "Luxor", img: "../aswan-luxor/dmitrii-zhodzishskii-cOihXsrJFRc-unsplash.jpg", rating: "4.9"},
-      {id: "abu-simbel", name: "Abu Simbel", city: "Aswan", img: "../aswan-luxor/david-gavi-AdIJ9S-kbrc-unsplash.jpg", rating: "4.9"}
+      {id: "luxor-temple", name: "Luxor Temple", city: "Luxor", img: "../images/gallery-luxor-temple.jpg", rating: "4.7"},
+      {id: "valley-of-kings", name: "Valley of the Kings", city: "Luxor", img: "../images/Valley-of-the-Kings.jpg", rating: "4.9"},
+      {id: "abu-simbel", name: "Abu Simbel", city: "Aswan", img: "../images/attr-abu-simbel.jpg", rating: "4.9"}
     ]
   },
   {
@@ -222,7 +222,7 @@ const attractions = [
     badgeIcon: "landmark",
     city: "Luxor",
     cityPage: "luxor.html",
-    heroImg: "../aswan-luxor/dmitrii-zhodzishskii-5aEHOQrb2Qk-unsplash.jpg",
+    heroImg: "../images/gallery-luxor-temple.jpg",
     rating: "4.7",
     reviewCount: "28,400",
     duration: "1-2 hours",
@@ -257,12 +257,12 @@ const attractions = [
       {icon: "fa-camera", name: "Obelisk Photo", desc: "Photograph the remaining obelisk — its twin now stands in Place de la Concorde, Paris.", duration: "15 min", difficulty: "Easy"}
     ],
     gallery: [
-      {src: "../aswan-luxor/dmitrii-zhodzishskii-5aEHOQrb2Qk-unsplash.jpg", caption: "Luxor Temple at Night"},
-      {src: "../images/hero-luxor.png", caption: "Temple Approach"},
-      {src: "../images/gallery-luxor-temple.png", caption: "Hypostyle Columns"},
-      {src: "../aswan-luxor/dmitrii-zhodzishskii-2K5kuh3NRvk-unsplash.jpg", caption: "Ancient Reliefs"},
-      {src: "../aswan-luxor/kevin-et-laurianne-langlais-pvFtrzwuc6g-unsplash.jpg", caption: "Nile & Temple"},
-      {src: "../aswan-luxor/dmitrii-zhodzishskii-4rXHE9XeW_A-unsplash.jpg", caption: "Temple Detail"}
+      {src: "../images/gallery-luxor-temple.jpg", caption: "Luxor Temple at Night"},
+      {src: "../images/hero-luxor.jpg", caption: "Temple Approach"},
+      {src: "../images/gallery-luxor-temple.jpg", caption: "Hypostyle Columns"},
+      {src: "../Real Moments/PHOTO-2026-01-19-20-26-36(3).jpg", caption: "Ancient Reliefs"},
+      {src: "../Real Moments/PHOTO-2025-12-05-14-30-07(1).jpg", caption: "Nile & Temple"},
+      {src: "../images/hero-luxor.jpg", caption: "Temple Detail"}
     ],
     tips: [
       {icon: "🌙", title: "Visit at Night", desc: "The illuminated temple is one of Egypt's most magical experiences. Open until 9 PM."},
@@ -276,9 +276,9 @@ const attractions = [
     bestTimeNote: "November to February. Evening visits are magical year-round thanks to night illumination.",
     videoHighlights: ["Stunning night illumination", "Avenue of Sphinxes connection", "3,400 years of history", "Mosque atop ancient temple"],
     related: [
-      {id: "karnak-temple", name: "Karnak Temple", city: "Luxor", img: "../images/gallery-luxor-temple.png", rating: "4.9"},
-      {id: "valley-of-kings", name: "Valley of the Kings", city: "Luxor", img: "../aswan-luxor/dmitrii-zhodzishskii-cOihXsrJFRc-unsplash.jpg", rating: "4.9"},
-      {id: "pyramids-of-giza", name: "Pyramids of Giza", city: "Giza", img: "../cairo/spencer-davis-ONVA6s03hg8-unsplash.jpg", rating: "4.9"}
+      {id: "karnak-temple", name: "Karnak Temple", city: "Luxor", img: "../images/Karnak-temple.jpg", rating: "4.9"},
+      {id: "valley-of-kings", name: "Valley of the Kings", city: "Luxor", img: "../images/Valley-of-the-Kings.jpg", rating: "4.9"},
+      {id: "pyramids-of-giza", name: "Pyramids of Giza", city: "Cairo", img: "../images/hero-pyramids.jpg", rating: "4.9"}
     ]
   },
   {
@@ -289,7 +289,7 @@ const attractions = [
     badgeIcon: "landmark",
     city: "Luxor",
     cityPage: "luxor.html",
-    heroImg: "../aswan-luxor/dmitrii-zhodzishskii-cOihXsrJFRc-unsplash.jpg",
+    heroImg: "../images/Valley-of-the-Kings.jpg",
     rating: "4.9",
     reviewCount: "41,200",
     duration: "3-4 hours",
@@ -324,12 +324,12 @@ const attractions = [
       {icon: "fa-camera", name: "Valley Panorama", desc: "Climb to the viewpoint above the valley for a dramatic panoramic view of the necropolis.", duration: "30 min", difficulty: "Moderate"}
     ],
     gallery: [
-      {src: "../aswan-luxor/dmitrii-zhodzishskii-cOihXsrJFRc-unsplash.jpg", caption: "Valley of the Kings Entrance"},
-      {src: "../aswan-luxor/dmitrii-zhodzishskii-2K5kuh3NRvk-unsplash.jpg", caption: "Tomb Paintings"},
-      {src: "../images/hero-luxor.png", caption: "West Bank Aerial"},
-      {src: "../aswan-luxor/dmitrii-zhodzishskii-4rXHE9XeW_A-unsplash.jpg", caption: "Temple of Hatshepsut"},
-      {src: "../aswan-luxor/dmitrii-zhodzishskii-5aEHOQrb2Qk-unsplash.jpg", caption: "Ancient Hieroglyphs"},
-      {src: "../images/gallery-luxor-balloons.png", caption: "Hot Air Balloon View"}
+      {src: "../images/Valley-of-the-Kings.jpg", caption: "Valley of the Kings Entrance"},
+      {src: "../Real Moments/PHOTO-2026-01-19-20-26-36(3).jpg", caption: "Tomb Paintings"},
+      {src: "../images/hero-luxor.jpg", caption: "West Bank Aerial"},
+      {src: "../images/hero-luxor.jpg", caption: "Temple of Hatshepsut"},
+      {src: "../images/gallery-luxor-temple.jpg", caption: "Ancient Hieroglyphs"},
+      {src: "../images/gallery-luxor-balloons.jpg", caption: "Hot Air Balloon View"}
     ],
     tips: [
       {icon: "🌅", title: "Start at 6 AM", desc: "Arrive at opening to beat the heat and the tour bus crowds. The valley heats up quickly."},
@@ -343,9 +343,9 @@ const attractions = [
     bestTimeNote: "November to February. Always go early morning to avoid extreme heat.",
     videoHighlights: ["65 royal tombs discovered", "Tutankhamun's golden treasures", "Vivid 3,500-year-old paintings", "Hot air balloon sunrise views"],
     related: [
-      {id: "karnak-temple", name: "Karnak Temple", city: "Luxor", img: "../images/gallery-luxor-temple.png", rating: "4.9"},
-      {id: "luxor-temple", name: "Luxor Temple", city: "Luxor", img: "../aswan-luxor/dmitrii-zhodzishskii-5aEHOQrb2Qk-unsplash.jpg", rating: "4.7"},
-      {id: "abu-simbel", name: "Abu Simbel", city: "Aswan", img: "../aswan-luxor/david-gavi-AdIJ9S-kbrc-unsplash.jpg", rating: "4.9"}
+      {id: "karnak-temple", name: "Karnak Temple", city: "Luxor", img: "../images/Karnak-temple.jpg", rating: "4.9"},
+      {id: "luxor-temple", name: "Luxor Temple", city: "Luxor", img: "../images/gallery-luxor-temple.jpg", rating: "4.7"},
+      {id: "abu-simbel", name: "Abu Simbel", city: "Aswan", img: "../images/attr-abu-simbel.jpg", rating: "4.9"}
     ]
   },
   {
@@ -356,7 +356,7 @@ const attractions = [
     badgeIcon: "landmark",
     city: "Aswan",
     cityPage: "aswan.html",
-    heroImg: "../aswan-luxor/david-gavi-AdIJ9S-kbrc-unsplash.jpg",
+    heroImg: "../images/attr-abu-simbel.jpg",
     rating: "4.9",
     reviewCount: "22,800",
     duration: "Full Day",
@@ -391,12 +391,12 @@ const attractions = [
       {icon: "fa-ship", name: "Lake Nasser Cruise", desc: "Arrive in style via a multi-day luxury cruise across Lake Nasser.", duration: "Multi-day", difficulty: "Easy"}
     ],
     gallery: [
-      {src: "../aswan-luxor/david-gavi-AdIJ9S-kbrc-unsplash.jpg", caption: "Abu Simbel Facade"},
-      {src: "../images/hero-aswan.png", caption: "Aswan Landscape"},
-      {src: "../aswan-luxor/hassan-ouajbir-251hbdY3M4E-unsplash.jpg", caption: "Aswan High Dam"},
-      {src: "../aswan-luxor/kevin-et-laurianne-langlais-Rk8yY0UfPx0-unsplash.jpg", caption: "Nile Felucca"},
-      {src: "../images/gallery-aswan-philae.png", caption: "Philae Temple"},
-      {src: "../images/gallery-aswan-nubian.png", caption: "Nubian Village"}
+      {src: "../images/attr-abu-simbel.jpg", caption: "Abu Simbel Facade"},
+      {src: "../images/hero-aswan.jpg", caption: "Aswan Landscape"},
+      {src: "../images/attr-aswan-high-dam.jpg", caption: "Aswan High Dam"},
+      {src: "../images/hero-aswan.jpg", caption: "Nile Felucca"},
+      {src: "../images/gallery-aswan-philae.jpg", caption: "Philae Temple"},
+      {src: "../images/gallery-aswan-nubian.jpg", caption: "Nubian Village"}
     ],
     tips: [
       {icon: "🚌", title: "3:30 AM Convoy", desc: "Most visitors join the organized convoy from Aswan departing at 3:30 AM. It's a 3-hour drive."},
@@ -410,9 +410,9 @@ const attractions = [
     bestTimeNote: "October to March. February 22 and October 22 are the Sun Festival dates.",
     videoHighlights: ["20-meter colossal statues", "UNESCO relocation miracle", "Solar alignment phenomenon", "Nefertari's beautiful temple"],
     related: [
-      {id: "karnak-temple", name: "Karnak Temple", city: "Luxor", img: "../images/gallery-luxor-temple.png", rating: "4.9"},
-      {id: "valley-of-kings", name: "Valley of the Kings", city: "Luxor", img: "../aswan-luxor/dmitrii-zhodzishskii-cOihXsrJFRc-unsplash.jpg", rating: "4.9"},
-      {id: "nile-cruises", name: "Nile Cruises", city: "Luxor-Aswan", img: "../aswan-luxor/kevin-et-laurianne-langlais-pvFtrzwuc6g-unsplash.jpg", rating: "4.8"}
+      {id: "karnak-temple", name: "Karnak Temple", city: "Luxor", img: "../images/Karnak-temple.jpg", rating: "4.9"},
+      {id: "valley-of-kings", name: "Valley of the Kings", city: "Luxor", img: "../images/Valley-of-the-Kings.jpg", rating: "4.9"},
+      {id: "nile-cruises", name: "Nile Cruises", city: "Luxor-Aswan", img: "../Real Moments/PHOTO-2025-12-05-14-30-07(1).jpg", rating: "4.8"}
     ]
   },
   {
@@ -423,7 +423,7 @@ const attractions = [
     badgeIcon: "store",
     city: "Cairo",
     cityPage: "cairo.html",
-    heroImg: "../images/gallery-cairo-khan.png",
+    heroImg: "../images/gallery-cairo-khan.jpg",
     rating: "4.6",
     reviewCount: "18,900",
     duration: "2-4 hours",
@@ -458,12 +458,12 @@ const attractions = [
       {icon: "fa-utensils", name: "Street Food Tour", desc: "Try koshari, ful, falafel, and fresh juice from the food stalls surrounding the bazaar.", duration: "1 hr", difficulty: "Easy"}
     ],
     gallery: [
-      {src: "../images/gallery-cairo-khan.png", caption: "Khan El Khalili Entrance"},
-      {src: "../cairo/dario-morandotti-rxv2qwYPe6s-unsplash.jpg", caption: "Islamic Cairo Streets"},
-      {src: "../images/gallery-cairo-mosque.png", caption: "Al-Azhar Mosque"},
-      {src: "../images/hero-cairo.png", caption: "Cairo Cityscape"},
-      {src: "../cairo/alex-azabache-MoonoldXeqs-unsplash.jpg", caption: "Evening Markets"},
-      {src: "../cairo/omar-adel-fJKMxGgJuHk-unsplash.jpg", caption: "Street Food Scene"}
+      {src: "../images/gallery-cairo-khan.jpg", caption: "Khan El Khalili Entrance"},
+      {src: "../images/gallery-cairo-mosque.jpg", caption: "Islamic Cairo Streets"},
+      {src: "../images/Al-Azhar-Mosque.jpg", caption: "Al-Azhar Mosque"},
+      {src: "../images/hero-cairo.jpg", caption: "Cairo Cityscape"},
+      {src: "../images/gallery-cairo-khan.jpg", caption: "Evening Markets"},
+      {src: "../images/khan el khalili.jpg", caption: "Street Food Scene"}
     ],
     tips: [
       {icon: "💰", title: "Bargain Hard", desc: "Start at 40% of the asking price and negotiate up. Bargaining is expected and enjoyed."},
@@ -477,9 +477,9 @@ const attractions = [
     bestTimeNote: "Open year-round. Evening visits are most atmospheric. Cooler months (Oct-Mar) are most comfortable.",
     videoHighlights: ["600+ years of continuous trade", "El Fishawi's 250-year-old café", "Master artisan workshops", "Legendary spice market"],
     related: [
-      {id: "egyptian-museum", name: "Egyptian Museum", city: "Cairo", img: "../cairo/grand egyptian museum.webp", rating: "4.8"},
-      {id: "pyramids-of-giza", name: "Pyramids of Giza", city: "Giza", img: "../cairo/spencer-davis-ONVA6s03hg8-unsplash.jpg", rating: "4.9"},
-      {id: "nile-cruises", name: "Nile Dinner Cruise", city: "Cairo", img: "../cairo/Cairo-Dinner-Cruise-Egypt-Tours-Portal.jpg", rating: "4.4"}
+      {id: "egyptian-museum", name: "Egyptian Museum", city: "Cairo", img: "../images/grand_egyptian_museum.jpg", rating: "4.8"},
+      {id: "pyramids-of-giza", name: "Pyramids of Giza", city: "Cairo", img: "../images/hero-pyramids.jpg", rating: "4.9"},
+      {id: "nile-cruises", name: "Nile Dinner Cruise", city: "Cairo", img: "../images/Cairo-Dinner-Cruise-Egypt-Tours-Portal.jpg", rating: "4.4"}
     ]
   },
   {
@@ -490,7 +490,7 @@ const attractions = [
     badgeIcon: "museum",
     city: "Cairo",
     cityPage: "cairo.html",
-    heroImg: "../cairo/grand egyptian museum.webp",
+    heroImg: "../images/grand_egyptian_museum.jpg",
     rating: "4.8",
     reviewCount: "38,500",
     duration: "2-4 hours",
@@ -525,12 +525,12 @@ const attractions = [
       {icon: "fa-map", name: "Guided Tour", desc: "Book an expert guide to navigate the vast collection and learn the stories behind the artifacts.", duration: "2 hrs", difficulty: "Easy"}
     ],
     gallery: [
-      {src: "../cairo/grand egyptian museum.webp", caption: "Grand Egyptian Museum"},
-      {src: "../cairo/gem-birdseye-view-copyright-grand-egyptian-museum.jpg", caption: "GEM Birdseye View"},
-      {src: "../cairo/Giza-Egypt-April-13-2024-The-Grand-Egyptian-Museum-Giza-Museum-Egypts-gift-to-the-world-the-largest-archaeological-museum-in-the-world-about-2-kilometers-from-Giza-pyramid-complex-1.webp", caption: "Grand Egyptian Museum Facade"},
-      {src: "../cairo/spencer-davis-ONVA6s03hg8-unsplash.jpg", caption: "Ancient Treasures"},
-      {src: "../cairo/dario-morandotti-rxv2qwYPe6s-unsplash.jpg", caption: "Historic Quarter"},
-      {src: "../images/gallery-cairo-khan.png", caption: "Khan El Khalili"}
+      {src: "../images/grand_egyptian_museum.jpg", caption: "Grand Egyptian Museum"},
+      {src: "../images/The-Grand-Egyptian-Museum.jpg", caption: "GEM Birdseye View"},
+      {src: "../images/The-Grand-Egyptian-Museum.jpg", caption: "Grand Egyptian Museum Facade"},
+      {src: "../images/hero-pyramids.jpg", caption: "Ancient Treasures"},
+      {src: "../images/gallery-cairo-mosque.jpg", caption: "Historic Quarter"},
+      {src: "../images/gallery-cairo-khan.jpg", caption: "Khan El Khalili"}
     ],
     tips: [
       {icon: "🎫", title: "Extra Fees", desc: "The Royal Mummies Hall and Tutankhamun gallery require additional paid tickets."},
@@ -544,9 +544,9 @@ const attractions = [
     bestTimeNote: "Indoor museum — comfortable year-round. Mornings are least crowded.",
     videoHighlights: ["120,000+ ancient artifacts", "Tutankhamun's golden mask", "Royal Mummies face-to-face", "5,000 years of history"],
     related: [
-      {id: "khan-el-khalili", name: "Khan El Khalili", city: "Cairo", img: "../images/gallery-cairo-khan.png", rating: "4.6"},
-      {id: "pyramids-of-giza", name: "Pyramids of Giza", city: "Giza", img: "../cairo/spencer-davis-ONVA6s03hg8-unsplash.jpg", rating: "4.9"},
-      {id: "karnak-temple", name: "Karnak Temple", city: "Luxor", img: "../images/gallery-luxor-temple.png", rating: "4.9"}
+      {id: "khan-el-khalili", name: "Khan El Khalili", city: "Cairo", img: "../images/gallery-cairo-khan.jpg", rating: "4.6"},
+      {id: "pyramids-of-giza", name: "Pyramids of Giza", city: "Cairo", img: "../images/hero-pyramids.jpg", rating: "4.9"},
+      {id: "karnak-temple", name: "Karnak Temple", city: "Luxor", img: "../images/Karnak-temple.jpg", rating: "4.9"}
     ]
   },
   {
@@ -557,7 +557,7 @@ const attractions = [
     badgeIcon: "ship",
     city: "Luxor-Aswan",
     cityPage: "luxor.html",
-    heroImg: "../aswan-luxor/kevin-et-laurianne-langlais-pvFtrzwuc6g-unsplash.jpg",
+    heroImg: "../Real Moments/PHOTO-2025-12-05-14-30-07(1).jpg",
     rating: "4.8",
     reviewCount: "26,300",
     duration: "3-7 Days",
@@ -592,12 +592,12 @@ const attractions = [
       {icon: "fa-sailboat", name: "Dahabiya Cruise", desc: "Choose a traditional dahabiya sailing vessel for a slower, more authentic Nile journey.", duration: "4-7 days", difficulty: "Easy"}
     ],
     gallery: [
-      {src: "../aswan-luxor/kevin-et-laurianne-langlais-pvFtrzwuc6g-unsplash.jpg", caption: "Felucca at Sunset"},
-      {src: "../aswan-luxor/kevin-et-laurianne-langlais-Rk8yY0UfPx0-unsplash.jpg", caption: "Nile Sailing"},
-      {src: "../images/hero-aswan.png", caption: "Aswan Waterfront"},
-      {src: "../images/hero-luxor.png", caption: "Luxor from the Nile"},
-      {src: "../aswan-luxor/kevin-et-laurianne-langlais-QveJH1hA2sI-unsplash.jpg", caption: "Riverside View"},
-      {src: "../aswan-luxor/hassan-ouajbir-251hbdY3M4E-unsplash.jpg", caption: "Aswan High Dam"}
+      {src: "../Real Moments/PHOTO-2025-12-05-14-30-07(1).jpg", caption: "Felucca at Sunset"},
+      {src: "../images/hero-aswan.jpg", caption: "Nile Sailing"},
+      {src: "../images/hero-aswan.jpg", caption: "Aswan Waterfront"},
+      {src: "../images/hero-luxor.jpg", caption: "Luxor from the Nile"},
+      {src: "../images/gallery-luxor-temple.jpg", caption: "Riverside View"},
+      {src: "../images/attr-aswan-high-dam.jpg", caption: "Aswan High Dam"}
     ],
     tips: [
       {icon: "📅", title: "Book Early", desc: "Popular cruises sell out months in advance, especially during peak season (Oct-Apr)."},
@@ -611,9 +611,9 @@ const attractions = [
     bestTimeNote: "October to April for ideal weather. December and January are peak season.",
     videoHighlights: ["5-star floating hotels", "Ancient temple excursions", "Spectacular Nile sunsets", "Traditional Nubian performances"],
     related: [
-      {id: "karnak-temple", name: "Karnak Temple", city: "Luxor", img: "../images/gallery-luxor-temple.png", rating: "4.9"},
-      {id: "abu-simbel", name: "Abu Simbel", city: "Aswan", img: "../aswan-luxor/david-gavi-AdIJ9S-kbrc-unsplash.jpg", rating: "4.9"},
-      {id: "valley-of-kings", name: "Valley of the Kings", city: "Luxor", img: "../aswan-luxor/dmitrii-zhodzishskii-cOihXsrJFRc-unsplash.jpg", rating: "4.9"}
+      {id: "karnak-temple", name: "Karnak Temple", city: "Luxor", img: "../images/Karnak-temple.jpg", rating: "4.9"},
+      {id: "abu-simbel", name: "Abu Simbel", city: "Aswan", img: "../images/attr-abu-simbel.jpg", rating: "4.9"},
+      {id: "valley-of-kings", name: "Valley of the Kings", city: "Luxor", img: "../images/Valley-of-the-Kings.jpg", rating: "4.9"}
     ]
   },
   {
@@ -624,7 +624,7 @@ const attractions = [
     badgeIcon: "water",
     city: "Hurghada & Sharm",
     cityPage: "hurghada.html",
-    heroImg: "../images/gallery-hurghada-reef.png",
+    heroImg: "../images/gallery-hurghada-reef.jpg",
     rating: "4.9",
     reviewCount: "45,100",
     duration: "Half - Full Day",
@@ -659,12 +659,12 @@ const attractions = [
       {icon: "fa-graduation-cap", name: "PADI Certification", desc: "Get your PADI Open Water certification in 3-4 days at some of the world's cheapest prices.", duration: "3-4 days", difficulty: "Moderate"}
     ],
     gallery: [
-      {src: "../images/gallery-hurghada-reef.png", caption: "Coral Reef"},
-      {src: "../hurgada/raimond-klavins-zfeY8HkSAOE-unsplash.jpg", caption: "Crystal Clear Waters"},
-      {src: "../images/gallery-sharm-diving.png", caption: "Underwater Paradise"},
-      {src: "../sharm/oleksandr-podoima-xzTR5ZLvAx0-unsplash.jpg", caption: "Ras Mohammed"},
-      {src: "../hurgada/youhana-nassif-9BZVf-jEDwU-unsplash.jpg", caption: "Glass Bottom Boat"},
-      {src: "../images/hero-hurghada.png", caption: "Hurghada Coast"}
+      {src: "../images/gallery-hurghada-reef.jpg", caption: "Coral Reef"},
+      {src: "../images/city-hurghada.jpg", caption: "Crystal Clear Waters"},
+      {src: "../images/gallery-sharm-diving.jpg", caption: "Underwater Paradise"},
+      {src: "../images/gallery-sharm-diving.jpg", caption: "Ras Mohammed"},
+      {src: "../images/gallery-hurghada-reef.jpg", caption: "Glass Bottom Boat"},
+      {src: "../images/hero-hurghada.jpg", caption: "Hurghada Coast"}
     ],
     tips: [
       {icon: "🤿", title: "Best Visibility", desc: "September to November offers the clearest water with 30m+ visibility."},
@@ -678,9 +678,9 @@ const attractions = [
     bestTimeNote: "Diving is year-round! Sep-Nov has best visibility. Summer has warmer water and more marine life.",
     videoHighlights: ["1,000+ fish species", "World-famous wreck dives", "Crystal-clear 30m visibility", "Affordable PADI certification"],
     related: [
-      {id: "siwa-oasis", name: "Siwa Oasis", city: "Western Desert", img: "../images/hero-siwa.png", rating: "4.7"},
-      {id: "pyramids-of-giza", name: "Pyramids of Giza", city: "Giza", img: "../cairo/spencer-davis-ONVA6s03hg8-unsplash.jpg", rating: "4.9"},
-      {id: "nile-cruises", name: "Nile Cruises", city: "Luxor-Aswan", img: "../aswan-luxor/kevin-et-laurianne-langlais-pvFtrzwuc6g-unsplash.jpg", rating: "4.8"}
+      {id: "siwa-oasis", name: "Siwa Oasis", city: "Western Desert", img: "../images/hero-siwa.jpg", rating: "4.7"},
+      {id: "pyramids-of-giza", name: "Pyramids of Giza", city: "Cairo", img: "../images/hero-pyramids.jpg", rating: "4.9"},
+      {id: "nile-cruises", name: "Nile Cruises", city: "Luxor-Aswan", img: "../Real Moments/PHOTO-2025-12-05-14-30-07(1).jpg", rating: "4.8"}
     ]
   },
   {
@@ -691,7 +691,7 @@ const attractions = [
     badgeIcon: "gem",
     city: "Western Desert",
     cityPage: "siwa.html",
-    heroImg: "../images/hero-siwa.png",
+    heroImg: "../images/hero-siwa.jpg",
     rating: "4.7",
     reviewCount: "8,200",
     duration: "2-3 Days",
@@ -726,12 +726,12 @@ const attractions = [
       {icon: "fa-mountain", name: "Mountain of the Dead", desc: "Explore ancient tombs carved into the honeycomb mountain dating to the 26th Dynasty.", duration: "1.5 hrs", difficulty: "Moderate"}
     ],
     gallery: [
-      {src: "../images/hero-siwa.png", caption: "Siwa Oasis"},
-      {src: "../aswan-luxor/pexels-alexey-k-458081116-36336671.jpg", caption: "Great Sand Sea"},
-      {src: "../aswan-luxor/mo-gabrail-iuC3w8mLDcs-unsplash.jpg", caption: "Salt Lakes"},
-      {src: "../aswan-luxor/flying-carpet-Si1MFhSLNWY-unsplash.jpg", caption: "Cleopatra's Spring"},
-      {src: "../aswan-luxor/calin-stan-Mv15X2n8JVE-unsplash.jpg", caption: "Oracle Temple"},
-      {src: "../aswan-luxor/thiago-rocha-UhI5MMB4Nv8-unsplash.jpg", caption: "Mountain of the Dead"}
+      {src: "../images/hero-siwa.jpg", caption: "Siwa Oasis"},
+      {src: "../images/Great Sand Sea.jpg", caption: "Great Sand Sea"},
+      {src: "../images/hero-siwa.jpg", caption: "Salt Lakes"},
+      {src: "../images/attr-cleopatra-spring.jpg", caption: "Cleopatra's Spring"},
+      {src: "../images/attr-temple-oracle.jpg", caption: "Oracle Temple"},
+      {src: "../images/attr-shali-fortress.jpg", caption: "Mountain of the Dead"}
     ],
     tips: [
       {icon: "🚗", title: "Getting There", desc: "8-hour drive from Cairo or fly to Marsa Matruh then 4-hour drive. No direct flights."},
@@ -745,9 +745,9 @@ const attractions = [
     bestTimeNote: "October to March for comfortable weather. Full moon visits to the desert are unforgettable.",
     videoHighlights: ["Alexander the Great's Oracle", "Great Sand Sea adventures", "Crystal salt lake floating", "12,000 years of habitation"],
     related: [
-      {id: "pyramids-of-giza", name: "Pyramids of Giza", city: "Giza", img: "../cairo/spencer-davis-ONVA6s03hg8-unsplash.jpg", rating: "4.9"},
-      {id: "khan-el-khalili", name: "Khan El Khalili", city: "Cairo", img: "../images/gallery-cairo-khan.png", rating: "4.6"},
-      {id: "red-sea-diving", name: "Red Sea Diving", city: "Hurghada", img: "../images/gallery-hurghada-reef.png", rating: "4.9"}
+      {id: "pyramids-of-giza", name: "Pyramids of Giza", city: "Cairo", img: "../images/hero-pyramids.jpg", rating: "4.9"},
+      {id: "khan-el-khalili", name: "Khan El Khalili", city: "Cairo", img: "../images/gallery-cairo-khan.jpg", rating: "4.6"},
+      {id: "red-sea-diving", name: "Red Sea Diving", city: "Hurghada", img: "../images/gallery-hurghada-reef.jpg", rating: "4.9"}
     ]
   }
 ];
@@ -852,16 +852,16 @@ function buildPage(a) {
     '                    <a href="../index.html#destinations" id="nav-destinations">Destinations <i class="fas fa-chevron-down"></i></a>\n' +
     '                    <div class="dropdown-menu">\n' +
     '                        <a href="../cairo.html">Cairo</a>\n' +
-    '                        <a href="../giza.html">Giza</a>\n' +
     '                        <a href="../alexandria.html">Alexandria</a>\n' +
     '                        <a href="../luxor.html">Luxor</a>\n' +
     '                        <a href="../aswan.html">Aswan</a>\n' +
     '                        <a href="../hurghada.html">Hurghada</a>\n' +
     '                        <a href="../sharm-el-sheikh.html">Sharm El Sheikh</a>\n' +
     '                        <a href="../dahab.html">Dahab</a>\n' +
-    '                        <a href="../marsa-alam.html">Marsa Alam</a>\n' +
-    '                        <a href="../el-gouna.html">El Gouna</a>\n' +
     '                        <a href="../siwa.html">Siwa Oasis</a>\n' +
+    '                        <a href="../port-said.html">Port Said</a>\n' +
+    '                        <a href="../ismailia.html">Ismailia</a>\n' +
+    '                        <a href="../fayoum.html">Fayoum</a>\n' +
     '                    </div>\n' +
     '                </div>\n' +
     '                <a href="../index.html#about" id="nav-about">About Us</a>\n' +
@@ -1015,7 +1015,7 @@ function buildPage(a) {
 
     // CTA
     '    <section class="dest-cta">\n' +
-    '        <div class="dest-cta-bg"><img src="../images/hero-pyramids.png" alt="Egypt"><div class="dest-cta-overlay"></div></div>\n' +
+    '        <div class="dest-cta-bg"><img src="../images/hero-pyramids.jpg" alt="Egypt"><div class="dest-cta-overlay"></div></div>\n' +
     '        <div class="container">\n' +
     '            <div class="dest-cta-content fade-up">\n' +
     '                <h2>Ready to visit <em>' + a.name + '</em>?</h2>\n' +

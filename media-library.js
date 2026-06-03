@@ -1,6 +1,6 @@
 (function () {
-  const PHOTO_DIR = 'Photos and Videos/photos/';
-  const VIDEO_DIR = 'Photos and Videos/videos/';
+  const PHOTO_DIR = 'Real Moments/';
+  const VIDEO_DIR = 'photos_and_videos/videos/';
 
   const PHOTO_FILES = [
     'PHOTO-2025-11-14-00-12-40(1).jpg',
@@ -22,7 +22,6 @@
     'PHOTO-2025-12-05-19-29-49.jpg',
     'PHOTO-2025-12-05-19-29-50(1).jpg',
     'PHOTO-2025-12-05-19-29-50.jpg',
-    'PHOTO-2025-12-09-12-36-35(1).jpg',
     'PHOTO-2025-12-09-12-36-35.jpg',
     'PHOTO-2025-12-10-14-17-50(1).jpg',
     'PHOTO-2025-12-10-14-17-50(2).jpg',
@@ -43,12 +42,9 @@
     'PHOTO-2026-01-19-20-26-08(1).jpg',
     'PHOTO-2026-01-19-20-26-08.jpg',
     'PHOTO-2026-01-19-20-26-19.jpg',
-    'PHOTO-2026-01-19-20-26-21.jpg',
     'PHOTO-2026-01-19-20-26-22.jpg',
-    'PHOTO-2026-01-19-20-26-23.jpg',
     'PHOTO-2026-01-19-20-26-24.jpg',
     'PHOTO-2026-01-19-20-26-25(1).jpg',
-    'PHOTO-2026-01-19-20-26-25.jpg',
     'PHOTO-2026-01-19-20-26-33.jpg',
     'PHOTO-2026-01-19-20-26-34(1).jpg',
     'PHOTO-2026-01-19-20-26-34(2).jpg',
@@ -61,7 +57,6 @@
     'PHOTO-2026-01-19-20-26-36(2).jpg',
     'PHOTO-2026-01-19-20-26-36(3).jpg',
     'PHOTO-2026-01-19-20-26-36.jpg',
-    'PHOTO-2026-01-19-20-26-37(1).jpg',
     'PHOTO-2026-01-19-20-26-37(2).jpg',
     'PHOTO-2026-01-19-20-26-37.jpg',
     'PHOTO-2026-02-16-20-13-47.jpg',
@@ -71,87 +66,84 @@
     'PHOTO-2026-04-28-01-42-26.jpg'
   ];
 
-  const VIDEO_FILES = [
-    'Journey in Egypt Mobile Video (1).mp4',
-    'luxor-aswan Mobile Video.mp4',
-    'VIDEO-2025-11-27-01-38-26.mp4',
-    'VIDEO-2025-12-09-12-37-34(1).mp4',
-    'VIDEO-2025-12-09-12-37-34.mp4',
-    'VIDEO-2025-12-09-12-37-43(1).mp4',
-    'VIDEO-2025-12-09-12-37-43.mp4',
-    'VIDEO-2025-12-10-14-17-49.mp4',
-    'VIDEO-2025-12-12-11-33-38.mp4',
-    'VIDEO-2025-12-12-11-33-40.mp4',
-    'VIDEO-2025-12-12-17-17-47.mp4',
-    'VIDEO-2025-12-20-13-27-43.mp4',
-    'VIDEO-2025-12-28-18-05-32.mp4',
-    'VIDEO-2025-12-28-18-10-37.mp4',
-    'VIDEO-2025-12-30-18-59-54.mp4',
-    'VIDEO-2026-01-19-20-26-06(1).mp4',
-    'VIDEO-2026-01-19-20-26-06.mp4',
-    'VIDEO-2026-01-19-20-26-07(1).mp4',
-    'VIDEO-2026-01-19-20-26-07.mp4',
-    'VIDEO-2026-01-19-20-26-08.mp4',
-    'VIDEO-2026-01-19-20-26-21(1).mp4',
-    'VIDEO-2026-01-19-20-26-21.mp4',
-    'VIDEO-2026-01-19-20-26-22.mp4',
-    'VIDEO-2026-01-19-20-26-23(1).mp4',
-    'VIDEO-2026-01-19-20-26-23(2).mp4',
-    'VIDEO-2026-01-19-20-26-23.mp4',
-    'VIDEO-2026-01-19-20-26-25.mp4',
-    'VIDEO-2026-01-19-20-26-34.mp4',
-    'VIDEO-2026-01-19-20-26-36.mp4',
-    'VIDEO-2026-01-21-14-24-29(1).mp4',
-    'VIDEO-2026-01-21-14-24-29(2).mp4',
-    'VIDEO-2026-01-21-14-24-29(3).mp4',
-    'VIDEO-2026-01-21-14-24-29.mp4',
-    'VIDEO-2026-01-21-14-24-30(1).mp4',
-    'VIDEO-2026-01-21-14-24-30(2).mp4',
-    'VIDEO-2026-01-21-14-24-30(3).mp4',
-    'VIDEO-2026-01-21-14-24-30(4).mp4',
-    'VIDEO-2026-01-21-14-24-30(5).mp4',
-    'VIDEO-2026-01-21-14-24-30.mp4',
-    'VIDEO-2026-01-21-14-24-31(1).mp4',
-    'VIDEO-2026-01-21-14-24-31(2).mp4',
-    'VIDEO-2026-01-21-14-24-31(3).mp4',
-    'VIDEO-2026-01-21-14-24-31(4).mp4',
-    'VIDEO-2026-01-21-14-24-31(5).mp4',
-    'VIDEO-2026-01-21-14-24-31.mp4',
-    'VIDEO-2026-01-21-14-24-32(1).mp4',
-    'VIDEO-2026-01-21-14-24-32(2).mp4',
-    'VIDEO-2026-01-21-14-24-32(3).mp4',
-    'VIDEO-2026-01-21-14-24-32.mp4',
-    'VIDEO-2026-01-21-14-24-33(1).mp4',
-    'VIDEO-2026-01-21-14-24-33(2).mp4',
-    'VIDEO-2026-01-21-14-24-33(3).mp4',
-    'VIDEO-2026-01-21-14-24-33.mp4',
-    'VIDEO-2026-01-21-14-24-42(1).mp4',
-    'VIDEO-2026-01-21-14-24-42.mp4',
-    'VIDEO-2026-01-21-14-24-43.mp4',
-    'VIDEO-2026-01-21-14-24-44(1).mp4',
-    'VIDEO-2026-01-21-14-24-44.mp4',
-    'VIDEO-2026-02-04-20-27-57.mp4',
-    'VIDEO-2026-02-04-21-09-26.mp4',
-    'VIDEO-2026-02-05-14-22-19.mp4',
-    'WhatsApp Video 2026-01-19 at 20.26.06 (1).mp4',
-    'WhatsApp Video 2026-01-19 at 20.26.06 (2).mp4',
-    'WhatsApp Video 2026-01-19 at 20.26.06.mp4',
-    'WhatsApp Video 2026-01-19 at 20.26.07.mp4',
-    'WhatsApp Video 2026-01-19 at 20.26.20.mp4',
-    'WhatsApp Video 2026-01-19 at 20.26.21 (1).mp4',
-    'WhatsApp Video 2026-01-19 at 20.26.21.mp4',
-    'WhatsApp Video 2026-01-19 at 20.26.25.mp4',
-    'WhatsApp Video 2026-01-19 at 20.26.34.mp4',
-    'WhatsApp Video 2026-01-21 at 14.24.30.mp4',
-    'WhatsApp Video 2026-01-21 at 14.24.32.mp4'
+  const YOUTUBE_VIDEOS = [
+    {
+      id: 'youtube-0',
+      type: 'video',
+      youtubeUrl: 'https://youtube.com/shorts/dp5cN5EvXwg?si=jBaxILrh7oeRoCCD',
+      videoId: 'dp5cN5EvXwg',
+      src: 'https://img.youtube.com/vi/dp5cN5EvXwg/hqdefault.jpg',
+      title: 'The Soul of Egypt',
+      caption: 'A cinematic Horus highlight reel from Egypt.',
+      destinations: ['cairo', 'giza', 'luxor', 'aswan', 'egypt'],
+      activities: ['historical', 'temple', 'hero'],
+      tags: ['video', 'cairo', 'giza', 'luxor', 'aswan', 'egypt', 'historical', 'temple', 'hero', 'home']
+    },
+    {
+      id: 'youtube-1',
+      type: 'video',
+      youtubeUrl: 'https://youtube.com/shorts/g_nTlW1F1tw?si=oosWdII718ZAjcZ-',
+      videoId: 'g_nTlW1F1tw',
+      src: 'https://img.youtube.com/vi/g_nTlW1F1tw/hqdefault.jpg',
+      title: 'Upper Egypt Expedition',
+      caption: 'A vertical travel reel from Upper Egypt.',
+      destinations: ['luxor', 'aswan', 'egypt'],
+      activities: ['nile', 'temple', 'historical', 'hero'],
+      tags: ['video', 'luxor', 'aswan', 'egypt', 'nile', 'temple', 'historical', 'hero', 'home']
+    },
+    {
+      id: 'youtube-2',
+      type: 'video',
+      youtubeUrl: 'https://youtube.com/shorts/gtc0E61VWQE?si=T2b-ZNMywme-hmGl',
+      videoId: 'gtc0E61VWQE',
+      src: 'https://img.youtube.com/vi/gtc0E61VWQE/hqdefault.jpg',
+      title: 'Abu Simbel Visit',
+      caption: 'Exploring the legendary temples of Abu Simbel.',
+      destinations: ['aswan', 'egypt'],
+      activities: ['abu-simbel', 'historical', 'temple'],
+      tags: ['video', 'aswan', 'egypt', 'abu-simbel', 'historical', 'temple']
+    },
+    {
+      id: 'youtube-3',
+      type: 'video',
+      youtubeUrl: 'https://youtube.com/shorts/0J4Yo-Pqrko?si=lMvrMAc4hvbkH1Br',
+      videoId: '0J4Yo-Pqrko',
+      src: 'https://img.youtube.com/vi/0J4Yo-Pqrko/hqdefault.jpg',
+      title: 'Abu Simbel Dawn Tour',
+      caption: 'Catching the first rays of sun at the Abu Simbel temples.',
+      destinations: ['aswan', 'egypt'],
+      activities: ['abu-simbel', 'historical', 'temple', 'sunrise'],
+      tags: ['video', 'aswan', 'egypt', 'abu-simbel', 'historical', 'temple', 'sunrise']
+    },
+    {
+      id: 'youtube-4',
+      type: 'video',
+      youtubeUrl: 'https://youtube.com/shorts/IINpACgPiWE?si=O85idinFJLkppwCE',
+      videoId: 'IINpACgPiWE',
+      src: 'https://img.youtube.com/vi/IINpACgPiWE/hqdefault.jpg',
+      title: 'Aswan Nile View',
+      caption: 'Beautiful panoramic view of the Nile in Aswan.',
+      destinations: ['aswan', 'egypt'],
+      activities: ['nile', 'cruise', 'waterfront'],
+      tags: ['video', 'aswan', 'egypt', 'nile', 'cruise', 'waterfront']
+    },
+    {
+      id: 'youtube-5',
+      type: 'video',
+      youtubeUrl: 'https://youtube.com/shorts/0asgNOltQeM?si=7GOPiM-XCbT6EEVw',
+      videoId: '0asgNOltQeM',
+      src: 'https://img.youtube.com/vi/0asgNOltQeM/hqdefault.jpg',
+      title: 'Beautiful Nile Waterfront',
+      caption: 'Tranquil moments along the banks of the Nile.',
+      destinations: ['aswan', 'luxor', 'egypt'],
+      activities: ['nile', 'waterfront'],
+      tags: ['video', 'aswan', 'luxor', 'egypt', 'nile', 'waterfront']
+    }
   ];
 
   const HOME_CURATED_FILES = [
-    'Journey in Egypt Mobile Video (1).mp4',
     'PHOTO-2025-11-14-00-12-40(1).jpg',
-    'VIDEO-2026-01-21-14-24-29.mp4',
     'PHOTO-2025-12-05-14-30-07(1).jpg',
-    'VIDEO-2026-01-19-20-26-22.mp4',
     'PHOTO-2025-12-28-18-10-59.jpg'
   ];
 
@@ -173,44 +165,20 @@
     'PHOTO-2026-01-19-20-26-36(3).jpg': 'Valley of the Kings Trails',
     'PHOTO-2026-02-16-20-13-47.jpg': 'Sinai Sand Adventures',
     'PHOTO-2026-04-18-03-14-58.jpg': 'Local Egyptian Smiles',
-    'PHOTO-2026-04-28-01-42-26.jpg': 'Aswan Cataract Overlook',
-    'Journey in Egypt Mobile Video (1).mp4': 'The Soul of Egypt',
-    'luxor-aswan Mobile Video.mp4': 'Upper Egypt Expedition',
-    'VIDEO-2025-12-09-12-37-43.mp4': 'Abu Simbel Dawn Tour',
-    'VIDEO-2026-01-19-20-26-22.mp4': 'Nubian Rhythms & Dance',
-    'VIDEO-2026-01-21-14-24-29.mp4': 'Balloons Over Luxor',
-    'VIDEO-2026-01-21-14-24-32.mp4': 'Feluccas Sailing at Dusk',
-    'VIDEO-2026-01-21-14-24-33.mp4': 'Luxor Temple Illuminated',
-    'VIDEO-2026-02-05-14-22-19.mp4': 'Red Sea Marine Wonders',
-    'VIDEO-2026-01-19-20-26-06.mp4': 'Exploring Karnak Temple',
-    'VIDEO-2026-01-19-20-26-07.mp4': 'Sailing in Aswan',
-    'VIDEO-2026-01-19-20-26-08.mp4': 'Luxor Temple Courtyard',
-    'VIDEO-2026-01-19-20-26-21.mp4': 'Nubian Village Celebration',
-    'VIDEO-2026-01-19-20-26-23.mp4': 'West Bank Tour Group',
-    'VIDEO-2026-01-19-20-26-25.mp4': 'Abu Simbel Majestic Columns',
-    'VIDEO-2026-01-19-20-26-34.mp4': 'Sunset Over the Nile',
-    'VIDEO-2026-01-19-20-26-36.mp4': 'Entering the Royal Tombs'
+    'PHOTO-2026-04-28-01-42-26.jpg': 'Aswan Cataract Overlook'
   };
 
   const CAPTION_OVERRIDES = {
     'PHOTO-2025-11-14-00-12-40(1).jpg': 'Our guests sharing a group moment in front of the Pyramids of Giza.',
     'PHOTO-2025-12-05-14-30-07(1).jpg': 'Sunbathing and enjoying the tranquil views from our luxury cruise deck.',
-    'PHOTO-2025-12-28-18-10-59.jpg': 'Capturing the sensory explosion of spices, lanterns, and colors in Cairo.',
-    'Journey in Egypt Mobile Video (1).mp4': 'A cinematic highlight reel capturing the spirit of our tours.',
-    'VIDEO-2026-01-19-20-26-22.mp4': 'Travelers joining Nubian musicians in a celebration of local rhythms.',
-    'VIDEO-2026-01-21-14-24-29.mp4': 'An unforgettable sunrise soaring above the ancient monuments of Luxor.'
+    'PHOTO-2025-12-28-18-10-59.jpg': 'Capturing the sensory explosion of spices, lanterns, and colors in Cairo.'
   };
 
   const DESTINATION_CONFIG = {
     cairo: {
       label: 'Cairo',
-      filters: ['cairo', 'giza', 'bazaar', 'food', 'historical', 'team'],
-      intro: 'Real traveler moments from Cairo, Giza, markets, guides, and ancient sites.'
-    },
-    giza: {
-      label: 'Giza',
-      filters: ['giza', 'cairo', 'pyramids', 'historical', 'team'],
-      intro: 'Original Horus photos from the plateau, guide moments, and guests at Egypts icons.'
+      filters: ['cairo', 'giza', 'pyramids', 'bazaar', 'food', 'historical', 'team'],
+      intro: 'Real traveler moments from Cairo, Giza Pyramids, Sphinx, markets, guides, and ancient sites.'
     },
     luxor: {
       label: 'Luxor',
@@ -242,20 +210,25 @@
       filters: ['red-sea', 'waterfront', 'desert', 'water', 'team'],
       intro: 'Authentic traveler clips and desert/water moments to support the laid-back Sinai story.'
     },
-    'marsa-alam': {
-      label: 'Marsa Alam',
-      filters: ['red-sea', 'waterfront', 'water', 'team'],
-      intro: 'Original waterfront and traveler content used where it naturally supports the page.'
-    },
-    'el-gouna': {
-      label: 'El Gouna',
-      filters: ['red-sea', 'waterfront', 'water', 'team'],
-      intro: 'Real Horus water and marina moments alongside the destination-specific visuals.'
-    },
     siwa: {
       label: 'Siwa Oasis',
       filters: ['desert', 'culture', 'team', 'egypt'],
       intro: 'Original desert, local culture, and guest moments that echo the oasis experience.'
+    },
+    'port-said': {
+      label: 'Port Said',
+      filters: ['port-said', 'suez-canal', 'waterfront', 'maritime', 'historical', 'team'],
+      intro: 'Footage and images highlighting Port Saids maritime history, colonial architecture, and the Suez Canal.'
+    },
+    ismailia: {
+      label: 'Ismailia',
+      filters: ['ismailia', 'suez-canal', 'lake-timsah', 'nature', 'historical', 'team'],
+      intro: 'Lush gardens, French colonial architecture, and serene moments from the green city of Ismailia.'
+    },
+    fayoum: {
+      label: 'Fayoum',
+      filters: ['fayoum', 'lakes', 'waterfalls', 'desert', 'nature', 'historical', 'team'],
+      intro: 'Stunning lakes, waterfalls, archaeological treasures, and Tunis pottery village highlights in Fayoum.'
     }
   };
 
@@ -367,16 +340,7 @@
         ...meta
       };
     }),
-    ...VIDEO_FILES.map((file, index) => {
-      const meta = inferMeta(file, 'video');
-      return {
-        id: `video-${index}`,
-        type: 'video',
-        file,
-        src: VIDEO_DIR + file,
-        ...meta
-      };
-    })
+    ...YOUTUBE_VIDEOS
   ];
 
   items.forEach((item, index) => {
@@ -395,44 +359,62 @@
   }
 
   function createMediaCard(item, options = {}) {
-    const card = document.createElement('button');
-    card.type = 'button';
-    card.className = `horus-media-card ${options.large ? 'is-large' : ''}`;
-    card.dataset.horusIndex = String(item.index);
-    card.dataset.horusLightbox = 'true';
-    card.dataset.type = item.type;
-
-    const frame = document.createElement('span');
-    frame.className = 'horus-media-frame';
-
     if (item.type === 'video') {
-      const video = document.createElement('video');
-      video.src = item.src;
-      video.muted = true;
-      video.playsInline = true;
-      video.preload = options.videoPreload || 'metadata';
-      video.setAttribute('aria-label', item.title);
-      frame.appendChild(video);
+      const card = document.createElement('a');
+      card.href = item.youtubeUrl;
+      card.target = '_blank';
+      card.rel = 'noopener noreferrer';
+      card.className = `horus-media-card ${options.large ? 'is-large' : ''}`;
+      card.dataset.horusIndex = String(item.index);
+      card.dataset.type = item.type;
+      card.style.textDecoration = 'none';
 
-      const play = document.createElement('span');
-      play.className = 'horus-media-play';
-      play.innerHTML = '<i class="fas fa-play"></i>';
-      frame.appendChild(play);
-    } else {
+      const frame = document.createElement('span');
+      frame.className = 'horus-media-frame';
+
       const img = document.createElement('img');
       img.src = item.src;
       img.alt = item.title;
       img.loading = options.eager ? 'eager' : 'lazy';
       frame.appendChild(img);
+
+      const play = document.createElement('span');
+      play.className = 'horus-media-play';
+      play.innerHTML = '<i class="fas fa-play"></i>';
+      frame.appendChild(play);
+
+      const label = document.createElement('span');
+      label.className = 'horus-media-label';
+      label.innerHTML = `<span>video</span><strong>${item.title}</strong>`;
+      frame.appendChild(label);
+      card.appendChild(frame);
+
+      return card;
+    } else {
+      const card = document.createElement('button');
+      card.type = 'button';
+      card.className = `horus-media-card ${options.large ? 'is-large' : ''}`;
+      card.dataset.horusIndex = String(item.index);
+      card.dataset.horusLightbox = 'true';
+      card.dataset.type = item.type;
+
+      const frame = document.createElement('span');
+      frame.className = 'horus-media-frame';
+
+      const img = document.createElement('img');
+      img.src = item.src;
+      img.alt = item.title;
+      img.loading = options.eager ? 'eager' : 'lazy';
+      frame.appendChild(img);
+
+      const label = document.createElement('span');
+      label.className = 'horus-media-label';
+      label.innerHTML = `<span>photo</span><strong>${item.title}</strong>`;
+      frame.appendChild(label);
+      card.appendChild(frame);
+
+      return card;
     }
-
-    const label = document.createElement('span');
-    label.className = 'horus-media-label';
-    label.innerHTML = `<span>${item.type}</span><strong>${item.title}</strong>`;
-    frame.appendChild(label);
-    card.appendChild(frame);
-
-    return card;
   }
 
   function ensureLightbox() {
@@ -482,7 +464,7 @@
   }
 
   function openLightbox(index, set) {
-    activeSet = set || items;
+    activeSet = (set || items).filter((item) => item.type === 'photo');
     activeIndex = Math.max(0, activeSet.findIndex((item) => item.index === index));
     if (activeIndex < 0) activeIndex = 0;
     const modal = ensureLightbox();
@@ -564,13 +546,13 @@
 
     const section = document.createElement('section');
     section.className = 'dest-section horus-destination-media';
-    section.id = 'real-media';
+    section.id = 'real-moments';
     section.dataset.destinationRealMedia = 'true';
     section.innerHTML = `
       <div class="container">
         <div class="section-header fade-up">
           <span class="section-tag">Original Horus Media</span>
-          <h2 class="section-title">Real <em>${config.label}</em> Moments</h2>
+          <h2 class="section-title">Real <em>Moments</em></h2>
           <p class="section-subtitle">${config.intro}</p>
         </div>
         <div class="horus-destination-grid fade-up" data-horus-media-scope></div>
@@ -582,12 +564,19 @@
 
     gallerySection.insertAdjacentElement('afterend', section);
 
+    // Observe newly inserted animated elements
+    if (window.animObserver) {
+      section.querySelectorAll('.fade-up, .fade-left, .fade-right, .scale-in').forEach(el => {
+        window.animObserver.observe(el);
+      });
+    }
+
     const quickNav = document.querySelector('.quick-nav .container');
-    if (quickNav && !quickNav.querySelector('a[href="#real-media"]')) {
+    if (quickNav && !quickNav.querySelector('a[href="#real-moments"]')) {
       const link = document.createElement('a');
-      link.href = '#real-media';
+      link.href = '#real-moments';
       link.className = 'quick-nav-pill';
-      link.innerHTML = '<i class="fas fa-photo-film"></i> Real Media';
+      link.innerHTML = '<i class="fas fa-photo-film"></i> Real Moments';
       quickNav.insertBefore(link, quickNav.querySelector('a[href="#tips"]') || null);
     }
   }

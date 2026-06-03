@@ -5,28 +5,28 @@ cities = {
     "cairo": {
         "title": "Cairo",
         "tagline": "The Heart of Ancient Egypt",
-        "description": "Where the ancient world's greatest wonders stand alongside a vibrant, bustling metropolis. From the Great Pyramids to the winding alleys of Khan El Khalili, Cairo is a city that never stops surprising you.",
+        "description": "Where the ancient world's greatest wonders stand alongside a vibrant, bustling metropolis. From the Pyramids of Giza and the Sphinx to the winding alleys of Khan el-Khalili, Cairo is a city that never stops surprising you.",
         "stats": [
             {"icon": "sun", "label": "Best Season", "value": "Oct–Apr"},
             {"icon": "users", "label": "Population", "value": "25M+"},
             {"icon": "clock", "label": "Timezone", "value": "UTC+2"}
         ],
-        "video": {"id": "yJ4LzXO8Un4", "title": "Experience the Magic of Cairo", "highlights": ["Ancient wonders meet modern city", "World-class museums", "Legendary street food", "Magical Nile sunset cruises"]},
-        "hero_img": "images/hero-cairo.png",
+        "video": {"id": "yJ4LzXO8Un4", "title": "Experience the Magic of Cairo", "highlights": ["Ancient Pyramids & Sphinx", "World-class museums", "Legendary Khan el-Khalili bazaar", "Cairo Citadel view"]},
+        "hero_img": "images/hero-cairo.jpg",
         "attractions": [
-            {"name": "Great Pyramids of Giza", "img": "cairo/spencer-davis-ONVA6s03hg8-unsplash.jpg", "tag": "Must See", "rating": "4.9", "time": "3-4 hours", "price": "$25"},
-            {"name": "Grand Egyptian Museum", "img": "cairo/grand egyptian museum.webp", "tag": "Cultural", "rating": "4.8", "time": "2-3 hours", "price": "$15"},
-            {"name": "Khan El Khalili Bazaar", "img": "images/gallery-cairo-khan.png", "tag": "Experience", "rating": "4.6", "time": "2-3 hours", "price": "Free"},
-            {"name": "Islamic Cairo & Al-Azhar", "img": "cairo/dario-morandotti-rxv2qwYPe6s-unsplash.jpg", "tag": "Historic", "rating": "4.5", "time": "Half Day", "price": "$10"},
-            {"name": "Cairo Citadel & Muhammad Ali", "img": "images/gallery-cairo-mosque.png", "tag": "Landmark", "rating": "4.8", "time": "2-3 hours", "price": "$10"},
-            {"name": "Nile Dinner Cruise", "img": "cairo/Cairo-Dinner-Cruise-Egypt-Tours-Portal.jpg", "tag": "Dining", "rating": "4.4", "time": "2-3 hours", "price": "$40"}
+            {"name": "Pyramids of Giza", "img": "images/hero-pyramids.jpg", "tag": "Wonder", "rating": "4.9", "time": "3-4 hours", "price": "$25"},
+            {"name": "Great Sphinx of Giza", "img": "images/sphinx.jpg", "tag": "Iconic", "rating": "4.9", "time": "1-2 hours", "price": "Included"},
+            {"name": "Egyptian Museum", "img": "images/grand_egyptian_museum.jpg", "tag": "Museum", "rating": "4.8", "time": "2-3 hours", "price": "$15"},
+            {"name": "Khan el-Khalili", "img": "images/gallery-cairo-khan.jpg", "tag": "Bazaar", "rating": "4.6", "time": "2-3 hours", "price": "Free"},
+            {"name": "Citadel of Saladin", "img": "images/gallery-cairo-mosque.jpg", "tag": "Historic", "rating": "4.8", "time": "2-3 hours", "price": "$10"},
+            {"name": "Al-Azhar Mosque", "img": "images/Al-Azhar-Mosque.jpg", "tag": "Cultural", "rating": "4.5", "time": "1-2 hours", "price": "Free"}
         ],
         "gallery": [
-            {"src": "cairo/grand egyptian museum.webp", "caption": "Grand Egyptian Museum"},
-            {"src": "cairo/gem-birdseye-view-copyright-grand-egyptian-museum.jpg", "caption": "GEM Birdseye View"},
-            {"src": "cairo/Giza-Egypt-April-13-2024-The-Grand-Egyptian-Museum-Giza-Museum-Egypts-gift-to-the-world-the-largest-archaeological-museum-in-the-world-about-2-kilometers-from-Giza-pyramid-complex-1.webp", "caption": "Grand Egyptian Museum Facade"},
-            {"src": "cairo/Cairo-Dinner-Cruise-Egypt-Tours-Portal.jpg", "caption": "Nile Dinner Cruise"},
-            {"src": "cairo/spencer-davis-TBNbpd6Xs_4-unsplash.jpg", "caption": "Pyramids of Giza"}
+            {"src": "images/grand_egyptian_museum.jpg", "caption": "Egyptian Museum"},
+            {"src": "images/hero-pyramids.jpg", "caption": "Pyramids of Giza"},
+            {"src": "images/sphinx.jpg", "caption": "Great Sphinx of Giza"},
+            {"src": "images/gallery-cairo-khan.jpg", "caption": "Khan el-Khalili Bazaar"},
+            {"src": "images/gallery-cairo-mosque.jpg", "caption": "Citadel of Saladin"}
         ],
         "tips": [
             {"icon": "🕐", "title": "Best Time", "desc": "Oct-Apr for comfortable weather."},
@@ -35,41 +35,6 @@ cities = {
             {"icon": "👗", "title": "Dress Code", "desc": "Modest clothing required for mosques."},
             {"icon": "🍽️", "title": "Must-Try Food", "desc": "Koshari and Ful are local favorites."},
             {"icon": "📸", "title": "Photo Tip", "desc": "Visit the Pyramids at 8AM for best light."}
-        ]
-    },
-    "giza": {
-        "title": "Giza",
-        "tagline": "Land of the Pyramids",
-        "description": "Home to the last surviving Wonder of the Ancient World. The Great Pyramids and the Sphinx have stood watch over the desert for over 4,500 years, a testament to human ambition and ingenuity.",
-        "stats": [
-            {"icon": "hourglass-half", "label": "Built", "value": "2560 BC"},
-            {"icon": "landmark", "label": "Heritage", "value": "UNESCO"},
-            {"icon": "history", "label": "Age", "value": "4,500+ Yrs"}
-        ],
-        "video": {"id": "yJ4LzXO8Un4", "title": "The Pyramids of Giza", "highlights": ["Last surviving Ancient Wonder", "4,500 years of history", "Spectacular sunset views", "Unforgettable camel rides"]},
-        "hero_img": "images/hero-giza.png",
-        "attractions": [
-            {"name": "Great Pyramid of Khufu", "img": "cairo/spencer-davis-ONVA6s03hg8-unsplash.jpg", "tag": "Wonder", "rating": "5.0", "time": "2-3 hours", "price": "$20"},
-            {"name": "The Great Sphinx", "img": "cairo/spencer-davis-TBNbpd6Xs_4-unsplash.jpg", "tag": "Iconic", "rating": "4.9", "time": "1 hour", "price": "Included"},
-            {"name": "Solar Boat Museum", "img": "cairo/spencer-davis-MVW_MUwusDs-unsplash.jpg", "tag": "Museum", "rating": "4.6", "time": "1 hour", "price": "$10"},
-            {"name": "Sound & Light Show", "img": "images/hero-pyramids.png", "tag": "Experience", "rating": "4.7", "time": "1.5 hours", "price": "$20"},
-            {"name": "Pyramid of Khafre", "img": "cairo/alex-azabache-hz4tKDvQHoo-unsplash.jpg", "tag": "Historic", "rating": "4.8", "time": "1-2 hours", "price": "$10"},
-            {"name": "Camel Ride at Sunset", "img": "cairo/andres-dallimonti-00Xo8z-bimM-unsplash.jpg", "tag": "Adventure", "rating": "4.5", "time": "1 hour", "price": "$15"}
-        ],
-        "gallery": [
-            {"src": "images/hero-giza.png", "caption": "Giza"},
-            {"src": "cairo/spencer-davis-ONVA6s03hg8-unsplash.jpg", "caption": "Pyramid"},
-            {"src": "cairo/spencer-davis-TBNbpd6Xs_4-unsplash.jpg", "caption": "Sphinx"},
-            {"src": "images/hero-pyramids.png", "caption": "Light Show"},
-            {"src": "cairo/andres-dallimonti-00Xo8z-bimM-unsplash.jpg", "caption": "Camel Ride"}
-        ],
-        "tips": [
-            {"icon": "🌅", "title": "Best Time", "desc": "Sunrise or sunset for magical light."},
-            {"icon": "👥", "title": "Skip Crowds", "desc": "Arrive right at 7AM opening."},
-            {"icon": "🐪", "title": "Camel Rides", "desc": "Always negotiate price beforehand."},
-            {"icon": "👟", "title": "What to Wear", "desc": "Comfortable shoes and sunscreen."},
-            {"icon": "🌙", "title": "Night Show", "desc": "Book Sound & Light in advance."},
-            {"icon": "🏨", "title": "Stay Nearby", "desc": "Book a hotel with a pyramid view."}
         ]
     },
     "alexandria": {
@@ -82,29 +47,28 @@ cities = {
             {"icon": "history", "label": "History", "value": "2,300+ Yrs"}
         ],
         "video": {"id": "0vo0dJ3wJVs", "title": "Discover Alexandria", "highlights": ["Greco-Roman heritage", "Stunning coastline", "World-class seafood", "Ancient Library reborn"]},
-        "hero_img": "images/city-alexandria.png",
+        "hero_img": "images/city-alexandria.jpg",
         "attractions": [
-            {"name": "Bibliotheca Alexandrina", "img": "cairo/thales-botelho-de-sousa-MB2eoqiNKiw-unsplash.jpg", "tag": "Cultural", "rating": "4.8", "time": "2-3 hours", "price": "$5"},
-            {"name": "Qaitbay Citadel", "img": "images/gallery-alex-citadel.png", "tag": "Historic", "rating": "4.7", "time": "1-2 hours", "price": "$5"},
-            {"name": "Catacombs of Kom El Shoqafa", "img": "cairo/ahmed-samy-IDsBb0AGJFY-unsplash.jpg", "tag": "Must See", "rating": "4.6", "time": "1-2 hours", "price": "$5"},
-            {"name": "Stanley Bridge & Corniche", "img": "cairo/rosario-janza-69qT-N3L5sc-unsplash.jpg", "tag": "Experience", "rating": "4.5", "time": "2-3 hours", "price": "Free"},
-            {"name": "Montazah Palace Gardens", "img": "cairo/mounir-abdi-VrrT5ma6mmY-unsplash.jpg", "tag": "Nature", "rating": "4.6", "time": "2-3 hours", "price": "$3"},
-            {"name": "Seafood Experience", "img": "cairo/omar-adel-fJKMxGgJuHk-unsplash.jpg", "tag": "Dining", "rating": "4.7", "time": "1-2 hours", "price": "$15"}
+            {"name": "Bibliotheca Alexandrina", "img": "images/attr-bibliotheca-alexandrina.jpg", "tag": "Cultural", "rating": "4.8", "time": "2-3 hours", "price": "$5"},
+            {"name": "Citadel of Qaitbay", "img": "images/gallery-alex-citadel.jpg", "tag": "Historic", "rating": "4.7", "time": "1-2 hours", "price": "$5"},
+            {"name": "Catacombs of Kom El Shoqafa", "img": "images/attr-catacombs-kom-el-shoqafa.jpg", "tag": "Must See", "rating": "4.6", "time": "1-2 hours", "price": "$5"},
+            {"name": "Montaza Palace", "img": "images/attr-montaza-palace.jpg", "tag": "Nature", "rating": "4.6", "time": "2-3 hours", "price": "$3"},
+            {"name": "Alexandria Corniche", "img": "images/attr-alexandria-corniche.jpg", "tag": "Experience", "rating": "4.5", "time": "2-3 hours", "price": "Free"}
         ],
         "gallery": [
-            {"src": "images/hero-alexandria.png", "caption": "Alexandria"},
-            {"src": "images/gallery-alex-citadel.png", "caption": "Citadel"},
-            {"src": "cairo/thales-botelho-de-sousa-MB2eoqiNKiw-unsplash.jpg", "caption": "Library"},
-            {"src": "cairo/rosario-janza-69qT-N3L5sc-unsplash.jpg", "caption": "Corniche"},
-            {"src": "cairo/ahmed-samy-IDsBb0AGJFY-unsplash.jpg", "caption": "Catacombs"}
+            {"src": "images/hero-alexandria.jpg", "caption": "Alexandria"},
+            {"src": "images/gallery-alex-citadel.jpg", "caption": "Citadel"},
+            {"src": "images/attr-bibliotheca-alexandrina.jpg", "caption": "Library"},
+            {"src": "images/attr-alexandria-corniche.jpg", "caption": "Corniche"},
+            {"src": "images/attr-catacombs-kom-el-shoqafa.jpg", "caption": "Catacombs"}
         ],
         "tips": [
-            {"icon": "🌊", "title": "Best Season", "desc": "May-Sep for beach, Nov-Mar for sightseeing."},
-            {"icon": "🐟", "title": "Seafood", "desc": "Visit Abu Qir for the best fish."},
-            {"icon": "🚂", "title": "Getting There", "desc": "Talgo train is 2.5hrs from Cairo."},
-            {"icon": "📸", "title": "Photo Spots", "desc": "Stanley Bridge at sunset is perfect."},
-            {"icon": "☂️", "title": "Weather", "desc": "Pack a light jacket in winter."},
-            {"icon": "🏊", "title": "Beaches", "desc": "Check out El-Maamoura & Montazah."}
+            {"icon": "waves", "title": "Best Season", "desc": "May-Sep for beach, Nov-Mar for sightseeing."},
+            {"icon": "fish", "title": "Seafood", "desc": "Visit Abu Qir for the best fish."},
+            {"icon": "train", "title": "Getting There", "desc": "Talgo train is 2.5hrs from Cairo."},
+            {"icon": "camera", "title": "Photo Spots", "desc": "Stanley Bridge at sunset is perfect."},
+            {"icon": "umbrella", "title": "Weather", "desc": "Pack a light jacket in winter."},
+            {"icon": "swimming-pool", "title": "Beaches", "desc": "Check out El-Maamoura & Montazah."}
         ]
     },
     "luxor": {
@@ -117,21 +81,19 @@ cities = {
             {"icon": "sun", "label": "Best Season", "value": "Oct–Mar"}
         ],
         "video": {"id": "SvxWvnhHYV8", "title": "Journey Through Ancient Luxor", "highlights": ["3,000+ years of history", "Spectacular balloon rides", "Stunning illuminated temples", "Timeless Nile sailing"]},
-        "hero_img": "images/hero-luxor.png",
+        "hero_img": "images/hero-luxor.jpg",
         "attractions": [
-            {"name": "Valley of the Kings", "img": "aswan-luxor/dmitrii-zhodzishskii-cOihXsrJFRc-unsplash.jpg", "tag": "Must See", "rating": "4.9", "time": "3-4 hours", "price": "$20"},
-            {"name": "Karnak Temple Complex", "img": "images/gallery-luxor-temple.png", "tag": "Ancient", "rating": "4.9", "time": "2-3 hours", "price": "$15"},
-            {"name": "Hot Air Balloon Ride", "img": "images/gallery-luxor-balloons.png", "tag": "Adventure", "rating": "4.8", "time": "1-2 hours", "price": "$80"},
-            {"name": "Luxor Temple", "img": "aswan-luxor/dmitrii-zhodzishskii-5aEHOQrb2Qk-unsplash.jpg", "tag": "Historic", "rating": "4.7", "time": "1-2 hours", "price": "$10"},
-            {"name": "Hatshepsut Temple", "img": "aswan-luxor/dmitrii-zhodzishskii-4rXHE9XeW_A-unsplash.jpg", "tag": "Landmark", "rating": "4.7", "time": "1-2 hours", "price": "$10"},
-            {"name": "Felucca Nile Sail", "img": "aswan-luxor/kevin-et-laurianne-langlais-pvFtrzwuc6g-unsplash.jpg", "tag": "Experience", "rating": "4.5", "time": "1-2 hours", "price": "$15"}
+            {"name": "Valley of the Kings", "img": "images/Valley-of-the-Kings.jpg", "tag": "Must See", "rating": "4.9", "time": "3-4 hours", "price": "$20"},
+            {"name": "Karnak Temple", "img": "images/Karnak-temple.jpg", "tag": "Ancient", "rating": "4.9", "time": "2-3 hours", "price": "$15"},
+            {"name": "Luxor Temple", "img": "images/gallery-luxor-temple.jpg", "tag": "Historic", "rating": "4.7", "time": "1-2 hours", "price": "$10"},
+            {"name": "Temple of Hatshepsut", "img": "images/hero-luxor.jpg", "tag": "Landmark", "rating": "4.7", "time": "1-2 hours", "price": "$10"},
+            {"name": "Nile River Cruise", "img": "Real Moments/PHOTO-2025-12-05-14-30-07(1).jpg", "tag": "Experience", "rating": "4.8", "time": "3-5 days", "price": "$250"}
         ],
         "gallery": [
-            {"src": "images/hero-luxor.png", "caption": "Luxor"},
-            {"src": "images/gallery-luxor-temple.png", "caption": "Karnak"},
-            {"src": "images/gallery-luxor-balloons.png", "caption": "Balloons"},
-            {"src": "aswan-luxor/dmitrii-zhodzishskii-2K5kuh3NRvk-unsplash.jpg", "caption": "Valley of Kings"},
-            {"src": "aswan-luxor/kevin-et-laurianne-langlais-QveJH1hA2sI-unsplash.jpg", "caption": "Felucca"}
+            {"src": "images/hero-luxor.jpg", "caption": "Luxor"},
+            {"src": "images/gallery-luxor-temple.jpg", "caption": "Karnak"},
+            {"src": "Real Moments/PHOTO-2026-01-19-20-26-36(3).jpg", "caption": "Valley of Kings"},
+            {"src": "Real Moments/PHOTO-2025-12-05-14-30-07(1).jpg", "caption": "Nile Cruise"}
         ],
         "tips": [
             {"icon": "🌅", "title": "Best Time", "desc": "Oct-Mar for comfortable exploring."},
@@ -152,21 +114,19 @@ cities = {
             {"icon": "landmark", "label": "Gateway", "value": "Abu Simbel"}
         ],
         "video": {"id": "z2YPnEPuqSk", "title": "Serenity of Aswan", "highlights": ["Magnificent Abu Simbel", "Vibrant Nubian villages", "Egypt's most beautiful sunsets", "Serene Nile sailing"]},
-        "hero_img": "images/hero-aswan.png",
+        "hero_img": "images/hero-aswan.jpg",
         "attractions": [
-            {"name": "Abu Simbel Temples", "img": "aswan-luxor/david-gavi-AdIJ9S-kbrc-unsplash.jpg", "tag": "Must See", "rating": "4.9", "time": "Full Day", "price": "$60"},
-            {"name": "Philae Temple", "img": "images/gallery-aswan-philae.png", "tag": "Ancient", "rating": "4.8", "time": "2-3 hours", "price": "$15"},
-            {"name": "Nubian Villages", "img": "images/gallery-aswan-nubian.png", "tag": "Cultural", "rating": "4.7", "time": "Half Day", "price": "$25"},
-            {"name": "Felucca Sailing", "img": "aswan-luxor/kevin-et-laurianne-langlais-Rk8yY0UfPx0-unsplash.jpg", "tag": "Experience", "rating": "4.8", "time": "1-3 hours", "price": "$15"},
-            {"name": "Aswan High Dam", "img": "aswan-luxor/hassan-ouajbir-251hbdY3M4E-unsplash.jpg", "tag": "Landmark", "rating": "4.3", "time": "1 hour", "price": "$5"},
-            {"name": "Unfinished Obelisk", "img": "aswan-luxor/calin-stan-a8ZSKCBE1xk-unsplash.jpg", "tag": "Historic", "rating": "4.4", "time": "1 hour", "price": "$5"}
+            {"name": "Philae Temple", "img": "images/gallery-aswan-philae.jpg", "tag": "Ancient", "rating": "4.8", "time": "2-3 hours", "price": "$15"},
+            {"name": "Abu Simbel Temples", "img": "images/attr-abu-simbel.jpg", "tag": "Must See", "rating": "4.9", "time": "Full Day", "price": "$60"},
+            {"name": "Aswan High Dam", "img": "images/attr-aswan-high-dam.jpg", "tag": "Landmark", "rating": "4.3", "time": "1 hour", "price": "$5"},
+            {"name": "Elephantine Island", "img": "images/attr-elephantine-island.jpg", "tag": "Nature", "rating": "4.6", "time": "2-3 hours", "price": "Free"},
+            {"name": "Nubian Village", "img": "images/gallery-aswan-nubian.jpg", "tag": "Cultural", "rating": "4.7", "time": "Half Day", "price": "$25"}
         ],
         "gallery": [
-            {"src": "images/hero-aswan.png", "caption": "Aswan"},
-            {"src": "images/gallery-aswan-philae.png", "caption": "Philae"},
-            {"src": "images/gallery-aswan-nubian.png", "caption": "Nubian Village"},
-            {"src": "aswan-luxor/kevin-et-laurianne-langlais-Rk8yY0UfPx0-unsplash.jpg", "caption": "Felucca"},
-            {"src": "aswan-luxor/hassan-ouajbir-251hbdY3M4E-unsplash.jpg", "caption": "High Dam"}
+            {"src": "images/hero-aswan.jpg", "caption": "Aswan"},
+            {"src": "images/gallery-aswan-philae.jpg", "caption": "Philae"},
+            {"src": "images/gallery-aswan-nubian.jpg", "caption": "Nubian Village"},
+            {"src": "images/attr-elephantine-island.jpg", "caption": "Elephantine Island"}
         ],
         "tips": [
             {"icon": "☀️", "title": "Best Time", "desc": "Nov-Feb for ideal weather."},
@@ -175,41 +135,6 @@ cities = {
             {"icon": "⛵", "title": "Felucca Tip", "desc": "Always negotiate prices first."},
             {"icon": "🌅", "title": "Best Sunset", "desc": "Watch from a Nubian Restaurant."},
             {"icon": "🛳️", "title": "Nile Cruise", "desc": "Take a multi-day cruise to Luxor."}
-        ]
-    },
-    "hurghada": {
-        "title": "Hurghada",
-        "tagline": "Red Sea Paradise",
-        "description": "Egypt's premier beach destination on the Red Sea coast. Crystal-clear waters, vibrant coral reefs, and year-round sunshine make Hurghada the ultimate escape for beach lovers and water sports enthusiasts.",
-        "stats": [
-            {"icon": "water", "label": "Coast", "value": "Red Sea"},
-            {"icon": "sun", "label": "Sunshine", "value": "365 Days"},
-            {"icon": "water", "label": "Diving", "value": "World-class"}
-        ],
-        "video": {"id": "L4FhWLBbiw8", "title": "Hurghada's Crystal Waters", "highlights": ["World-class coral reef diving", "Pristine island beaches", "Thrilling desert safari", "Year-round perfect weather"]},
-        "hero_img": "images/hero-hurghada.png",
-        "attractions": [
-            {"name": "Giftun Island", "img": "hurgada/raimond-klavins-zfeY8HkSAOE-unsplash.jpg", "tag": "Must See", "rating": "4.8", "time": "Full Day", "price": "$35"},
-            {"name": "Coral Reef Diving", "img": "images/gallery-hurghada-reef.png", "tag": "Adventure", "rating": "4.9", "time": "Half Day", "price": "$45"},
-            {"name": "Desert Safari", "img": "hurgada/pexels-vika-glitter-392079-31166931.jpg", "tag": "Experience", "rating": "4.6", "time": "Half Day", "price": "$30"},
-            {"name": "Glass Bottom Boat", "img": "hurgada/youhana-nassif-9BZVf-jEDwU-unsplash.jpg", "tag": "Family", "rating": "4.5", "time": "2-3 hours", "price": "$20"},
-            {"name": "El Gouna Day Trip", "img": "hurgada/omar-elsharawy-Figb0H3ExRw-unsplash.jpg", "tag": "Luxury", "rating": "4.7", "time": "Full Day", "price": "Free"},
-            {"name": "Submarine Tour", "img": "images/gallery-hurghada-reef.png", "tag": "Unique", "rating": "4.4", "time": "2 hours", "price": "$50"}
-        ],
-        "gallery": [
-            {"src": "images/hero-hurghada.png", "caption": "Hurghada"},
-            {"src": "images/gallery-hurghada-reef.png", "caption": "Reef"},
-            {"src": "hurgada/omar-elsharawy-Figb0H3ExRw-unsplash.jpg", "caption": "Marina"},
-            {"src": "hurgada/youhana-nassif-9BZVf-jEDwU-unsplash.jpg", "caption": "Boat"},
-            {"src": "hurgada/pexels-vika-glitter-392079-31166931.jpg", "caption": "Desert"}
-        ],
-        "tips": [
-            {"icon": "🤿", "title": "Diving Season", "desc": "Sep-Nov for best visibility."},
-            {"icon": "☀️", "title": "Sun Safety", "desc": "Use SPF 50+ sunscreen."},
-            {"icon": "🏨", "title": "Stay Smart", "desc": "El Mamsha promenade is great."},
-            {"icon": "🐠", "title": "Reef Etiquette", "desc": "Never touch the coral."},
-            {"icon": "💰", "title": "Budget", "desc": "Book tours through locals."},
-            {"icon": "🌙", "title": "Nightlife", "desc": "Check out the Marina area."}
         ]
     },
     "sharm-el-sheikh": {
@@ -222,21 +147,19 @@ cities = {
             {"icon": "star", "label": "Resorts", "value": "Luxury"}
         ],
         "video": {"id": "q4iE63kHJhk", "title": "Sharm's Hidden Wonders", "highlights": ["World-famous diving", "Sacred Mount Sinai sunrise", "Luxury resort experiences", "Desert adventure safaris"]},
-        "hero_img": "images/hero-sharm.png",
+        "hero_img": "images/hero-sharm.jpg",
         "attractions": [
-            {"name": "Ras Mohammed", "img": "sharm/oleksandr-podoima-xzTR5ZLvAx0-unsplash.jpg", "tag": "Must See", "rating": "4.9", "time": "Full Day", "price": "$25"},
-            {"name": "Blue Hole (Dahab)", "img": "images/gallery-sharm-diving.png", "tag": "Adventure", "rating": "4.8", "time": "Full Day", "price": "$40"},
-            {"name": "Mount Sinai Sunrise", "img": "images/hero-dahab.png", "tag": "Spiritual", "rating": "4.7", "time": "Overnight", "price": "$35"},
-            {"name": "Naama Bay", "img": "images/hero-sharm.png", "tag": "Entertainment", "rating": "4.6", "time": "Evening", "price": "Free"},
-            {"name": "Tiran Island", "img": "images/gallery-hurghada-reef.png", "tag": "Nature", "rating": "4.7", "time": "Full Day", "price": "$30"},
-            {"name": "Quad Biking", "img": "hurgada/pexels-vika-glitter-392079-31166931.jpg", "tag": "Experience", "rating": "4.5", "time": "Half Day", "price": "$25"}
+            {"name": "Ras Mohammed National Park", "img": "images/gallery-sharm-diving.jpg", "tag": "Must See", "rating": "4.9", "time": "Full Day", "price": "$25"},
+            {"name": "Naama Bay", "img": "images/hero-sharm.jpg", "tag": "Entertainment", "rating": "4.6", "time": "Evening", "price": "Free"},
+            {"name": "Soho Square", "img": "images/attr-soho-square.jpg", "tag": "Modern", "rating": "4.6", "time": "Evening", "price": "Free"},
+            {"name": "Scuba Diving & Snorkeling", "img": "images/gallery-sharm-diving.jpg", "tag": "Adventure", "rating": "4.8", "time": "Half Day", "price": "$40"},
+            {"name": "Desert Safari Tours", "img": "images/desert safari tours.jpg", "tag": "Experience", "rating": "4.5", "time": "Half Day", "price": "$25"}
         ],
         "gallery": [
-            {"src": "images/hero-sharm.png", "caption": "Sharm"},
-            {"src": "images/gallery-sharm-diving.png", "caption": "Diving"},
-            {"src": "sharm/oleksandr-podoima-xzTR5ZLvAx0-unsplash.jpg", "caption": "Ras Mohammed"},
-            {"src": "hurgada/pexels-vika-glitter-392079-31166931.jpg", "caption": "Desert Safari"},
-            {"src": "images/gallery-hurghada-reef.png", "caption": "Tiran Island"}
+            {"src": "images/hero-sharm.jpg", "caption": "Sharm El Sheikh"},
+            {"src": "images/gallery-sharm-diving.jpg", "caption": "Diving"},
+            {"src": "images/gallery-sharm-diving.jpg", "caption": "Ras Mohammed"},
+            {"src": "images/attr-soho-square.jpg", "caption": "Soho Square"}
         ],
         "tips": [
             {"icon": "🤿", "title": "Dive Centers", "desc": "Use PADI-certified shops."},
@@ -247,39 +170,37 @@ cities = {
             {"icon": "🚐", "title": "Day Trips", "desc": "Dahab is only 1 hour away."}
         ]
     },
-    "siwa": {
-        "title": "Siwa Oasis",
-        "tagline": "Egypt's Hidden Paradise",
-        "description": "A mystical desert oasis nestled in the Western Sahara, where ancient Berber culture thrives among palm groves, salt lakes, and sand seas. Siwa is Egypt's best-kept secret.",
+    "hurghada": {
+        "title": "Hurghada",
+        "tagline": "Red Sea Paradise",
+        "description": "Egypt's premier beach destination on the Red Sea coast. Crystal-clear waters, vibrant coral reefs, and year-round sunshine make Hurghada the ultimate escape for beach lovers and water sports enthusiasts.",
         "stats": [
-            {"icon": "mountain", "label": "Region", "value": "Western Desert"},
-            {"icon": "users", "label": "Culture", "value": "Berber"},
-            {"icon": "tint", "label": "Springs", "value": "300+"}
+            {"icon": "water", "label": "Coast", "value": "Red Sea"},
+            {"icon": "sun", "label": "Sunshine", "value": "365 Days"},
+            {"icon": "water", "label": "Diving", "value": "World-class"}
         ],
-        "video": {"id": "WPrDnl5iQiQ", "title": "Magic of Siwa Oasis", "highlights": ["Ancient Oracle Temple", "Great Sand Sea adventures", "Crystal-clear salt lakes", "Authentic Berber culture"]},
-        "hero_img": "images/hero-siwa.png",
+        "video": {"id": "L4FhWLBbiw8", "title": "Hurghada's Crystal Waters", "highlights": ["World-class coral reef diving", "Pristine island beaches", "Thrilling desert safari", "Year-round perfect weather"]},
+        "hero_img": "images/hero-hurghada.jpg",
         "attractions": [
-            {"name": "Shali Fortress", "img": "images/hero-siwa.png", "tag": "Historic", "rating": "4.7", "time": "1-2 hours", "price": "$5"},
-            {"name": "Oracle Temple of Amun", "img": "aswan-luxor/calin-stan-Mv15X2n8JVE-unsplash.jpg", "tag": "Ancient", "rating": "4.8", "time": "1 hour", "price": "$5"},
-            {"name": "Cleopatra's Spring", "img": "aswan-luxor/flying-carpet-Si1MFhSLNWY-unsplash.jpg", "tag": "Nature", "rating": "4.6", "time": "1-2 hours", "price": "Free"},
-            {"name": "Great Sand Sea Safari", "img": "aswan-luxor/pexels-alexey-k-458081116-36336671.jpg", "tag": "Adventure", "rating": "4.9", "time": "Half Day", "price": "$40"},
-            {"name": "Salt Lakes", "img": "aswan-luxor/mo-gabrail-iuC3w8mLDcs-unsplash.jpg", "tag": "Experience", "rating": "4.5", "time": "2 hours", "price": "Free"},
-            {"name": "Mountain of the Dead", "img": "aswan-luxor/thiago-rocha-UhI5MMB4Nv8-unsplash.jpg", "tag": "Cultural", "rating": "4.4", "time": "1-2 hours", "price": "$5"}
+            {"name": "Giftun Islands", "img": "images/city-hurghada.jpg", "tag": "Must See", "rating": "4.8", "time": "Full Day", "price": "$35"},
+            {"name": "Marina Hurghada", "img": "images/city-hurghada.jpg", "tag": "Luxury", "rating": "4.7", "time": "2-3 hours", "price": "Free"},
+            {"name": "Desert Quad Bike Tours", "img": "images/Desert Quad Bike Tours.jpg", "tag": "Experience", "rating": "4.6", "time": "Half Day", "price": "$30"},
+            {"name": "Snorkeling & Diving Excursions", "img": "images/gallery-hurghada-reef.jpg", "tag": "Adventure", "rating": "4.9", "time": "Half Day", "price": "$45"},
+            {"name": "Hurghada Grand Aquarium", "img": "images/Hurghada Grand Aquarium.jpg", "tag": "Family", "rating": "4.5", "time": "2-3 hours", "price": "$20"}
         ],
         "gallery": [
-            {"src": "images/hero-siwa.png", "caption": "Siwa Oasis"},
-            {"src": "aswan-luxor/pexels-alexey-k-458081116-36336671.jpg", "caption": "Sand Sea"},
-            {"src": "aswan-luxor/mo-gabrail-iuC3w8mLDcs-unsplash.jpg", "caption": "Salt Lakes"},
-            {"src": "aswan-luxor/flying-carpet-Si1MFhSLNWY-unsplash.jpg", "caption": "Cleopatra's Spring"},
-            {"src": "aswan-luxor/calin-stan-Mv15X2n8JVE-unsplash.jpg", "caption": "Oracle Temple"}
+            {"src": "images/hero-hurghada.jpg", "caption": "Hurghada"},
+            {"src": "images/gallery-hurghada-reef.jpg", "caption": "Reef"},
+            {"src": "images/city-hurghada.jpg", "caption": "Marina"},
+            {"src": "images/gallery-hurghada-reef.jpg", "caption": "Boat"}
         ],
         "tips": [
-            {"icon": "🚗", "title": "Getting There", "desc": "8-hour drive from Cairo."},
-            {"icon": "🌡️", "title": "Best Time", "desc": "Oct-Apr for mild weather."},
-            {"icon": "🧥", "title": "What to Pack", "desc": "Warm layers for desert nights."},
-            {"icon": "🤝", "title": "Culture", "desc": "Conservative dress required."},
-            {"icon": "🫒", "title": "Food", "desc": "Try local dates and olive oil."},
-            {"icon": "🏡", "title": "Stay", "desc": "Eco-lodges for authentic experience."}
+            {"icon": "🤿", "title": "Diving Season", "desc": "Sep-Nov for best visibility."},
+            {"icon": "☀️", "title": "Sun Safety", "desc": "Use SPF 50+ sunscreen."},
+            {"icon": "🏨", "title": "Stay Smart", "desc": "El Mamsha promenade is great."},
+            {"icon": "🐠", "title": "Reef Etiquette", "desc": "Never touch the coral."},
+            {"icon": "💰", "title": "Budget", "desc": "Book tours through locals."},
+            {"icon": "🌙", "title": "Nightlife", "desc": "Check out the Marina area."}
         ]
     },
     "dahab": {
@@ -292,21 +213,19 @@ cities = {
             {"icon": "heart", "label": "Vibe", "value": "Backpacker"}
         ],
         "video": {"id": "BxQCzBbsmbk", "title": "Egypt's Best Kept Secret", "highlights": ["World-famous Blue Hole diving", "Perfect kitesurfing conditions", "Laid-back beach café culture", "Sacred Mount Sinai treks"]},
-        "hero_img": "images/hero-dahab.png",
+        "hero_img": "images/hero-dahab.jpg",
         "attractions": [
-            {"name": "Blue Hole", "img": "images/gallery-sharm-diving.png", "tag": "Must See", "rating": "4.9", "time": "2-3 hours", "price": "$10"},
-            {"name": "Three Pools", "img": "images/hero-dahab.png", "tag": "Nature", "rating": "4.7", "time": "Half Day", "price": "Free"},
-            {"name": "Lighthouse Reef", "img": "sharm/oleksandr-podoima-xzTR5ZLvAx0-unsplash.jpg", "tag": "Adventure", "rating": "4.8", "time": "2-3 hours", "price": "$15"},
-            {"name": "Kitesurfing", "img": "hurgada/raimond-klavins-zfeY8HkSAOE-unsplash.jpg", "tag": "Sport", "rating": "4.7", "time": "Half Day", "price": "$50"},
-            {"name": "Mount Sinai Trek", "img": "images/hero-sharm.png", "tag": "Spiritual", "rating": "4.7", "time": "Overnight", "price": "$30"},
-            {"name": "Bedouin Desert", "img": "hurgada/pexels-vika-glitter-392079-31166931.jpg", "tag": "Cultural", "rating": "4.6", "time": "Evening", "price": "$20"}
+            {"name": "Blue Hole", "img": "images/gallery-sharm-diving.jpg", "tag": "Must See", "rating": "4.9", "time": "2-3 hours", "price": "$10"},
+            {"name": "Lighthouse Reef", "img": "images/gallery-sharm-diving.jpg", "tag": "Adventure", "rating": "4.8", "time": "2-3 hours", "price": "$15"},
+            {"name": "Mount Sinai Excursions", "img": "images/hero-sharm.jpg", "tag": "Spiritual", "rating": "4.7", "time": "Overnight", "price": "$30"},
+            {"name": "Bedouin Camps", "img": "images/Bedouin Camps.jpg", "tag": "Cultural", "rating": "4.6", "time": "Evening", "price": "$20"},
+            {"name": "Lagoon Beach", "img": "images/hero-dahab.jpg", "tag": "Nature", "rating": "4.7", "time": "Half Day", "price": "Free"}
         ],
         "gallery": [
-            {"src": "images/hero-dahab.png", "caption": "Dahab"},
-            {"src": "images/gallery-sharm-diving.png", "caption": "Blue Hole"},
-            {"src": "sharm/oleksandr-podoima-xzTR5ZLvAx0-unsplash.jpg", "caption": "Lighthouse Reef"},
-            {"src": "hurgada/raimond-klavins-zfeY8HkSAOE-unsplash.jpg", "caption": "Kitesurfing"},
-            {"src": "images/hero-sharm.png", "caption": "Sinai"}
+            {"src": "images/hero-dahab.jpg", "caption": "Dahab"},
+            {"src": "images/gallery-sharm-diving.jpg", "caption": "Blue Hole"},
+            {"src": "images/gallery-sharm-diving.jpg", "caption": "Lighthouse Reef"},
+            {"src": "images/Bedouin Camps.jpg", "caption": "Bedouin Camps"}
         ],
         "tips": [
             {"icon": "🚐", "title": "Getting There", "desc": "1 hour from Sharm by bus."},
@@ -317,88 +236,147 @@ cities = {
             {"icon": "⚠️", "title": "Safety", "desc": "Dive with buddy at Blue Hole."}
         ]
     },
-    "marsa-alam": {
-        "title": "Marsa Alam",
-        "tagline": "The Untouched Red Sea",
-        "description": "Egypt's most pristine diving destination, where virgin coral reefs meet untouched beaches. Marsa Alam offers encounters with dugongs, dolphins, and sea turtles in waters so clear they feel like glass.",
+    "siwa": {
+        "title": "Siwa Oasis",
+        "tagline": "Egypt's Hidden Paradise",
+        "description": "A mystical desert oasis nestled in the Western Sahara, where ancient Berber culture thrives among palm groves, salt lakes, and sand seas. Siwa is Egypt's best-kept secret.",
         "stats": [
-            {"icon": "water", "label": "Reefs", "value": "Pristine"},
-            {"icon": "fish", "label": "Wildlife", "value": "Dugong Habitat"},
-            {"icon": "leaf", "label": "Tourism", "value": "Eco-Friendly"}
+            {"icon": "mountain", "label": "Region", "value": "Western Desert"},
+            {"icon": "users", "label": "Culture", "value": "Berber"},
+            {"icon": "tint", "label": "Springs", "value": "300+"}
         ],
-        "video": {"id": "9v1JE46dkHY", "title": "Underwater Paradise", "highlights": ["Swim with wild dugongs", "World-class reef diving", "Dolphin encounters", "Pristine untouched beaches"]},
-        "hero_img": "images/hero-marsa-alam.png",
+        "video": {"id": "WPrDnl5iQiQ", "title": "Magic of Siwa Oasis", "highlights": ["Ancient Oracle Temple", "Great Sand Sea adventures", "Crystal-clear salt lakes", "Authentic Berber culture"]},
+        "hero_img": "images/hero-siwa.jpg",
         "attractions": [
-            {"name": "Abu Dabbab Bay", "img": "hurgada/raimond-klavins-zfeY8HkSAOE-unsplash.jpg", "tag": "Must See", "rating": "4.9", "time": "Half Day", "price": "$25"},
-            {"name": "Elphinstone Reef", "img": "images/gallery-hurghada-reef.png", "tag": "Adventure", "rating": "4.9", "time": "Full Day", "price": "$50"},
-            {"name": "Dolphin House Reef", "img": "hurgada/youhana-nassif-9BZVf-jEDwU-unsplash.jpg", "tag": "Experience", "rating": "4.8", "time": "Half Day", "price": "$35"},
-            {"name": "Wadi El Gemal", "img": "hurgada/pexels-vika-glitter-392079-31166931.jpg", "tag": "Nature", "rating": "4.7", "time": "Full Day", "price": "$15"},
-            {"name": "Port Ghalib Marina", "img": "hurgada/omar-elsharawy-Figb0H3ExRw-unsplash.jpg", "tag": "Luxury", "rating": "4.6", "time": "2-3 hours", "price": "Free"},
-            {"name": "Sataya Reef", "img": "images/gallery-hurghada-reef.png", "tag": "Unique", "rating": "4.8", "time": "Full Day", "price": "$45"}
+            {"name": "Siwa Oasis", "img": "images/hero-siwa.jpg", "tag": "Nature", "rating": "4.8", "time": "1-2 Days", "price": "Free"},
+            {"name": "Shali Fortress", "img": "images/attr-shali-fortress.jpg", "tag": "Historic", "rating": "4.7", "time": "1-2 hours", "price": "$5"},
+            {"name": "Cleopatra Spring", "img": "images/attr-cleopatra-spring.jpg", "tag": "Nature", "rating": "4.6", "time": "1-2 hours", "price": "Free"},
+            {"name": "Temple of the Oracle", "img": "images/attr-temple-oracle.jpg", "tag": "Ancient", "rating": "4.8", "time": "1 hour", "price": "$5"},
+            {"name": "Great Sand Sea", "img": "images/Great Sand Sea.jpg", "tag": "Adventure", "rating": "4.9", "time": "Half Day", "price": "$40"}
         ],
         "gallery": [
-            {"src": "images/hero-marsa-alam.png", "caption": "Marsa Alam"},
-            {"src": "hurgada/raimond-klavins-zfeY8HkSAOE-unsplash.jpg", "caption": "Abu Dabbab"},
-            {"src": "images/gallery-hurghada-reef.png", "caption": "Elphinstone"},
-            {"src": "hurgada/youhana-nassif-9BZVf-jEDwU-unsplash.jpg", "caption": "Dolphin House"},
-            {"src": "hurgada/pexels-vika-glitter-392079-31166931.jpg", "caption": "Wadi El Gemal"}
+            {"src": "images/hero-siwa.jpg", "caption": "Siwa Oasis"},
+            {"src": "images/Great Sand Sea.jpg", "caption": "Sand Sea"},
+            {"src": "images/attr-cleopatra-spring.jpg", "caption": "Cleopatra's Spring"},
+            {"src": "images/attr-temple-oracle.jpg", "caption": "Oracle Temple"}
         ],
         "tips": [
-            {"icon": "🤿", "title": "Diving", "desc": "Jun-Sep for dugongs."},
-            {"icon": "✈️", "title": "Getting There", "desc": "Fly to Marsa Alam airport."},
-            {"icon": "🌿", "title": "Eco-Tourism", "desc": "Reef-safe sunscreen only."},
-            {"icon": "🐢", "title": "Wildlife", "desc": "Don't chase animals."},
-            {"icon": "🏨", "title": "Hotels", "desc": "All-inclusive resorts."},
-            {"icon": "📚", "title": "Remote", "desc": "Limited nightlife — relax."}
+            {"icon": "🚗", "title": "Getting There", "desc": "8-hour drive from Cairo."},
+            {"icon": "🌡️", "title": "Best Time", "desc": "Oct-Apr for mild weather."},
+            {"icon": "🧥", "title": "What to Pack", "desc": "Warm layers for desert nights."},
+            {"icon": "🤝", "title": "Culture", "desc": "Conservative dress required."},
+            {"icon": "🫒", "title": "Food", "desc": "Try local dates and olive oil."},
+            {"icon": "🏡", "title": "Stay", "desc": "Eco-lodges for authentic experience."}
         ]
     },
-    "el-gouna": {
-        "title": "El Gouna",
-        "tagline": "Venice of the Red Sea",
-        "description": "Egypt's most exclusive resort town, built around a series of stunning turquoise lagoons. El Gouna offers world-class dining, vibrant nightlife, luxury hotels, and all the water sports you can dream of.",
+    "port-said": {
+        "title": "Port Said",
+        "tagline": "Gateway to the Suez Canal",
+        "description": "Known for its beautiful 19th-century colonial architecture, historic lighthouse, and prime views of massive cargo ships traversing the Suez Canal. Port Said is a vibrant coastal city with a unique maritime soul.",
         "stats": [
-            {"icon": "water", "label": "Lagoons", "value": "Private"},
-            {"icon": "star", "label": "Resorts", "value": "5-Star"},
-            {"icon": "calendar", "label": "Events", "value": "Year-round"}
+            {"icon": "water", "label": "Coast", "value": "Suez Canal & Med"},
+            {"icon": "landmark", "label": "Founded", "value": "1859"},
+            {"icon": "history", "label": "Theme", "value": "Maritime"}
         ],
-        "video": {"id": "x7hqPbV_mEU", "title": "Luxury Red Sea Escape", "highlights": ["Stunning private lagoons", "World-class kitesurfing", "Gourmet dining scene", "Vibrant nightlife and events"]},
-        "hero_img": "images/hero-elgouna.png",
+        "video": {"id": "dp5cN5EvXwg", "title": "The Gateway of Egypt", "highlights": ["Historic Suez Canal views", "Beautiful colonial style", "Military Museum history", "Scenic ferry crossings"]},
+        "hero_img": "images/city-port-said.jpg",
         "attractions": [
-            {"name": "Lagoon Beaches", "img": "hurgada/raimond-klavins-zfeY8HkSAOE-unsplash.jpg", "tag": "Must See", "rating": "4.8", "time": "Full Day", "price": "Free"},
-            {"name": "El Gouna Marina", "img": "hurgada/omar-elsharawy-Figb0H3ExRw-unsplash.jpg", "tag": "Experience", "rating": "4.7", "time": "2-3 hours", "price": "Free"},
-            {"name": "Kitesurfing Beach", "img": "images/hero-dahab.png", "tag": "Adventure", "rating": "4.8", "time": "Half Day", "price": "$60"},
-            {"name": "Sliders Cable Park", "img": "hurgada/youhana-nassif-9BZVf-jEDwU-unsplash.jpg", "tag": "Sport", "rating": "4.6", "time": "2-3 hours", "price": "$25"},
-            {"name": "Downtown & Nightlife", "img": "hurgada/pexels-vika-glitter-392079-31166931.jpg", "tag": "Entertainment", "rating": "4.5", "time": "Evening", "price": "Free"},
-            {"name": "Diving & Snorkeling", "img": "images/gallery-hurghada-reef.png", "tag": "Adventure", "rating": "4.7", "time": "Half Day", "price": "$40"}
+            {"name": "Port Said Lighthouse", "img": "images/attr-port-said-lighthouse.jpg", "tag": "Historic", "rating": "4.7", "time": "1 hour", "price": "Free"},
+            {"name": "Suez Canal Viewpoints", "img": "images/attr-suez-canal-viewpoint.jpg", "tag": "Must See", "rating": "4.8", "time": "1-2 hours", "price": "Free"},
+            {"name": "Military Museum", "img": "images/attr-military-museum.jpg", "tag": "Museum", "rating": "4.6", "time": "2 hours", "price": "$3"},
+            {"name": "Ferry Crossing", "img": "images/attr-ferry-crossing.jpg", "tag": "Experience", "rating": "4.7", "time": "30 min", "price": "Free"}
         ],
         "gallery": [
-            {"src": "images/hero-elgouna.png", "caption": "El Gouna"},
-            {"src": "hurgada/raimond-klavins-zfeY8HkSAOE-unsplash.jpg", "caption": "Lagoon Beaches"},
-            {"src": "hurgada/omar-elsharawy-Figb0H3ExRw-unsplash.jpg", "caption": "Marina"},
-            {"src": "hurgada/youhana-nassif-9BZVf-jEDwU-unsplash.jpg", "caption": "Sliders"},
-            {"src": "hurgada/pexels-vika-glitter-392079-31166931.jpg", "caption": "Downtown"}
+            {"src": "images/city-port-said.jpg", "caption": "Port Said Port"},
+            {"src": "images/attr-port-said-lighthouse.jpg", "caption": "Port Said Lighthouse"},
+            {"src": "images/attr-suez-canal-viewpoint.jpg", "caption": "Suez Canal Viewpoint"},
+            {"src": "images/attr-ferry-crossing.jpg", "caption": "Ferry Crossing"}
         ],
         "tips": [
-            {"icon": "✈️", "title": "Getting There", "desc": "20 min from Hurghada."},
-            {"icon": "🛺", "title": "TukTuks", "desc": "Fun way to get around."},
-            {"icon": "🍷", "title": "Dining", "desc": "Book dinner in advance."},
-            {"icon": "🪁", "title": "Kite Season", "desc": "Mar-Jun and Sep-Nov."},
-            {"icon": "🏨", "title": "Stay Options", "desc": "Choose lagoon-front."},
-            {"icon": "🎬", "title": "Events", "desc": "Film festival in October."}
+            {"icon": "🚢", "title": "Canal Views", "desc": "Walk along the Corniche to watch giant ships pass."},
+            {"icon": "🚢", "title": "Free Ferry", "desc": "Take the ferry to Port Fouad — it is completely free."},
+            {"icon": "Architecture", "title": "French Quarter", "desc": "Look out for old buildings with wooden balconies."},
+            {"icon": "🐟", "title": "Seafood", "desc": "Try local fish at the historic fish market."},
+            {"icon": "🛍️", "title": "Shopping", "desc": "Port Said is a duty-free zone, great for shopping."}
+        ]
+    },
+    "ismailia": {
+        "title": "Ismailia",
+        "tagline": "The City of Gardens and Beauty",
+        "description": "Built during the construction of the Suez Canal, Ismailia is famous for its French colonial villas, lush green parks, and the serene Lake Timsah. It is one of Egypt's most peaceful and clean cities.",
+        "stats": [
+            {"icon": "tree", "label": "Greenery", "value": "Park City"},
+            {"icon": "water", "label": "Water", "value": "Lake Timsah"},
+            {"icon": "landmark", "label": "History", "value": "Suez Canal"}
+        ],
+        "video": {"id": "dp5cN5EvXwg", "title": "The Garden City of Egypt", "highlights": ["French colonial villas", "Serene Lake Timsah beaches", "Lush green public gardens", "Archaeology Museum treasures"]},
+        "hero_img": "images/city-ismailia.jpg",
+        "attractions": [
+            {"name": "Suez Canal Authority Building", "img": "images/attr-suez-canal-authority.jpg", "tag": "Historic", "rating": "4.8", "time": "1 hour", "price": "Free"},
+            {"name": "Ismailia Museum", "img": "images/attr-ismailia-museum.jpg", "tag": "Museum", "rating": "4.6", "time": "2 hours", "price": "$3"},
+            {"name": "Lake Timsah", "img": "images/attr-lake-timsah.jpg", "tag": "Nature", "rating": "4.7", "time": "Half Day", "price": "Free"},
+            {"name": "Public Gardens", "img": "images/attr-public-gardens.jpg", "tag": "Relax", "rating": "4.5", "time": "1-2 hours", "price": "Free"}
+        ],
+        "gallery": [
+            {"src": "images/city-ismailia.jpg", "caption": "Ismailia City View"},
+            {"src": "images/attr-suez-canal-authority.jpg", "caption": "Suez Canal Authority Building"},
+            {"src": "images/attr-lake-timsah.jpg", "caption": "Lake Timsah"},
+            {"src": "images/attr-public-gardens.jpg", "caption": "Lush Public Gardens"}
+        ],
+        "tips": [
+            {"icon": "🥭", "title": "Mango Season", "desc": "Visit in July-August to taste Egypt's best mangoes."},
+            {"icon": "🏖️", "title": "Lake Timsah", "desc": "Visit beach clubs like Frouz or Jahaz for water sports."},
+            {"icon": "🏡", "title": "Colonial Quarter", "desc": "Stroll down the tree-lined streets of the French Quarter."},
+            {"icon": "☕", "title": "Relaxed Vibe", "desc": "Perfect weekend getaway from Cairo's bustle."},
+            {"icon": "🏛️", "title": "Archaeology", "desc": "The museum houses beautiful mosaics from the Canal excavation."}
+        ]
+    },
+    "fayoum": {
+        "title": "Fayoum",
+        "tagline": "Land of Lakes and Waterfalls",
+        "description": "Egypt's oldest city, located in a lush basin fed by the Nile. Fayoum is home to the stunning waterfalls of Wadi El Rayan, the prehistoric Whale Valley (Wadi Al Hitan), and the artistic village of Tunis.",
+        "stats": [
+            {"icon": "hourglass", "label": "Age", "value": "6,000+ Yrs"},
+            {"icon": "leaf", "label": "Nature", "value": "Oasis & Lake"},
+            {"icon": "landmark", "label": "UNESCO", "value": "Whale Valley"}
+        ],
+        "video": {"id": "dp5cN5EvXwg", "title": "Magic of Fayoum Oasis", "highlights": ["Wadi El Rayan waterfalls", "Wadi Al Hitan fossils", "Tunis Village pottery", "Serene Qarun Lake views"]},
+        "hero_img": "images/city-fayoum.jpg",
+        "attractions": [
+            {"name": "Wadi El Rayan", "img": "images/attr-wadi-el-rayan.jpg", "tag": "Nature", "rating": "4.8", "time": "Half Day", "price": "$5"},
+            {"name": "Wadi Al Hitan (Whale Valley)", "img": "images/attr-wadi-al-hitan.jpg", "tag": "UNESCO", "rating": "4.9", "time": "Half Day", "price": "$10"},
+            {"name": "Qarun Lake", "img": "images/attr-qarun-lake.jpg", "tag": "Scenic", "rating": "4.5", "time": "2-3 hours", "price": "Free"},
+            {"name": "Tunis Village", "img": "images/attr-tunis-village.jpg", "tag": "Artisan", "rating": "4.7", "time": "2-3 hours", "price": "Free"}
+        ],
+        "gallery": [
+            {"src": "images/city-fayoum.jpg", "caption": "Fayoum Oasis"},
+            {"src": "images/attr-wadi-el-rayan.jpg", "caption": "Wadi El Rayan Waterfalls"},
+            {"src": "images/attr-wadi-al-hitan.jpg", "caption": "Wadi Al Hitan Fossils"},
+            {"src": "images/attr-tunis-village.jpg", "caption": "Tunis Village Pottery"}
+        ],
+        "tips": [
+            {"icon": "🛹", "title": "Sandboarding", "desc": "Try sandboarding on the Magic Lake dunes."},
+            {"icon": "🏺", "title": "Pottery Class", "desc": "Visit Tunis Village to take a pottery-making class."},
+            {"icon": "🐋", "title": "Whale Valley", "desc": "Hire a 4x4 vehicle to reach Wadi Al Hitan's prehistoric fossils."},
+            {"icon": "🐦", "title": "Bird Watching", "desc": "Lake Qarun is a major migratory bird stop in winter."},
+            {"icon": "jacket", "title": "Desert Nights", "desc": "If camping in the desert, pack warm layers for the night."}
         ]
     }
 }
 
 cities_meta = [
-    {"id": "cairo", "name": "Cairo", "hero": "images/hero-cairo.png", "tag": "The City That Never Sleeps"},
-    {"id": "giza", "name": "Giza", "hero": "images/hero-giza.png", "tag": "Land of the Pyramids"},
-    {"id": "alexandria", "name": "Alexandria", "hero": "images/city-alexandria.png", "tag": "Pearl of the Mediterranean"},
-    {"id": "luxor", "name": "Luxor", "hero": "images/hero-luxor.png", "tag": "World's Greatest Open-Air Museum"},
-    {"id": "aswan", "name": "Aswan", "hero": "images/hero-aswan.png", "tag": "The Jewel of the Nile"},
-    {"id": "hurghada", "name": "Hurghada", "hero": "images/hero-hurghada.png", "tag": "Red Sea Paradise"},
-    {"id": "sharm-el-sheikh", "name": "Sharm El Sheikh", "hero": "images/hero-sharm.png", "tag": "Where Desert Meets the Sea"},
-    {"id": "dahab", "name": "Dahab", "hero": "images/hero-dahab.png", "tag": "The Bohemian Beach Town"},
-    {"id": "marsa-alam", "name": "Marsa Alam", "hero": "images/hero-marsa-alam.png", "tag": "The Untouched Red Sea"},
+    {"id": "cairo", "name": "Cairo", "hero": "images/hero-cairo.jpg", "tag": "The City That Never Sleeps"},
+    {"id": "alexandria", "name": "Alexandria", "hero": "images/city-alexandria.jpg", "tag": "Pearl of the Mediterranean"},
+    {"id": "luxor", "name": "Luxor", "hero": "images/hero-luxor.jpg", "tag": "World's Greatest Open-Air Museum"},
+    {"id": "aswan", "name": "Aswan", "hero": "images/hero-aswan.jpg", "tag": "The Jewel of the Nile"},
+    {"id": "sharm-el-sheikh", "name": "Sharm El Sheikh", "hero": "images/hero-sharm.jpg", "tag": "Where Desert Meets the Sea"},
+    {"id": "hurghada", "name": "Hurghada", "hero": "images/hero-hurghada.jpg", "tag": "Red Sea Paradise"},
+    {"id": "dahab", "name": "Dahab", "hero": "images/hero-dahab.jpg", "tag": "The Bohemian Beach Town"},
+    {"id": "siwa", "name": "Siwa Oasis", "hero": "images/hero-siwa.jpg", "tag": "Egypt's Hidden Paradise"},
+    {"id": "port-said", "name": "Port Said", "hero": "images/city-port-said.jpg", "tag": "Gateway to the Suez Canal"},
+    {"id": "ismailia", "name": "Ismailia", "hero": "images/city-ismailia.jpg", "tag": "City of Gardens and Beauty"},
+    {"id": "fayoum", "name": "Fayoum", "hero": "images/city-fayoum.jpg", "tag": "Land of Lakes and Waterfalls"}
+]Sea"},
     {"id": "el-gouna", "name": "El Gouna", "hero": "images/hero-elgouna.png", "tag": "Venice of the Red Sea"},
     {"id": "siwa", "name": "Siwa Oasis", "hero": "images/hero-siwa.png", "tag": "Egypt's Hidden Paradise"}
 ]

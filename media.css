@@ -180,7 +180,7 @@
   background: transparent;
   color: inherit;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: var(--radius, 14px);
   overflow: hidden;
   min-height: 210px;
 }
@@ -266,6 +266,11 @@
 .horus-destination-media {
   background:
     linear-gradient(180deg, #fffaf1, #f8efe0);
+  padding-top: 40px; /* Reduced padding to bring sections closer */
+}
+
+#gallery.dest-section {
+  padding-bottom: 40px; /* Bring static gallery closer to dynamic media */
 }
 
 .horus-destination-media .horus-media-card {
@@ -274,6 +279,12 @@
 
 .horus-destination-media .horus-media-card.is-large {
   min-height: 476px;
+}
+
+/* Bento Grid Balance for 7-item gallery: make last two items span 2 columns to fill row 3 */
+.horus-destination-grid .horus-media-card:nth-child(6),
+.horus-destination-grid .horus-media-card:nth-child(7) {
+  grid-column: span 2;
 }
 
 .activity-real-strip {
@@ -620,6 +631,8 @@
 
   .horus-media-mosaic .horus-media-card:first-child,
   .horus-destination-grid .horus-media-card.is-large,
+  .horus-destination-grid .horus-media-card:nth-child(6),
+  .horus-destination-grid .horus-media-card:nth-child(7),
   .activity-real-grid .horus-media-card.is-large,
   .gallery-grid .horus-media-card:nth-child(7n + 1),
   .gallery-grid .horus-media-card:nth-child(11n + 4) {

@@ -8,71 +8,94 @@
 // ======================= DATA STRUCTURES ===========================
 
 const CITIES = [
-  { id: 'cairo', name: 'Cairo', img: 'images/city-cairo.png', tagline: 'Heart of Ancient Egypt' },
-  { id: 'giza', name: 'Giza', img: 'images/hero-giza.png', tagline: 'Land of the Pyramids' },
-  { id: 'alexandria', name: 'Alexandria', img: 'images/city-alexandria.png', tagline: 'Pearl of the Mediterranean' },
-  { id: 'luxor', name: 'Luxor', img: 'images/hero-luxor.png', tagline: 'Open Air Museum' },
-  { id: 'aswan', name: 'Aswan', img: 'images/hero-aswan.png', tagline: 'Jewel of the Nile' },
-  { id: 'hurghada', name: 'Hurghada', img: 'images/city-hurghada.png', tagline: 'Red Sea Paradise' },
-  { id: 'sharm', name: 'Sharm El Sheikh', img: 'images/hero-sharm.png', tagline: 'Diving Capital' },
-  { id: 'dahab', name: 'Dahab', img: 'images/hero-dahab.png', tagline: 'Bohemian Beach Town' },
-  { id: 'marsa-alam', name: 'Marsa Alam', img: 'images/hero-marsa-alam.png', tagline: 'Untouched Red Sea' },
-  { id: 'el-gouna', name: 'El Gouna', img: 'images/hero-elgouna.png', tagline: 'Venice of Egypt' },
-  { id: 'siwa', name: 'Siwa Oasis', img: 'images/hero-siwa.png', tagline: 'Hidden Desert Paradise' }
+  { id: 'cairo', name: 'Cairo', img: 'images/city-cairo.jpg', tagline: 'The Heart of Ancient Egypt' },
+  { id: 'alexandria', name: 'Alexandria', img: 'images/city-alexandria.jpg', tagline: 'The Pearl of the Mediterranean' },
+  { id: 'luxor', name: 'Luxor', img: 'images/hero-luxor.jpg', tagline: "The World's Greatest Open Air Museum" },
+  { id: 'aswan', name: 'Aswan', img: 'images/hero-aswan.jpg', tagline: 'The Jewel of the Nile' },
+  { id: 'hurghada', name: 'Hurghada', img: 'images/city-hurghada.jpg', tagline: 'Red Sea Paradise' },
+  { id: 'sharm', name: 'Sharm El Sheikh', img: 'images/hero-sharm.jpg', tagline: 'Where Desert Meets the Sea' },
+  { id: 'dahab', name: 'Dahab', img: 'images/hero-dahab.jpg', tagline: 'The Bohemian Beach Town' },
+  { id: 'siwa', name: 'Siwa Oasis', img: 'images/hero-siwa.jpg', tagline: "Egypt's Hidden Paradise" },
+  { id: 'port-said', name: 'Port Said', img: 'images/city-port-said.jpg', tagline: 'Gateway to the Suez Canal' },
+  { id: 'ismailia', name: 'Ismailia', img: 'images/city-ismailia.jpg', tagline: 'The City of Gardens and Beauty' },
+  { id: 'fayoum', name: 'Fayoum', img: 'images/city-fayoum.jpg', tagline: 'Land of Lakes and Waterfalls' }
 ];
 
 const ATTRACTIONS = {
   cairo: [
-    { id: 'pyramids', name: 'Pyramids of Giza', img: 'cairo/spencer-davis-ONVA6s03hg8-unsplash.jpg', rating: 4.9, category: 'Must See', city: 'Cairo' },
-    { id: 'egyptian-museum', name: 'Egyptian Museum', img: 'cairo/osama-elsayed-vqRMXgVtGXM-unsplash.jpg', rating: 4.8, category: 'Cultural', city: 'Cairo' },
-    { id: 'khan-khalili', name: 'Khan El Khalili', img: 'images/gallery-cairo-khan.png', rating: 4.6, category: 'Experience', city: 'Cairo' },
-    { id: 'islamic-cairo', name: 'Islamic Cairo', img: 'cairo/dario-morandotti-rxv2qwYPe6s-unsplash.jpg', rating: 4.5, category: 'Historic', city: 'Cairo' },
-    { id: 'citadel', name: 'Cairo Citadel', img: 'images/gallery-cairo-mosque.png', rating: 4.8, category: 'Landmark', city: 'Cairo' },
-  ],
-  giza: [
-    { id: 'great-pyramid', name: 'Great Pyramid', img: 'cairo/spencer-davis-ONVA6s03hg8-unsplash.jpg', rating: 5.0, category: 'Wonder', city: 'Giza' },
-    { id: 'sphinx', name: 'The Great Sphinx', img: 'cairo/spencer-davis-TBNbpd6Xs_4-unsplash.jpg', rating: 4.9, category: 'Iconic', city: 'Giza' },
-    { id: 'sound-light', name: 'Sound & Light Show', img: 'images/hero-pyramids.png', rating: 4.7, category: 'Experience', city: 'Giza' },
+    { id: 'pyramids', name: 'Pyramids of Giza', img: 'images/hero-pyramids.jpg', rating: 4.9, category: 'Wonder', city: 'Cairo' },
+    { id: 'sphinx', name: 'Great Sphinx of Giza', img: 'images/sphinx.jpg', rating: 4.9, category: 'Iconic', city: 'Cairo' },
+    { id: 'egyptian-museum', name: 'Egyptian Museum', img: 'images/grand_egyptian_museum.jpg', rating: 4.8, category: 'Museum', city: 'Cairo' },
+    { id: 'khan-khalili', name: 'Khan el-Khalili', img: 'images/gallery-cairo-khan.jpg', rating: 4.6, category: 'Bazaar', city: 'Cairo' },
+    { id: 'citadel', name: 'Citadel of Saladin', img: 'images/gallery-cairo-mosque.jpg', rating: 4.8, category: 'Historic', city: 'Cairo' },
+    { id: 'al-azhar', name: 'Al-Azhar Mosque', img: 'images/Al-Azhar-Mosque.jpg', rating: 4.5, category: 'Cultural', city: 'Cairo' }
   ],
   alexandria: [
-    { id: 'bibliotheca', name: 'Bibliotheca Alexandrina', img: 'images/hero-alexandria.png', rating: 4.8, category: 'Cultural', city: 'Alexandria' },
-    { id: 'qaitbay', name: 'Qaitbay Citadel', img: 'images/gallery-alex-citadel.png', rating: 4.7, category: 'Historic', city: 'Alexandria' },
-    { id: 'catacombs', name: 'Catacombs', img: 'images/hero-alexandria.png', rating: 4.6, category: 'Must See', city: 'Alexandria' },
+    { id: 'bibliotheca', name: 'Bibliotheca Alexandrina', img: 'images/attr-bibliotheca-alexandrina.jpg', rating: 4.8, category: 'Cultural', city: 'Alexandria' },
+    { id: 'qaitbay', name: 'Citadel of Qaitbay', img: 'images/gallery-alex-citadel.jpg', rating: 4.7, category: 'Historic', city: 'Alexandria' },
+    { id: 'catacombs', name: 'Catacombs of Kom El Shoqafa', img: 'images/attr-catacombs-kom-el-shoqafa.jpg', rating: 4.6, category: 'Must See', city: 'Alexandria' },
+    { id: 'montaza', name: 'Montaza Palace', img: 'images/attr-montaza-palace.jpg', rating: 4.6, category: 'Nature', city: 'Alexandria' },
+    { id: 'corniche', name: 'Alexandria Corniche', img: 'images/attr-alexandria-corniche.jpg', rating: 4.5, category: 'Experience', city: 'Alexandria' }
   ],
   luxor: [
-    { id: 'valley-kings', name: 'Valley of the Kings', img: 'aswan-luxor/dmitrii-zhodzishskii-cOihXsrJFRc-unsplash.jpg', rating: 4.9, category: 'Must See', city: 'Luxor' },
-    { id: 'karnak', name: 'Karnak Temple', img: 'images/gallery-luxor-temple.png', rating: 4.9, category: 'Ancient', city: 'Luxor' },
-    { id: 'hot-balloon', name: 'Hot Air Balloon', img: 'images/gallery-luxor-balloons.png', rating: 4.8, category: 'Adventure', city: 'Luxor' },
-    { id: 'luxor-temple', name: 'Luxor Temple', img: 'aswan-luxor/dmitrii-zhodzishskii-5aEHOQrb2Qk-unsplash.jpg', rating: 4.7, category: 'Historic', city: 'Luxor' },
-    { id: 'hatshepsut', name: 'Hatshepsut Temple', img: 'aswan-luxor/dmitrii-zhodzishskii-4rXHE9XeW_A-unsplash.jpg', rating: 4.7, category: 'Landmark', city: 'Luxor' },
+    { id: 'valley-kings', name: 'Valley of the Kings', img: 'images/Valley-of-the-Kings.jpg', rating: 4.9, category: 'Must See', city: 'Luxor' },
+    { id: 'karnak', name: 'Karnak Temple', img: 'images/Karnak-temple.jpg', rating: 4.9, category: 'Ancient', city: 'Luxor' },
+    { id: 'luxor-temple', name: 'Luxor Temple', img: 'images/gallery-luxor-temple.jpg', rating: 4.7, category: 'Historic', city: 'Luxor' },
+    { id: 'hatshepsut', name: 'Temple of Hatshepsut', img: 'images/hero-luxor.jpg', rating: 4.7, category: 'Landmark', city: 'Luxor' },
+    { id: 'nile-cruise', name: 'Nile River Cruise', img: 'Real Moments/PHOTO-2025-12-05-14-30-07(1).jpg', rating: 4.8, category: 'Experience', city: 'Luxor' }
   ],
   aswan: [
-    { id: 'abu-simbel', name: 'Abu Simbel', img: 'aswan-luxor/david-gavi-AdIJ9S-kbrc-unsplash.jpg', rating: 4.9, category: 'Must See', city: 'Aswan' },
-    { id: 'philae', name: 'Philae Temple', img: 'images/gallery-aswan-philae.png', rating: 4.8, category: 'Ancient', city: 'Aswan' },
-    { id: 'nubian', name: 'Nubian Villages', img: 'images/gallery-aswan-nubian.png', rating: 4.7, category: 'Cultural', city: 'Aswan' },
-    { id: 'felucca', name: 'Felucca Sailing', img: 'aswan-luxor/kevin-et-laurianne-langlais-Rk8yY0UfPx0-unsplash.jpg', rating: 4.8, category: 'Experience', city: 'Aswan' },
+    { id: 'philae', name: 'Philae Temple', img: 'images/gallery-aswan-philae.jpg', rating: 4.8, category: 'Ancient', city: 'Aswan' },
+    { id: 'abu-simbel', name: 'Abu Simbel Temples', img: 'images/attr-abu-simbel.jpg', rating: 4.9, category: 'Must See', city: 'Aswan' },
+    { id: 'high-dam', name: 'Aswan High Dam', img: 'images/attr-aswan-high-dam.jpg', rating: 4.3, category: 'Landmark', city: 'Aswan' },
+    { id: 'elephantine', name: 'Elephantine Island', img: 'images/attr-elephantine-island.jpg', rating: 4.6, category: 'Nature', city: 'Aswan' },
+    { id: 'nubian-village', name: 'Nubian Village', img: 'images/gallery-aswan-nubian.jpg', rating: 4.7, category: 'Cultural', city: 'Aswan' }
   ],
   hurghada: [
-    { id: 'giftun', name: 'Giftun Island', img: 'hurgada/raimond-klavins-zfeY8HkSAOE-unsplash.jpg', rating: 4.8, category: 'Must See', city: 'Hurghada' },
-    { id: 'reef-diving', name: 'Coral Reef Diving', img: 'images/gallery-hurghada-reef.png', rating: 4.9, category: 'Adventure', city: 'Hurghada' },
-    { id: 'desert-safari', name: 'Desert Safari', img: 'hurgada/pexels-vika-glitter-392079-31166931.jpg', rating: 4.6, category: 'Experience', city: 'Hurghada' },
+    { id: 'giftun-islands', name: 'Giftun Islands', img: 'images/city-hurghada.jpg', rating: 4.8, category: 'Must See', city: 'Hurghada' },
+    { id: 'marina', name: 'Marina Hurghada', img: 'images/city-hurghada.jpg', rating: 4.7, category: 'Luxury', city: 'Hurghada' },
+    { id: 'quad-tours', name: 'Desert Quad Bike Tours', img: 'images/Desert Quad Bike Tours.jpg', rating: 4.6, category: 'Experience', city: 'Hurghada' },
+    { id: 'diving-excursions', name: 'Snorkeling & Diving Excursions', img: 'images/gallery-hurghada-reef.jpg', rating: 4.9, category: 'Adventure', city: 'Hurghada' },
+    { id: 'aquarium', name: 'Hurghada Grand Aquarium', img: 'images/Hurghada Grand Aquarium.jpg', rating: 4.5, category: 'Family', city: 'Hurghada' }
   ],
   sharm: [
-    { id: 'ras-mohamed', name: 'Ras Mohamed', img: 'images/gallery-sharm-diving.png', rating: 4.9, category: 'Must See', city: 'Sharm' },
-    { id: 'blue-hole', name: 'Blue Hole', img: 'images/hero-sharm.png', rating: 4.7, category: 'Adventure', city: 'Sharm' },
+    { id: 'ras-mohammed', name: 'Ras Mohammed National Park', img: 'images/gallery-sharm-diving.jpg', rating: 4.9, category: 'Must See', city: 'Sharm El Sheikh' },
+    { id: 'naama-bay', name: 'Naama Bay', img: 'images/hero-sharm.jpg', rating: 4.6, category: 'Entertainment', city: 'Sharm El Sheikh' },
+    { id: 'soho-square', name: 'Soho Square', img: 'images/attr-soho-square.jpg', rating: 4.6, category: 'Modern', city: 'Sharm El Sheikh' },
+    { id: 'diving-snorkeling', name: 'Scuba Diving & Snorkeling', img: 'images/gallery-sharm-diving.jpg', rating: 4.8, category: 'Adventure', city: 'Sharm El Sheikh' },
+    { id: 'desert-safari-tours', name: 'Desert Safari Tours', img: 'images/desert safari tours.jpg', rating: 4.5, category: 'Experience', city: 'Sharm El Sheikh' }
   ],
   dahab: [
-    { id: 'dahab-diving', name: 'Dahab Diving', img: 'images/hero-dahab.png', rating: 4.8, category: 'Adventure', city: 'Dahab' },
-  ],
-  'marsa-alam': [
-    { id: 'dugong', name: 'Dugong Spotting', img: 'images/hero-marsa-alam.png', rating: 4.7, category: 'Experience', city: 'Marsa Alam' },
-  ],
-  'el-gouna': [
-    { id: 'lagoons', name: 'El Gouna Lagoons', img: 'images/hero-elgouna.png', rating: 4.7, category: 'Luxury', city: 'El Gouna' },
+    { id: 'blue-hole', name: 'Blue Hole', img: 'images/gallery-sharm-diving.jpg', rating: 4.9, category: 'Must See', city: 'Dahab' },
+    { id: 'lighthouse-reef', name: 'Lighthouse Reef', img: 'images/gallery-sharm-diving.jpg', rating: 4.8, category: 'Adventure', city: 'Dahab' },
+    { id: 'mount-sinai-exc', name: 'Mount Sinai Excursions', img: 'images/hero-sharm.jpg', rating: 4.7, category: 'Spiritual', city: 'Dahab' },
+    { id: 'bedouin-camps', name: 'Bedouin Camps', img: 'images/Bedouin Camps.jpg', rating: 4.6, category: 'Cultural', city: 'Dahab' },
+    { id: 'lagoon-beach', name: 'Lagoon Beach', img: 'images/hero-dahab.jpg', rating: 4.7, category: 'Nature', city: 'Dahab' }
   ],
   siwa: [
-    { id: 'shali', name: 'Shali Fortress', img: 'images/hero-siwa.png', rating: 4.7, category: 'Historic', city: 'Siwa' },
-    { id: 'sand-sea', name: 'Great Sand Sea', img: 'aswan-luxor/pexels-alexey-k-458081116-36336671.jpg', rating: 4.9, category: 'Adventure', city: 'Siwa' },
+    { id: 'siwa-oasis', name: 'Siwa Oasis', img: 'images/hero-siwa.jpg', rating: 4.8, category: 'Nature', city: 'Siwa Oasis' },
+    { id: 'shali-fortress', name: 'Shali Fortress', img: 'images/attr-shali-fortress.jpg', rating: 4.7, category: 'Historic', city: 'Siwa Oasis' },
+    { id: 'cleopatra-spring', name: 'Cleopatra Spring', img: 'images/attr-cleopatra-spring.jpg', rating: 4.6, category: 'Nature', city: 'Siwa Oasis' },
+    { id: 'oracle-temple', name: 'Temple of the Oracle', img: 'images/attr-temple-oracle.jpg', rating: 4.8, category: 'Ancient', city: 'Siwa Oasis' },
+    { id: 'sand-sea', name: 'Great Sand Sea', img: 'images/Great Sand Sea.jpg', rating: 4.9, category: 'Adventure', city: 'Siwa Oasis' }
+  ],
+  'port-said': [
+    { id: 'port-said-lighthouse', name: 'Port Said Lighthouse', img: 'images/attr-port-said-lighthouse.jpg', rating: 4.7, category: 'Historic', city: 'Port Said' },
+    { id: 'suez-canal-viewpoint', name: 'Suez Canal Viewpoints', img: 'images/attr-suez-canal-viewpoint.jpg', rating: 4.8, category: 'Must See', city: 'Port Said' },
+    { id: 'military-museum', name: 'Military Museum', img: 'images/attr-military-museum.jpg', rating: 4.6, category: 'Museum', city: 'Port Said' },
+    { id: 'ferry-crossing', name: 'Ferry Crossing', img: 'images/attr-ferry-crossing.jpg', rating: 4.7, category: 'Experience', city: 'Port Said' }
+  ],
+  ismailia: [
+    { id: 'suez-canal-authority', name: 'Suez Canal Authority Building', img: 'images/attr-suez-canal-authority.jpg', rating: 4.8, category: 'Historic', city: 'Ismailia' },
+    { id: 'ismailia-museum', name: 'Ismailia Museum', img: 'images/attr-ismailia-museum.jpg', rating: 4.6, category: 'Museum', city: 'Ismailia' },
+    { id: 'lake-timsah', name: 'Lake Timsah', img: 'images/attr-lake-timsah.jpg', rating: 4.7, category: 'Nature', city: 'Ismailia' },
+    { id: 'public-gardens', name: 'Public Gardens', img: 'images/attr-public-gardens.jpg', rating: 4.5, category: 'Relax', city: 'Ismailia' }
+  ],
+  fayoum: [
+    { id: 'wadi-el-rayan', name: 'Wadi El Rayan', img: 'images/attr-wadi-el-rayan.jpg', rating: 4.8, category: 'Nature', city: 'Fayoum' },
+    { id: 'wadi-al-hitan', name: 'Wadi Al Hitan (Whale Valley)', img: 'images/attr-wadi-al-hitan.jpg', rating: 4.9, category: 'UNESCO', city: 'Fayoum' },
+    { id: 'qarun-lake', name: 'Qarun Lake', img: 'images/attr-qarun-lake.jpg', rating: 4.5, category: 'Scenic', city: 'Fayoum' },
+    { id: 'tunis-village', name: 'Tunis Village', img: 'images/attr-tunis-village.jpg', rating: 4.7, category: 'Artisan', city: 'Fayoum' }
   ]
 };
 
