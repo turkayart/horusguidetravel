@@ -743,11 +743,26 @@ img { max-width: 100%; display: block; }
   .cities-carousel {
     justify-content: flex-start;
     gap: 12px;
-    padding: 10px 18px;
+    padding: 10px 18px 20px 18px;
     margin: 0 -18px;
     scroll-padding: 0 18px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--gold) rgba(255, 255, 255, 0.05);
   }
-  .city-card { width: 150px; height: 190px; }
+  .cities-carousel::-webkit-scrollbar {
+    display: block;
+    height: 4px;
+  }
+  .cities-carousel::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    margin: 0 18px;
+  }
+  .cities-carousel::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 10px;
+  }
+  .city-card { width: 170px; height: 215px; }
   .plan-features { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .plan-card { padding: 30px 24px; }
   .plan-card h2 { font-size: 1.7rem; }
