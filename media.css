@@ -610,7 +610,11 @@
     font-size: 0.62rem;
   }
 
-  .horus-home-story,
+  .horus-home-story {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
   .activity-real-copy {
     display: block;
   }
