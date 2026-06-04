@@ -6,8 +6,6 @@
     'PHOTO-2025-11-14-00-12-40(1).jpg',
     'PHOTO-2025-11-14-00-12-40(2).jpg',
     'PHOTO-2025-11-14-00-12-40(3).jpg',
-    'PHOTO-2025-11-14-00-12-40.jpg',
-    'PHOTO-2025-11-14-00-28-40.jpg',
     'PHOTO-2025-11-26-17-53-53.jpg',
     'PHOTO-2025-12-05-14-30-03.jpg',
     'PHOTO-2025-12-05-14-30-06.jpg',
@@ -26,10 +24,6 @@
     'PHOTO-2025-12-10-14-17-50(1).jpg',
     'PHOTO-2025-12-10-14-17-50(2).jpg',
     'PHOTO-2025-12-10-14-17-50.jpg',
-    'PHOTO-2025-12-12-11-33-35.jpg',
-    'PHOTO-2025-12-12-11-33-36.jpg',
-    'PHOTO-2025-12-12-11-33-37(1).jpg',
-    'PHOTO-2025-12-12-11-33-37.jpg',
     'PHOTO-2025-12-12-18-29-35.jpg',
     'PHOTO-2025-12-22-18-09-50.jpg',
     'PHOTO-2025-12-28-01-29-03.jpg',
@@ -60,10 +54,7 @@
     'PHOTO-2026-01-19-20-26-37(2).jpg',
     'PHOTO-2026-01-19-20-26-37.jpg',
     'PHOTO-2026-02-16-20-13-47.jpg',
-    'PHOTO-2026-03-22-19-04-35.jpg',
-    'PHOTO-2026-04-18-03-14-58(1).jpg',
-    'PHOTO-2026-04-18-03-14-58.jpg',
-    'PHOTO-2026-04-28-01-42-26.jpg'
+    'PHOTO-2026-03-22-19-04-35.jpg'
   ];
 
   const YOUTUBE_VIDEOS = [
@@ -151,8 +142,6 @@
     'PHOTO-2025-11-14-00-12-40(1).jpg': 'Giza Pyramids Legacy',
     'PHOTO-2025-11-14-00-12-40(2).jpg': 'Karnak Temple Explorers',
     'PHOTO-2025-11-14-00-12-40(3).jpg': 'Ancient Temple Columns',
-    'PHOTO-2025-11-14-00-12-40.jpg': 'Horus Tour Guide Team',
-    'PHOTO-2025-11-14-00-28-40.jpg': 'Saqqara Step Pyramid',
     'PHOTO-2025-12-05-14-30-07(1).jpg': 'Nile Cruise Sundeck',
     'PHOTO-2025-12-05-19-29-49.jpg': 'Nubian House Welcome',
     'PHOTO-2025-12-09-12-36-35.jpg': 'Abu Simbel Majesty',
@@ -163,9 +152,7 @@
     'PHOTO-2026-01-19-20-26-34.jpg': 'Luxor West Bank Vistas',
     'PHOTO-2026-01-19-20-26-35(1).jpg': 'Colossi of Memnon Grandeur',
     'PHOTO-2026-01-19-20-26-36(3).jpg': 'Valley of the Kings Trails',
-    'PHOTO-2026-02-16-20-13-47.jpg': 'Sinai Sand Adventures',
-    'PHOTO-2026-04-18-03-14-58.jpg': 'Local Egyptian Smiles',
-    'PHOTO-2026-04-28-01-42-26.jpg': 'Aswan Cataract Overlook'
+    'PHOTO-2026-02-16-20-13-47.jpg': 'Sinai Sand Adventures'
   };
 
   const CAPTION_OVERRIDES = {
