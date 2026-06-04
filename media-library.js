@@ -88,6 +88,126 @@
       destinations: ['aswan', 'luxor', 'egypt'],
       activities: ['nile', 'waterfront'],
       tags: ['video', 'aswan', 'luxor', 'egypt', 'nile', 'waterfront']
+    },
+    {
+      id: 'youtube-6',
+      type: 'video',
+      youtubeUrl: 'https://youtube.com/shorts/kKpe7ak1dec?si=QcQ2bY_R6jRg8tbF',
+      videoId: 'kKpe7ak1dec',
+      src: 'https://img.youtube.com/vi/kKpe7ak1dec/hqdefault.jpg',
+      title: 'Egypt Through My Eyes',
+      caption: 'An inspiring first-person visual journey across Egypt.',
+      destinations: ['cairo', 'giza', 'luxor', 'aswan', 'egypt'],
+      activities: ['historical', 'temple', 'hero'],
+      tags: ['video', 'cairo', 'giza', 'luxor', 'aswan', 'egypt', 'historical', 'temple', 'hero', 'home']
+    },
+    {
+      id: 'youtube-7',
+      type: 'video',
+      youtubeUrl: 'https://youtube.com/shorts/xvrz71MgAKY?si=LO3xrTfuc0U-6e9B',
+      videoId: 'xvrz71MgAKY',
+      src: 'https://img.youtube.com/vi/xvrz71MgAKY/hqdefault.jpg',
+      title: 'Everyone Should Visit Egypt',
+      caption: 'Why Egypt should be on every traveler\'s bucket list.',
+      destinations: ['cairo', 'giza', 'luxor', 'aswan', 'egypt'],
+      activities: ['culture', 'historical'],
+      tags: ['video', 'cairo', 'giza', 'luxor', 'aswan', 'egypt', 'culture', 'historical']
+    },
+    {
+      id: 'youtube-8',
+      type: 'video',
+      youtubeUrl: 'https://youtube.com/shorts/H9p-ACd3LtM?si=OuqggAGAdsStM_9x',
+      videoId: 'H9p-ACd3LtM',
+      src: 'https://img.youtube.com/vi/H9p-ACd3LtM/hqdefault.jpg',
+      title: 'Echoes of Ancient Egypt',
+      caption: 'Capturing the deep history and monumental scale of ancient sites.',
+      destinations: ['cairo', 'giza', 'luxor', 'aswan', 'egypt'],
+      activities: ['historical', 'temple'],
+      tags: ['video', 'cairo', 'giza', 'luxor', 'aswan', 'egypt', 'historical', 'temple']
+    },
+    {
+      id: 'youtube-9',
+      type: 'video',
+      youtubeUrl: 'https://youtube.com/shorts/FFHugkqvdvo?si=MzwwexhDzcuo6oDw',
+      videoId: 'FFHugkqvdvo',
+      src: 'https://img.youtube.com/vi/FFHugkqvdvo/hqdefault.jpg',
+      title: 'Where History Never Sleeps',
+      caption: 'A vibrant snapshot of Cairo\'s timeless historical streets and markets.',
+      destinations: ['cairo', 'egypt'],
+      activities: ['bazaar', 'historical', 'culture'],
+      tags: ['video', 'cairo', 'egypt', 'bazaar', 'historical', 'culture']
+    },
+    {
+      id: 'youtube-10',
+      type: 'video',
+      youtubeUrl: 'https://youtube.com/shorts/wzDKKx2QA1w?si=xfeUoXlvrIHiXoX9',
+      videoId: 'wzDKKx2QA1w',
+      src: 'https://img.youtube.com/vi/wzDKKx2QA1w/hqdefault.jpg',
+      title: 'Amazing Experience with Horus Guide',
+      caption: 'Heartwarming feedback and fun group moments with our expert local guides.',
+      destinations: ['cairo', 'giza', 'luxor', 'aswan', 'egypt'],
+      activities: ['team', 'culture'],
+      tags: ['video', 'cairo', 'giza', 'luxor', 'aswan', 'egypt', 'team', 'culture', 'home']
+    },
+    {
+      id: 'youtube-11',
+      type: 'video',
+      youtubeUrl: 'https://youtube.com/shorts/nLgpXNOjkGA?si=veWg3yWwTc6No_F2',
+      videoId: 'nLgpXNOjkGA',
+      src: 'https://img.youtube.com/vi/nLgpXNOjkGA/hqdefault.jpg',
+      title: 'Great Experience with Horus Guide',
+      caption: 'Delighted guests sharing their memorable tour experiences in Egypt.',
+      destinations: ['cairo', 'giza', 'luxor', 'aswan', 'egypt'],
+      activities: ['team', 'culture'],
+      tags: ['video', 'cairo', 'giza', 'luxor', 'aswan', 'egypt', 'team', 'culture']
+    },
+    {
+      id: 'youtube-12',
+      type: 'video',
+      youtubeUrl: 'https://youtube.com/shorts/KDEQC82ulZI?si=-YUuyivafZG3QC4t',
+      videoId: 'KDEQC82ulZI',
+      src: 'https://img.youtube.com/vi/KDEQC82ulZI/hqdefault.jpg',
+      title: 'The Most Amazing Place in Egypt',
+      caption: 'Standing before the breathtaking Pyramids of Giza.',
+      destinations: ['giza', 'cairo', 'egypt'],
+      activities: ['pyramids', 'historical'],
+      tags: ['video', 'giza', 'cairo', 'egypt', 'pyramids', 'historical']
+    },
+    {
+      id: 'youtube-13',
+      type: 'video',
+      youtubeUrl: 'https://youtube.com/shorts/yze7HZVAnR0?si=kg9IoulrG7Dfkkd3',
+      videoId: 'yze7HZVAnR0',
+      src: 'https://img.youtube.com/vi/yze7HZVAnR0/hqdefault.jpg',
+      title: 'A Moment in Ancient Egypt',
+      caption: 'Glimpsing the grandeur of Luxor\'s famous temple columns.',
+      destinations: ['luxor', 'egypt'],
+      activities: ['temple', 'historical'],
+      tags: ['video', 'luxor', 'egypt', 'temple', 'historical']
+    },
+    {
+      id: 'youtube-14',
+      type: 'video',
+      youtubeUrl: 'https://youtube.com/shorts/efFma-r8msc?si=MFQ996sUjvOTbyph',
+      videoId: 'efFma-r8msc',
+      src: 'https://img.youtube.com/vi/efFma-r8msc/hqdefault.jpg',
+      title: 'Egypt Is More Than I Expected',
+      caption: 'Exploring the rich, unexpected beauty of local life and architecture.',
+      destinations: ['cairo', 'luxor', 'aswan', 'egypt'],
+      activities: ['culture', 'historical'],
+      tags: ['video', 'cairo', 'luxor', 'aswan', 'egypt', 'culture', 'historical']
+    },
+    {
+      id: 'youtube-15',
+      type: 'video',
+      youtubeUrl: 'https://youtube.com/shorts/GZh7n8KNL4Y?si=c_ENx0rV3h7FHF5K',
+      videoId: 'GZh7n8KNL4Y',
+      src: 'https://img.youtube.com/vi/GZh7n8KNL4Y/hqdefault.jpg',
+      title: 'Incredible Dahab Experience',
+      caption: 'Soaking in the vibrant coastal vibe and beautiful Red Sea waterfront of Dahab.',
+      destinations: ['dahab', 'egypt'],
+      activities: ['red-sea', 'waterfront', 'water'],
+      tags: ['video', 'dahab', 'egypt', 'red-sea', 'waterfront', 'water']
     }
   ];
 
