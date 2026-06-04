@@ -530,6 +530,30 @@
 .pt-input:focus {
   border-color: var(--gold);
 }
+.pt-phone-container {
+  display: flex;
+  gap: 8px;
+}
+.pt-country-select {
+  padding: 13px 12px;
+  border-radius: 10px;
+  border: 2px solid #e8e2d6;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  background: #fff;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  width: 175px;
+  flex-shrink: 0;
+}
+.pt-country-select:focus {
+  border-color: var(--gold);
+}
+.pt-phone-input {
+  flex-grow: 1;
+}
 
 /* ============ STEP NAVIGATION ============ */
 .pt-step-nav {

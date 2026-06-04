@@ -301,9 +301,13 @@ function buildReview() {
   const firstName = document.getElementById('firstName').value.trim();
   const lastName = document.getElementById('lastName').value.trim();
   const travelDate = document.getElementById('travelDate').value.trim();
+  const ageGroup = document.getElementById('ageGroup').value || '—';
   const email = document.getElementById('email').value.trim();
+  const countryCode = document.getElementById('countryCode').value;
   const phone = document.getElementById('phone').value.trim();
   const requests = document.getElementById('specialRequests').value.trim();
+
+  const fullPhone = `${countryCode} ${phone}`;
 
   card.innerHTML = `
     <div class="pt-review-section">
@@ -358,8 +362,8 @@ function buildReview() {
     <div class="pt-review-section">
       <div class="pt-review-icon"><i class="fas fa-user"></i></div>
       <div class="pt-review-content">
-        <strong>Name</strong>
-        <span>${firstName} ${lastName}</span>
+        <strong>Name / Age Group</strong>
+        <span>${firstName} ${lastName} (${ageGroup})</span>
       </div>
     </div>
     <div class="pt-review-section">
@@ -373,7 +377,7 @@ function buildReview() {
       <div class="pt-review-icon"><i class="fas fa-phone"></i></div>
       <div class="pt-review-content">
         <strong>Phone / WhatsApp</strong>
-        <span>${phone}</span>
+        <span>${fullPhone}</span>
       </div>
     </div>
     ${requests ? `
@@ -409,18 +413,22 @@ async function submitForm() {
   const firstName = document.getElementById('firstName').value.trim();
   const lastName = document.getElementById('lastName').value.trim();
   const travelDate = document.getElementById('travelDate').value.trim();
+  const ageGroup = document.getElementById('ageGroup').value || 'Not specified';
   const email = document.getElementById('email').value.trim();
+  const countryCode = document.getElementById('countryCode').value;
   const phone = document.getElementById('phone').value.trim();
   const requests = document.getElementById('specialRequests').value.trim();
   const preferredContact = document.getElementById('preferredContact')?.value || 'WhatsApp';
   
   const fullName = `${firstName} ${lastName}`;
+  const fullPhone = `${countryCode} ${phone}`;
 
   // Formulate elegant, structured text block for WhatsApp / Email Fallback
   let messageText = `𓂀 *Horus Guide Travel — New Trip Plan Request* 𓂀\n\n`;
   messageText += `👤 *Name:* ${fullName}\n`;
+  messageText += `🎂 *Age Group:* ${ageGroup}\n`;
   messageText += `✉️ *Email:* ${email}\n`;
-  messageText += `📞 *Phone / WhatsApp:* ${phone}\n`;
+  messageText += `📞 *Phone / WhatsApp:* ${fullPhone}\n`;
   messageText += `💬 *Preferred Contact:* ${preferredContact}\n\n`;
   messageText += `🗺️ *Destinations:* ${dests.join(', ') || '—'}\n`;
   messageText += `💰 *Budget Range:* ${budget}\n`;
@@ -477,8 +485,9 @@ async function submitForm() {
         subject: subjectText,
         from_name: "Horus Guide Travel Website",
         name: fullName,
+        age_group: ageGroup,
         email: email,
-        phone: phone,
+        phone: fullPhone,
         preferred_contact: preferredContact,
         destinations: dests.join(', ') || 'None',
         budget: budget,
