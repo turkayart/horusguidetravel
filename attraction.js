@@ -207,10 +207,22 @@ if (lightboxModal) {
 const videoPlayBtn = document.getElementById('videoPlayBtn');
 const videoWrapper = document.getElementById('videoWrapper');
 
-if (videoPlayBtn && videoWrapper && typeof videoId !== 'undefined') {
+const HORUS_YOUTUBE_IDS = [
+  'dp5cN5EvXwg',
+  'g_nTlW1F1tw',
+  'gtc0E61VWQE',
+  '0J4Yo-Pqrko',
+  'IINpACgPiWE',
+  '0asgNOltQeM'
+];
+
+if (videoPlayBtn && videoWrapper) {
+  // Select a random video ID from our official YouTube list
+  const randomVideoId = HORUS_YOUTUBE_IDS[Math.floor(Math.random() * HORUS_YOUTUBE_IDS.length)];
+
   videoPlayBtn.addEventListener('click', () => {
     const iframe = document.createElement('iframe');
-    iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0&modestbranding=1';
+    iframe.src = 'https://www.youtube.com/embed/' + randomVideoId + '?autoplay=1&rel=0&modestbranding=1';
     iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
     iframe.allowFullscreen = true;
     iframe.style.cssText = 'width:100%;height:100%;border:none;position:absolute;top:0;left:0;';
