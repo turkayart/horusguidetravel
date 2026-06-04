@@ -228,7 +228,7 @@
           <div class="pt-field-group">
             <div class="pt-field-label">
               <span class="pt-field-bullet"></span>
-              <strong>What is your budget range?</strong>
+              <strong>What is your budget range? <span class="pt-req">*</span></strong>
             </div>
             <div class="pt-radio-row" id="budgetRow">
               <label class="pt-radio-option">
@@ -268,40 +268,43 @@
           <div class="pt-field-group">
             <div class="pt-field-label">
               <span class="pt-field-bullet"></span>
-              <strong>What type of travel experience do you prefer?</strong>
+              <div>
+                <strong>What type of travel experience do you prefer? <span class="pt-req">*</span></strong>
+                <small>You can select more than one</small>
+              </div>
             </div>
             <div class="pt-radio-row pt-radio-row-4" id="styleRow">
               <label class="pt-radio-option">
-                <input type="radio" name="style" value="Cultural & Historical">
+                <input type="checkbox" name="style" value="Cultural & Historical">
                 <div class="pt-radio-card">
-                  <div class="pt-radio-dot"></div>
+                  <div class="pt-checkbox-square"><i class="fas fa-check"></i></div>
                   <div>
                     <strong>Cultural<br>& Historical</strong>
                   </div>
                 </div>
               </label>
               <label class="pt-radio-option">
-                <input type="radio" name="style" value="Adventure & Nature">
+                <input type="checkbox" name="style" value="Adventure & Nature">
                 <div class="pt-radio-card">
-                  <div class="pt-radio-dot"></div>
+                  <div class="pt-checkbox-square"><i class="fas fa-check"></i></div>
                   <div>
                     <strong>Adventure<br>& Nature</strong>
                   </div>
                 </div>
               </label>
               <label class="pt-radio-option">
-                <input type="radio" name="style" value="Relaxation & Beach">
+                <input type="checkbox" name="style" value="Relaxation & Beach">
                 <div class="pt-radio-card">
-                  <div class="pt-radio-dot"></div>
+                  <div class="pt-checkbox-square"><i class="fas fa-check"></i></div>
                   <div>
                     <strong>Relaxation<br>& Beach</strong>
                   </div>
                 </div>
               </label>
               <label class="pt-radio-option">
-                <input type="radio" name="style" value="Family Friendly">
+                <input type="checkbox" name="style" value="Family Friendly">
                 <div class="pt-radio-card">
-                  <div class="pt-radio-dot"></div>
+                  <div class="pt-checkbox-square"><i class="fas fa-check"></i></div>
                   <div>
                     <strong>Family<br>Friendly</strong>
                   </div>
@@ -359,7 +362,7 @@
           <div class="pt-field-group">
             <div class="pt-field-label">
               <span class="pt-field-bullet"></span>
-              <strong>What is your preferred accommodation style?</strong>
+              <strong>What is your preferred accommodation style? <span class="pt-req">*</span></strong>
             </div>
             <div class="pt-radio-row" id="accomRow">
               <label class="pt-radio-option">
@@ -430,8 +433,8 @@
           </div>
           <div class="pt-form-row">
             <div class="pt-form-group">
-              <label for="nationality">Nationality</label>
-              <input type="text" class="pt-input" id="nationality" placeholder="Your nationality">
+              <label for="nationality">Nationality <span class="pt-req">*</span></label>
+              <input type="text" class="pt-input" id="nationality" placeholder="Your nationality" required>
             </div>
             <div class="pt-form-group">
               <label for="travelDate">Preferred Travel Date <span class="pt-req">*</span></label>
@@ -439,9 +442,9 @@
             </div>
           </div>
           <div class="pt-form-group">
-            <label for="ageGroup">Age Group</label>
+            <label for="ageGroup">Age Group <span class="pt-req">*</span></label>
             <div class="pt-select-wrap pt-select-full">
-              <select id="ageGroup">
+              <select id="ageGroup" required>
                 <option value="">Select age group</option>
                 <option value="18-25">18 – 25</option>
                 <option value="26-35">26 – 35</option>

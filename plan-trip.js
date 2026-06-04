@@ -133,10 +133,10 @@ function updateOverview() {
   }
 
   // Travel Style
-  const style = document.querySelector('input[name="style"]:checked');
+  const styles = Array.from(document.querySelectorAll('input[name="style"]:checked')).map(c => c.value);
   const styleEl = document.querySelector('#ov-style .pt-ov-content span');
-  if (style) {
-    styleEl.textContent = style.value;
+  if (styles.length > 0) {
+    styleEl.textContent = styles.join(', ');
     styleEl.classList.add('has-value');
   } else {
     styleEl.textContent = 'Not selected yet';
@@ -227,23 +227,44 @@ function validateStep(step) {
   switch (step) {
     case 1: {
       const dests = document.querySelectorAll('input[name="destination"]:checked');
+      const budget = document.querySelector('input[name="budget"]:checked');
+      const styles = document.querySelectorAll('input[name="style"]:checked');
+      const accom = document.querySelector('input[name="accommodation"]:checked');
+
+      let isValid = true;
       if (dests.length === 0) {
         shakeElement(document.getElementById('destGrid'));
-        return false;
+        isValid = false;
       }
-      return true;
+      if (!budget) {
+        shakeElement(document.getElementById('budgetRow'));
+        isValid = false;
+      }
+      if (styles.length === 0) {
+        shakeElement(document.getElementById('styleRow'));
+        isValid = false;
+      }
+      if (!accom) {
+        shakeElement(document.getElementById('accomRow'));
+        isValid = false;
+      }
+      return isValid;
     }
     case 2: {
       const first = document.getElementById('firstName').value.trim();
       const last = document.getElementById('lastName').value.trim();
+      const nationality = document.getElementById('nationality').value.trim();
       const travelDate = document.getElementById('travelDate').value.trim();
-      if (!first || !last || !travelDate) {
-        if (!first) shakeElement(document.getElementById('firstName'));
-        if (!last) shakeElement(document.getElementById('lastName'));
-        if (!travelDate) shakeElement(document.getElementById('travelDate'));
-        return false;
-      }
-      return true;
+      const ageGroup = document.getElementById('ageGroup').value.trim();
+      
+      let isValid = true;
+      if (!first) { shakeElement(document.getElementById('firstName')); isValid = false; }
+      if (!last) { shakeElement(document.getElementById('lastName')); isValid = false; }
+      if (!nationality) { shakeElement(document.getElementById('nationality')); isValid = false; }
+      if (!travelDate) { shakeElement(document.getElementById('travelDate')); isValid = false; }
+      if (!ageGroup) { shakeElement(document.getElementById('ageGroup').parentElement); isValid = false; }
+      
+      return isValid;
     }
     case 3: {
       const email = document.getElementById('email').value.trim();
@@ -294,7 +315,7 @@ function buildReview() {
   const card = document.getElementById('reviewCard');
   const dests = Array.from(document.querySelectorAll('input[name="destination"]:checked')).map(c => c.value);
   const budget = document.querySelector('input[name="budget"]:checked')?.value || '—';
-  const style = document.querySelector('input[name="style"]:checked')?.value || '—';
+  const styles = Array.from(document.querySelectorAll('input[name="style"]:checked')).map(c => c.value);
   const accommodation = document.querySelector('input[name="accommodation"]:checked')?.value || '—';
   const people = document.getElementById('selectPeople');
   const days = document.getElementById('selectDays');
@@ -328,7 +349,7 @@ function buildReview() {
       <div class="pt-review-icon"><i class="fas fa-compass"></i></div>
       <div class="pt-review-content">
         <strong>Travel Style</strong>
-        <span>${style}</span>
+        <span>${styles.join(', ') || '—'}</span>
       </div>
     </div>
     <div class="pt-review-section">
@@ -402,7 +423,7 @@ async function submitForm() {
   // Extract all selections
   const dests = Array.from(document.querySelectorAll('input[name="destination"]:checked')).map(c => c.value);
   const budget = document.querySelector('input[name="budget"]:checked')?.value || '—';
-  const style = document.querySelector('input[name="style"]:checked')?.value || '—';
+  const styles = Array.from(document.querySelectorAll('input[name="style"]:checked')).map(c => c.value);
   const accommodation = document.querySelector('input[name="accommodation"]:checked')?.value || '—';
   
   const peopleEl = document.getElementById('selectPeople');
@@ -422,6 +443,7 @@ async function submitForm() {
   
   const fullName = `${firstName} ${lastName}`;
   const fullPhone = `${countryCode} ${phone}`;
+  const styleText = styles.join(', ') || '—';
 
   // Formulate elegant, structured text block for WhatsApp / Email Fallback
   let messageText = `𓂀 *Horus Guide Travel — New Trip Plan Request* 𓂀\n\n`;
@@ -432,7 +454,7 @@ async function submitForm() {
   messageText += `💬 *Preferred Contact:* ${preferredContact}\n\n`;
   messageText += `🗺️ *Destinations:* ${dests.join(', ') || '—'}\n`;
   messageText += `💰 *Budget Range:* ${budget}\n`;
-  messageText += `🧭 *Travel Style:* ${style}\n`;
+  messageText += `🧭 *Travel Style:* ${styleText}\n`;
   messageText += `🏨 *Accommodation:* ${accommodation}\n`;
   messageText += `👥 *Travelers:* ${peopleText}\n`;
   messageText += `📅 *Duration:* ${daysText}\n`;
@@ -491,7 +513,7 @@ async function submitForm() {
         preferred_contact: preferredContact,
         destinations: dests.join(', ') || 'None',
         budget: budget,
-        travel_style: style,
+        travel_style: styleText,
         accommodation: accommodation,
         travelers: peopleText,
         duration: daysText,
