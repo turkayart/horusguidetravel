@@ -459,7 +459,6 @@ template = """<!DOCTYPE html>
             <a href="#attractions" class="quick-nav-pill"><i class="fas fa-map-marked-alt"></i> Attractions</a>
             <a href="#gallery" class="quick-nav-pill"><i class="fas fa-camera"></i> Gallery</a>
             <a href="#tips" class="quick-nav-pill"><i class="fas fa-lightbulb"></i> Tips</a>
-            <a href="#video" class="quick-nav-pill"><i class="fas fa-play-circle"></i> Video</a>
             <a href="#other-cities" class="quick-nav-pill"><i class="fas fa-globe-africa"></i> Explore More</a>
         </div>
     </div>
@@ -515,30 +514,6 @@ template = """<!DOCTYPE html>
             </div>
             <div class="tips-grid stagger-children fade-up">
                 {tips_html}
-            </div>
-        </div>
-    </section>
-
-    <section class="dest-section dest-section-dark" id="video">
-        <div class="container">
-            <div class="section-header fade-up">
-                <span class="section-tag">Experience</span>
-                <h2 class="section-title">Watch & <em>Feel</em></h2>
-            </div>
-            <div class="video-showcase fade-up">
-                <div class="video-container" id="videoWrapper">
-                    <div class="video-wrapper">
-                        <img src="{hero_img}" alt="Video Thumbnail" class="video-thumbnail">
-                        <button class="video-play-btn" id="videoPlayBtn" aria-label="Play video"><i class="fas fa-play"></i></button>
-                    </div>
-                </div>
-                <div class="video-info">
-                    <h3>{video_title}</h3>
-                    <p>Immerse yourself in the sights and sounds of {title}. Let this journey inspire your next great adventure.</p>
-                    <ul class="video-highlights">
-                        {video_highlights_html}
-                    </ul>
-                </div>
             </div>
         </div>
     </section>

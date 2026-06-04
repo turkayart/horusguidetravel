@@ -979,29 +979,6 @@ function buildPage(a) {
     '            </div>\n' +
     '        </div>\n    </section>\n\n' +
 
-    // VIDEO
-    '    <section class="dest-section dest-section-dark" id="video">\n        <div class="container">\n' +
-    '            <div class="section-header fade-up">\n' +
-    '                <span class="section-tag">Experience</span>\n' +
-    '                <h2 class="section-title">Watch & <em>Feel</em></h2>\n' +
-    '            </div>\n' +
-    '            <div class="video-showcase fade-up">\n' +
-    '                <div class="video-container" id="videoWrapper">\n' +
-    '                    <div class="video-wrapper">\n' +
-    '                        <img src="' + a.heroImg + '" alt="Video Thumbnail" class="video-thumbnail">\n' +
-    '                        <button class="video-play-btn" id="videoPlayBtn" aria-label="Play video"><i class="fas fa-play"></i></button>\n' +
-    '                    </div>\n' +
-    '                </div>\n' +
-    '                <div class="video-info">\n' +
-    '                    <h3>' + a.videoTitle + '</h3>\n' +
-    '                    <p>Immerse yourself in the wonder of ' + a.name + '. Let this journey inspire your next Egyptian adventure.</p>\n' +
-    '                    <ul class="video-highlights">\n' +
-    '                        ' + videoHighlightsHtml + '\n' +
-    '                    </ul>\n' +
-    '                </div>\n' +
-    '            </div>\n' +
-    '        </div>\n    </section>\n\n' +
-
     // RELATED
     '    <section class="dest-section" id="related">\n        <div class="container">\n' +
     '            <div class="section-header fade-up">\n' +
