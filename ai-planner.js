@@ -10,7 +10,7 @@
 const CITIES = [
   { id: 'cairo', name: 'Cairo', img: 'images/city-cairo.jpg', tagline: 'The Heart of Ancient Egypt' },
   { id: 'alexandria', name: 'Alexandria', img: 'images/city-alexandria.jpg', tagline: 'The Pearl of the Mediterranean' },
-  { id: 'luxor', name: 'Luxor', img: 'images/hero-luxor.jpg', tagline: "The World's Greatest Open Air Museum" },
+  { id: 'luxor', name: 'Luxor', img: 'images/luxor temple.jpg', tagline: "The World's Greatest Open Air Museum" },
   { id: 'aswan', name: 'Aswan', img: 'images/hero-aswan.jpg', tagline: 'The Jewel of the Nile' },
   { id: 'hurghada', name: 'Hurghada', img: 'images/city-hurghada.jpg', tagline: 'Red Sea Paradise' },
   { id: 'sharm', name: 'Sharm El Sheikh', img: 'images/hero-sharm.jpg', tagline: 'Where Desert Meets the Sea' },
@@ -38,11 +38,10 @@ const ATTRACTIONS = {
     { id: 'corniche', name: 'Alexandria Corniche', img: 'images/attr-alexandria-corniche.jpg', rating: 4.5, category: 'Experience', city: 'Alexandria' }
   ],
   luxor: [
-    { id: 'valley-kings', name: 'Valley of the Kings', img: 'images/Valley-of-the-Kings.jpg', rating: 4.9, category: 'Must See', city: 'Luxor' },
-    { id: 'karnak', name: 'Karnak Temple', img: 'images/Karnak-temple.jpg', rating: 4.9, category: 'Ancient', city: 'Luxor' },
-    { id: 'luxor-temple', name: 'Luxor Temple', img: 'images/gallery-luxor-temple.jpg', rating: 4.7, category: 'Historic', city: 'Luxor' },
-    { id: 'hatshepsut', name: 'Temple of Hatshepsut', img: 'images/hero-luxor.jpg', rating: 4.7, category: 'Landmark', city: 'Luxor' },
-    { id: 'nile-cruise', name: 'Nile River Cruise', img: 'Real Moments/PHOTO-2025-12-05-14-30-07(1).jpg', rating: 4.8, category: 'Experience', city: 'Luxor' }
+    { id: 'hatshepsut', name: 'Temple of Hatshepsut', img: 'images/Hatshepsut.jpg', rating: 4.7, category: 'Landmark', city: 'Luxor' },
+    { id: 'edfu-temple', name: 'Edfu Temple', img: 'images/Edfu-temple.jpg', rating: 4.9, category: 'Ancient', city: 'Luxor' },
+    { id: 'luxor-temple', name: 'Luxor Temple', img: 'images/luxor temple.jpg', rating: 4.7, category: 'Historic', city: 'Luxor' },
+    { id: 'nile-cruise', name: 'Nile River Cruise', img: 'images/nile-cruise.png', rating: 4.8, category: 'Experience', city: 'Luxor' }
   ],
   aswan: [
     { id: 'philae', name: 'Philae Temple', img: 'images/gallery-aswan-philae.jpg', rating: 4.8, category: 'Ancient', city: 'Aswan' },

@@ -144,74 +144,74 @@ const attractions = [
     related: [
       {id: "pyramids-of-giza", name: "Pyramids of Giza", city: "Cairo", img: "../images/hero-pyramids.jpg", rating: "4.9"},
       {id: "egyptian-museum", name: "Egyptian Museum", city: "Cairo", img: "../images/grand_egyptian_museum.jpg", rating: "4.8"},
-      {id: "karnak-temple", name: "Karnak Temple", city: "Luxor", img: "../images/Karnak-temple.jpg", rating: "4.9"}
+      {id: "luxor-temple", name: "Luxor Temple", city: "Luxor", img: "../images/luxor temple.jpg", rating: "4.7"}
     ]
   },
   {
-    id: "karnak-temple",
-    name: "Karnak Temple",
-    subtitle: "The Largest Religious Complex Ever Built",
-    badge: "Ancient Wonder",
+    id: "edfu-temple",
+    name: "Edfu Temple",
+    subtitle: "The Most Perfectly Preserved Temple of Ancient Egypt",
+    badge: "Ptolemaic Masterpiece",
     badgeIcon: "gopuram",
     city: "Luxor",
     cityPage: "luxor.html",
-    heroImg: "../images/Karnak-temple.jpg",
+    heroImg: "../images/Edfu-temple.jpg",
     rating: "4.9",
-    reviewCount: "32,600",
+    reviewCount: "18,400",
     duration: "2-3 hours",
     price: "$15",
     priceDetail: "Adult entry",
-    location: "East Bank, Luxor",
-    openHours: "6:00 AM – 5:30 PM",
-    builtDate: "c. 2000 BC – 30 BC",
-    architect: "30+ Pharaohs over 2,000 years",
-    era: "Middle Kingdom to Ptolemaic",
-    heightFact: "23m tall columns",
-    visitorsFact: "5M+ visitors/year",
-    ageFact: "4,000+ years old",
+    location: "West Bank of the Nile, Edfu",
+    openHours: "7:00 AM – 5:00 PM",
+    builtDate: "237 BC – 57 BC",
+    architect: "Ptolemaic Builders",
+    era: "Ptolemaic Kingdom",
+    heightFact: "36m high pylons",
+    visitorsFact: "2M+ visitors/year",
+    ageFact: "2,000+ years old",
     videoId: "SvxWvnhHYV8",
-    videoTitle: "The Majesty of Karnak Temple",
-    description: "Karnak Temple is the largest religious building ever constructed. This vast complex of temples, pylons, and obelisks was built over 2,000 years by more than 30 pharaohs, each adding their own contributions. The Great Hypostyle Hall alone contains 134 massive columns, some standing 23 meters tall.",
-    history: "Construction began during the Middle Kingdom around 2000 BC and continued through the Ptolemaic period. Karnak was the most important temple complex in Egypt, dedicated primarily to Amun-Ra, the king of the gods. The site covers over 200 acres — large enough to contain ten average European cathedrals. The Avenue of Sphinxes, recently restored, connects Karnak to Luxor Temple 2.7 kilometers away.",
+    videoTitle: "The Splendor of Edfu Temple",
+    description: "Dedicated to the falcon god Horus, Edfu Temple is the most intact ancient temple in Egypt. Built during the Ptolemaic era, its massive entrance pylons, hyperstyle halls, and inner sanctuaries remain almost completely undamaged, offering a perfect window into ancient Egyptian temple architecture and rituals.",
+    history: "Construction began in 237 BC under Ptolemy III Euergetes and was completed in 57 BC under Ptolemy XII. The temple is built on the site of an earlier, smaller temple. Over the centuries, it was buried under 12 meters of desert sand and silt from Nile floods, which preserved it perfectly until it was excavated by French archaeologist Auguste Mariette in the 1860s.",
     timeline: [
-      {date: "c. 2000 BC", text: "Senusret I begins the first construction at Karnak during the Middle Kingdom."},
-      {date: "c. 1479 BC", text: "Hatshepsut adds her red chapel and famous obelisks to the complex."},
-      {date: "c. 1279 BC", text: "Ramesses II completes the Great Hypostyle Hall with its 134 massive columns."},
-      {date: "c. 380 BC", text: "Nectanebo I builds the last major Egyptian addition to the temple."},
-      {date: "1979", text: "Karnak is inscribed as a UNESCO World Heritage Site along with ancient Thebes."},
-      {date: "2021", text: "The Avenue of Sphinxes between Karnak and Luxor Temple is reopened to the public."}
+      {date: "237 BC", text: "Ptolemy III begins construction of the main temple building."},
+      {date: "212 BC", text: "Construction is temporarily halted due to local rebellions in Upper Egypt."},
+      {date: "142 BC", text: "The inner hall and sanctuaries are completed and decorated with reliefs."},
+      {date: "57 BC", text: "The massive entrance pylons are completed, marking the end of 180 years of construction."},
+      {date: "1860", text: "Auguste Mariette begins excavating the temple from the sand and village ruins built atop it."},
+      {date: "2010", text: "A new visitor center and lighting system are installed for night sightseeing."}
     ],
     activities: [
-      {icon: "fa-columns", name: "Hypostyle Hall", desc: "Walk among 134 massive columns in the largest hall of columns in the world — an overwhelming experience.", duration: "45 min", difficulty: "Easy"},
-      {icon: "fa-monument", name: "Sacred Lake Circuit", desc: "Circle the ancient Sacred Lake where priests performed purification rituals for 2,000 years.", duration: "30 min", difficulty: "Easy"},
-      {icon: "fa-route", name: "Avenue of Sphinxes", desc: "Walk the 2.7km sphinx-lined ceremonial road connecting Karnak to Luxor Temple.", duration: "1 hr", difficulty: "Moderate"},
-      {icon: "fa-moon", name: "Sound & Light Show", desc: "Experience the temple dramatically illuminated with a narrated night show.", duration: "1.5 hrs", difficulty: "Easy"},
-      {icon: "fa-search", name: "Scarab Statue Circuit", desc: "Walk around the sacred scarab beetle statue — legend says 7 times for good luck.", duration: "10 min", difficulty: "Easy"},
-      {icon: "fa-compass", name: "Open Air Museum", desc: "Explore the smaller chapels and reconstructed structures in the on-site open air museum.", duration: "45 min", difficulty: "Easy"}
+      {icon: "fa-columns", name: "Hypostyle Hall", desc: "Walk through the grand court and enter the columned hall, with 12 massive columns decorated with floral capitals.", duration: "45 min", difficulty: "Easy"},
+      {icon: "fa-falcon", name: "Horus Falcon Statues", desc: "Marvel at the giant black granite statues of the falcon god Horus guarding the main temple entrance.", duration: "15 min", difficulty: "Easy"},
+      {icon: "fa-dungeon", name: "Holy of Holies", desc: "Explore the dark, innermost sanctuary containing a rare polished granite naos (shrine) for the sacred boat.", duration: "30 min", difficulty: "Easy"},
+      {icon: "fa-history", name: "Battle Reliefs", desc: "Study the detailed wall carvings depicting the mythical battle between Horus and Seth (as a hippopotamus).", duration: "30 min", difficulty: "Easy"},
+      {icon: "fa-horse", name: "Horse Carriage Ride", desc: "Arrive from the Nile cruise ship dock via a traditional horse-drawn carriage through the streets of Edfu.", duration: "20 min", difficulty: "Easy"},
+      {icon: "fa-search", name: "Birth House (Mammisi)", desc: "Visit the surrounding colonnaded Mammisi, where the divine birth of Horus was celebrated.", duration: "30 min", difficulty: "Easy"}
     ],
     gallery: [
-      {src: "../images/gallery-luxor-temple.jpg", caption: "Great Hypostyle Hall"},
-      {src: "../images/gallery-luxor-temple.jpg", caption: "Temple Columns at Sunset"},
-      {src: "../images/hero-luxor.jpg", caption: "Karnak Complex"},
-      {src: "../Real Moments/PHOTO-2026-01-19-20-26-36(3).jpg", caption: "Ancient Carvings"},
-      {src: "../images/gallery-luxor-temple.jpg", caption: "Sacred Obelisks"},
-      {src: "../images/hero-luxor.jpg", caption: "Temple Detail"}
+      {src: "../images/Edfu-temple.jpg", caption: "Edfu Temple Entrance Pylon"},
+      {src: "../images/gallery-luxor-temple.jpg", caption: "Falcon Statue of Horus"},
+      {src: "../images/luxor temple.jpg", caption: "Inner Sanctuary Shrine"},
+      {src: "../Real Moments/PHOTO-2026-01-19-20-26-36(3).jpg", caption: "Ptolemaic Columns"},
+      {src: "../images/gallery-luxor-balloons.jpg", caption: "Temple Courtyard"},
+      {src: "../images/gallery-luxor-temple.jpg", caption: "Wall Carvings"}
     ],
     tips: [
-      {icon: "🌅", title: "Go Early", desc: "Arrive at 6 AM opening to photograph the Hypostyle Hall bathed in golden sunrise light."},
-      {icon: "🎫", title: "Luxor Pass", desc: "If visiting multiple temples, the Luxor Pass offers unlimited access and saves money."},
-      {icon: "🏛️", title: "Plan 3 Hours", desc: "The complex is massive — budget at least 2-3 hours to see the main highlights."},
-      {icon: "🌙", title: "Night Show", desc: "The Sound & Light Show runs nightly and is one of Egypt's best evening experiences."},
-      {icon: "📖", title: "Hire a Guide", desc: "A local guide brings the hieroglyphics and history to life — highly recommended."},
-      {icon: "💧", title: "Stay Hydrated", desc: "Limited shade inside the complex. Bring water and wear a hat."}
+      {icon: "🐴", title: "Carriage Rides", desc: "If visiting from a cruise, the horse carriage is included in your tour. Hold on tight as the drivers go fast."},
+      {icon: "🌅", title: "Visit Early", desc: "Edfu gets crowded when cruise ships arrive. Visiting at 7 AM opening avoids the large tour groups."},
+      {icon: "🔦", title: "Bring a Flashlight", desc: "Some of the inner chambers and corridors have limited lighting, revealing beautiful soot-blackened ceilings."},
+      {icon: "🧴", title: "Stay Cool", desc: "Although the temple interior is shady and relatively cool, the open courtyard is very sunny and hot."},
+      {icon: "📖", title: "Hire a Guide", desc: "The inscriptions explain the Opet-like festivals and temple rituals — a guide is essential to interpret them."},
+      {icon: "🎫", title: "Ticket office", desc: "The ticket office is located at the modern visitor center near the main parking area."}
     ],
     bestMonths: {jan:"best",feb:"best",mar:"good",apr:"good",may:"avoid",jun:"avoid",jul:"avoid",aug:"avoid",sep:"avoid",oct:"good",nov:"best",dec:"best"},
-    bestTimeNote: "November to February for pleasant weather. Early morning visits are best year-round.",
-    videoHighlights: ["134 massive stone columns", "2,000 years of construction", "Sacred Lake rituals", "Avenue of Sphinxes"],
+    bestTimeNote: "November to February. Early mornings are best to beat the cruise ship crowds.",
+    videoHighlights: ["Falcon statues of Horus", "36-meter-high pylons", "Exquisitely preserved Ptolemaic reliefs", "Hidden inner sanctuary"],
     related: [
-      {id: "luxor-temple", name: "Luxor Temple", city: "Luxor", img: "../images/gallery-luxor-temple.jpg", rating: "4.7"},
-      {id: "valley-of-kings", name: "Valley of the Kings", city: "Luxor", img: "../images/Valley-of-the-Kings.jpg", rating: "4.9"},
-      {id: "abu-simbel", name: "Abu Simbel", city: "Aswan", img: "../images/attr-abu-simbel.jpg", rating: "4.9"}
+      {id: "luxor-temple", name: "Luxor Temple", city: "Luxor", img: "../images/luxor temple.jpg", rating: "4.7"},
+      {id: "hatshepsut-temple", name: "Temple of Hatshepsut", city: "Luxor", img: "../images/Hatshepsut.jpg", rating: "4.7"},
+      {id: "nile-cruises", name: "Nile Cruises", city: "Luxor-Aswan", img: "../images/nile-cruise.png", rating: "4.8"}
     ]
   },
   {
@@ -258,11 +258,11 @@ const attractions = [
     ],
     gallery: [
       {src: "../images/gallery-luxor-temple.jpg", caption: "Luxor Temple at Night"},
-      {src: "../images/hero-luxor.jpg", caption: "Temple Approach"},
+      {src: "../images/luxor temple.jpg", caption: "Temple Approach"},
       {src: "../images/gallery-luxor-temple.jpg", caption: "Hypostyle Columns"},
       {src: "../Real Moments/PHOTO-2026-01-19-20-26-36(3).jpg", caption: "Ancient Reliefs"},
-      {src: "../Real Moments/PHOTO-2025-12-05-14-30-07(1).jpg", caption: "Nile & Temple"},
-      {src: "../images/hero-luxor.jpg", caption: "Temple Detail"}
+      {src: "../images/Edfu-temple.jpg", caption: "Nile & Temple"},
+      {src: "../images/gallery-luxor-temple.jpg", caption: "Temple Detail"}
     ],
     tips: [
       {icon: "🌙", title: "Visit at Night", desc: "The illuminated temple is one of Egypt's most magical experiences. Open until 9 PM."},
@@ -276,76 +276,76 @@ const attractions = [
     bestTimeNote: "November to February. Evening visits are magical year-round thanks to night illumination.",
     videoHighlights: ["Stunning night illumination", "Avenue of Sphinxes connection", "3,400 years of history", "Mosque atop ancient temple"],
     related: [
-      {id: "karnak-temple", name: "Karnak Temple", city: "Luxor", img: "../images/Karnak-temple.jpg", rating: "4.9"},
-      {id: "valley-of-kings", name: "Valley of the Kings", city: "Luxor", img: "../images/Valley-of-the-Kings.jpg", rating: "4.9"},
+      {id: "edfu-temple", name: "Edfu Temple", city: "Luxor", img: "../images/Edfu-temple.jpg", rating: "4.9"},
+      {id: "hatshepsut-temple", name: "Temple of Hatshepsut", city: "Luxor", img: "../images/Hatshepsut.jpg", rating: "4.7"},
       {id: "pyramids-of-giza", name: "Pyramids of Giza", city: "Cairo", img: "../images/hero-pyramids.jpg", rating: "4.9"}
     ]
   },
   {
-    id: "valley-of-kings",
-    name: "Valley of the Kings",
-    subtitle: "The Royal Necropolis of Ancient Egypt",
+    id: "hatshepsut-temple",
+    name: "Temple of Hatshepsut",
+    subtitle: "The Mortuary Temple of Egypt's Famous Female Pharaoh",
     badge: "UNESCO Heritage",
     badgeIcon: "landmark",
     city: "Luxor",
     cityPage: "luxor.html",
-    heroImg: "../images/Valley-of-the-Kings.jpg",
-    rating: "4.9",
-    reviewCount: "41,200",
-    duration: "3-4 hours",
-    price: "$20",
-    priceDetail: "Includes 3 tombs",
-    location: "West Bank, Luxor",
+    heroImg: "../images/Hatshepsut.jpg",
+    rating: "4.7",
+    reviewCount: "25,300",
+    duration: "1-2 hours",
+    price: "$10",
+    priceDetail: "Adult entry",
+    location: "Deir el-Bahari, West Bank, Luxor",
     openHours: "6:00 AM – 5:00 PM",
-    builtDate: "c. 1539 – 1075 BC",
-    architect: "New Kingdom Pharaohs",
-    era: "New Kingdom, 18th–20th Dynasty",
-    heightFact: "65 discovered tombs",
-    visitorsFact: "9M+ visitors/year",
-    ageFact: "3,500+ years old",
+    builtDate: "c. 1479 BC",
+    architect: "Senenmut",
+    era: "New Kingdom, 18th Dynasty",
+    heightFact: "3 terraced levels",
+    visitorsFact: "3M+ visitors/year",
+    ageFact: "3,400+ years old",
     videoId: "SvxWvnhHYV8",
-    videoTitle: "Secrets of the Royal Tombs",
-    description: "Hidden in a remote desert valley on Luxor's West Bank, the Valley of the Kings served as the burial ground for Egypt's most powerful pharaohs for nearly 500 years. Its 65 discovered tombs — including the legendary tomb of Tutankhamun — are adorned with vivid paintings depicting the journey to the afterlife.",
-    history: "The pharaohs of the New Kingdom abandoned the visible pyramid burials of their predecessors in favor of hidden rock-cut tombs in this isolated valley. Despite elaborate security measures, nearly all tombs were looted in antiquity. Howard Carter's 1922 discovery of Tutankhamun's virtually intact tomb was the greatest archaeological find in history, revealing over 5,000 artifacts including the iconic gold death mask.",
+    videoTitle: "The Temple of Hatshepsut",
+    description: "The Mortuary Temple of Hatshepsut is a masterpiece of ancient classical architecture. Built against the towering cliffs of Deir el-Bahari, this terraced temple honors one of Egypt's rare female pharaohs who ruled as a king, depicting her trade expeditions and divine birth on its walls.",
+    history: "Designed by the royal architect Senenmut, the temple consists of three layered terraces reaching 30 meters high, connected by long ramps and surrounded by gardens. Hatshepsut ruled for over 20 years during Egypt's golden age. After her death, her successor attempted to erase her name and images from the temple, but the architectural brilliance of the site preserved her legacy.",
     timeline: [
-      {date: "c. 1539 BC", text: "Thutmose I becomes the first pharaoh to be buried in the Valley of the Kings."},
-      {date: "c. 1279 BC", text: "Ramesses II builds the largest tomb in the valley (KV5), with 120+ chambers for his sons."},
-      {date: "c. 1075 BC", text: "Ramesses XI is the last pharaoh buried in the valley, ending 500 years of royal burials."},
-      {date: "1922", text: "Howard Carter discovers the tomb of Tutankhamun (KV62), nearly intact with 5,000+ artifacts."},
-      {date: "1979", text: "The valley is inscribed as a UNESCO World Heritage Site."},
-      {date: "2020", text: "New tomb discoveries continue with advanced scanning technology revealing hidden chambers."}
+      {date: "c. 1479 BC", text: "Hatshepsut commissions the construction of her mortuary temple at Deir el-Bahari."},
+      {date: "c. 1460 BC", text: "The temple is completed, featuring beautiful painted reliefs of the Punt expedition."},
+      {date: "c. 1458 BC", text: "Thutmose III ascends the throne; later, efforts to scratch out Hatshepsut's images begin."},
+      {date: "19th century", text: "Archaeologists begin excavating the temple from under deep piles of rock debris."},
+      {date: "1961", text: "The Polish-Egyptian Archaeological Mission begins long-term restoration of the terraces."},
+      {date: "1979", text: "The temple is inscribed as a UNESCO World Heritage Site along with ancient Thebes."}
     ],
     activities: [
-      {icon: "fa-dungeon", name: "Tomb Exploration", desc: "Enter three tombs with your standard ticket, each decorated with vivid afterlife paintings.", duration: "2 hrs", difficulty: "Moderate"},
-      {icon: "fa-crown", name: "Tutankhamun's Tomb", desc: "Visit the world's most famous tomb where Howard Carter found the golden treasures in 1922.", duration: "30 min", difficulty: "Easy"},
-      {icon: "fa-palette", name: "Tomb of Seti I", desc: "See the finest painted tomb in the valley — often called the 'Sistine Chapel of ancient Egypt.'", duration: "30 min", difficulty: "Easy"},
-      {icon: "fa-mountain", name: "Hike to Hatshepsut", desc: "Take the mountain trail from the valley over the ridge to Hatshepsut's temple.", duration: "1.5 hrs", difficulty: "Challenging"},
-      {icon: "fa-binoculars", name: "Workers' Village", desc: "Visit Deir el-Medina, where the tomb builders and artists lived for generations.", duration: "1 hr", difficulty: "Easy"},
-      {icon: "fa-camera", name: "Valley Panorama", desc: "Climb to the viewpoint above the valley for a dramatic panoramic view of the necropolis.", duration: "30 min", difficulty: "Moderate"}
+      {icon: "fa-hiking", name: "Terrace Exploration", desc: "Climb the grand ramps and explore the three tiers of colonnades with statues of Hatshepsut as Osiris.", duration: "1 hr", difficulty: "Easy"},
+      {icon: "fa-palette", name: "Punt Reliefs", desc: "View the famous painted reliefs depicting Hatshepsut's maritime trade expedition to the Land of Punt.", duration: "30 min", difficulty: "Easy"},
+      {icon: "fa-binoculars", name: "Hathor Chapel", desc: "Explore the beautifully preserved chapel of Hathor, with columns carved with the face of the cow-headed goddess.", duration: "20 min", difficulty: "Easy"},
+      {icon: "fa-sun", name: "Sunrise Views", desc: "Watch the sun rise over the Nile Valley from the temple's top terrace — a breathtaking view.", duration: "45 min", difficulty: "Easy"},
+      {icon: "fa-camera", name: "Cliffside Photography", desc: "Photograph the striking symmetry of the temple juxtaposed against the rugged desert cliffs.", duration: "30 min", difficulty: "Easy"},
+      {icon: "fa-road", name: "Valley Trail Hike", desc: "Hike the ancient path over the mountain ridge that connects the temple to the Valley of the Kings.", duration: "1.5 hrs", difficulty: "Challenging"}
     ],
     gallery: [
-      {src: "../images/Valley-of-the-Kings.jpg", caption: "Valley of the Kings Entrance"},
-      {src: "../Real Moments/PHOTO-2026-01-19-20-26-36(3).jpg", caption: "Tomb Paintings"},
-      {src: "../images/hero-luxor.jpg", caption: "West Bank Aerial"},
-      {src: "../images/hero-luxor.jpg", caption: "Temple of Hatshepsut"},
-      {src: "../images/gallery-luxor-temple.jpg", caption: "Ancient Hieroglyphs"},
-      {src: "../images/gallery-luxor-balloons.jpg", caption: "Hot Air Balloon View"}
+      {src: "../images/Hatshepsut.jpg", caption: "Temple of Hatshepsut Facade"},
+      {src: "../images/gallery-luxor-temple.jpg", caption: "Colonnaded Terraces"},
+      {src: "../images/gallery-luxor-balloons.jpg", caption: "Hot Air Balloon View"},
+      {src: "../images/luxor temple.jpg", caption: "Statues of Hatshepsut"},
+      {src: "../Real Moments/PHOTO-2026-01-19-20-26-36(3).jpg", caption: "Ancient Reliefs"},
+      {src: "../images/gallery-luxor-temple.jpg", caption: "Hathor Chapel Detail"}
     ],
     tips: [
-      {icon: "🌅", title: "Start at 6 AM", desc: "Arrive at opening to beat the heat and the tour bus crowds. The valley heats up quickly."},
-      {icon: "🎫", title: "Extra Tickets", desc: "Tutankhamun and Seti I tombs require separate paid tickets — buy at the entrance."},
-      {icon: "📷", title: "No Photos Inside", desc: "Photography is NOT allowed inside the tombs. Guards check strictly."},
-      {icon: "💧", title: "Extreme Heat", desc: "Summer temperatures exceed 45°C. Bring lots of water and wear sun protection."},
-      {icon: "🎈", title: "Balloon First", desc: "Take a hot air balloon at sunrise BEFORE visiting the valley for the best experience."},
-      {icon: "🚐", title: "Electric Train", desc: "A small electric train takes you from the ticket office to the tomb entrance area."}
+      {icon: "🌅", title: "Arrive Early", desc: "The temple gets extremely hot by midday and there is no shade on the ramps. 6-8 AM is best."},
+      {icon: "🧴", title: "Sun Protection", desc: "Bring high-SPF sunscreen, a wide-brimmed hat, and sunglasses. The white limestone reflects intense light."},
+      {icon: "💧", title: "Bring Water", desc: "Keep a bottle of cold water with you; there are no shops inside the archaeological area."},
+      {icon: "🚶", title: "Electric Taf-Taf", desc: "A shuttle train is available to carry visitors from the parking lot to the temple gate."},
+      {icon: "🎫", title: "Ticket Purchase", desc: "Buy tickets at the main visitors' center before boarding the shuttle train."},
+      {icon: "📷", title: "Photography Tip", desc: "The best panoramic shot is from the parking lot approach, capturing the entire facade against the cliffs."}
     ],
     bestMonths: {jan:"best",feb:"best",mar:"good",apr:"good",may:"avoid",jun:"avoid",jul:"avoid",aug:"avoid",sep:"avoid",oct:"good",nov:"best",dec:"best"},
     bestTimeNote: "November to February. Always go early morning to avoid extreme heat.",
-    videoHighlights: ["65 royal tombs discovered", "Tutankhamun's golden treasures", "Vivid 3,500-year-old paintings", "Hot air balloon sunrise views"],
+    videoHighlights: ["Three monumental terraced levels", "Carved into solid desert cliffs", "Reliefs of trade expeditions to Punt", "Designed by architect Senenmut"],
     related: [
-      {id: "karnak-temple", name: "Karnak Temple", city: "Luxor", img: "../images/Karnak-temple.jpg", rating: "4.9"},
-      {id: "luxor-temple", name: "Luxor Temple", city: "Luxor", img: "../images/gallery-luxor-temple.jpg", rating: "4.7"},
-      {id: "abu-simbel", name: "Abu Simbel", city: "Aswan", img: "../images/attr-abu-simbel.jpg", rating: "4.9"}
+      {id: "luxor-temple", name: "Luxor Temple", city: "Luxor", img: "../images/luxor temple.jpg", rating: "4.7"},
+      {id: "edfu-temple", name: "Edfu Temple", city: "Luxor", img: "../images/Edfu-temple.jpg", rating: "4.9"},
+      {id: "nile-cruises", name: "Nile Cruises", city: "Luxor-Aswan", img: "../images/nile-cruise.png", rating: "4.8"}
     ]
   },
   {
@@ -410,9 +410,9 @@ const attractions = [
     bestTimeNote: "October to March. February 22 and October 22 are the Sun Festival dates.",
     videoHighlights: ["20-meter colossal statues", "UNESCO relocation miracle", "Solar alignment phenomenon", "Nefertari's beautiful temple"],
     related: [
-      {id: "karnak-temple", name: "Karnak Temple", city: "Luxor", img: "../images/Karnak-temple.jpg", rating: "4.9"},
-      {id: "valley-of-kings", name: "Valley of the Kings", city: "Luxor", img: "../images/Valley-of-the-Kings.jpg", rating: "4.9"},
-      {id: "nile-cruises", name: "Nile Cruises", city: "Luxor-Aswan", img: "../Real Moments/PHOTO-2025-12-05-14-30-07(1).jpg", rating: "4.8"}
+      {id: "edfu-temple", name: "Edfu Temple", city: "Luxor", img: "../images/Edfu-temple.jpg", rating: "4.9"},
+      {id: "hatshepsut-temple", name: "Temple of Hatshepsut", city: "Luxor", img: "../images/Hatshepsut.jpg", rating: "4.7"},
+      {id: "luxor-temple", name: "Luxor Temple", city: "Luxor", img: "../images/luxor temple.jpg", rating: "4.7"}
     ]
   },
   {
@@ -546,7 +546,7 @@ const attractions = [
     related: [
       {id: "khan-el-khalili", name: "Khan El Khalili", city: "Cairo", img: "../images/gallery-cairo-khan.jpg", rating: "4.6"},
       {id: "pyramids-of-giza", name: "Pyramids of Giza", city: "Cairo", img: "../images/hero-pyramids.jpg", rating: "4.9"},
-      {id: "karnak-temple", name: "Karnak Temple", city: "Luxor", img: "../images/Karnak-temple.jpg", rating: "4.9"}
+      {id: "luxor-temple", name: "Luxor Temple", city: "Luxor", img: "../images/luxor temple.jpg", rating: "4.7"}
     ]
   },
   {
@@ -557,7 +557,7 @@ const attractions = [
     badgeIcon: "ship",
     city: "Luxor-Aswan",
     cityPage: "luxor.html",
-    heroImg: "../Real Moments/PHOTO-2025-12-05-14-30-07(1).jpg",
+    heroImg: "../images/nile-cruise.png",
     rating: "4.8",
     reviewCount: "26,300",
     duration: "3-7 Days",
@@ -592,10 +592,10 @@ const attractions = [
       {icon: "fa-sailboat", name: "Dahabiya Cruise", desc: "Choose a traditional dahabiya sailing vessel for a slower, more authentic Nile journey.", duration: "4-7 days", difficulty: "Easy"}
     ],
     gallery: [
-      {src: "../Real Moments/PHOTO-2025-12-05-14-30-07(1).jpg", caption: "Felucca at Sunset"},
+      {src: "../images/nile-cruise.png", caption: "Nile Cruise"},
       {src: "../images/hero-aswan.jpg", caption: "Nile Sailing"},
       {src: "../images/hero-aswan.jpg", caption: "Aswan Waterfront"},
-      {src: "../images/hero-luxor.jpg", caption: "Luxor from the Nile"},
+      {src: "../images/gallery-luxor-temple.jpg", caption: "Luxor from the Nile"},
       {src: "../images/gallery-luxor-temple.jpg", caption: "Riverside View"},
       {src: "../images/attr-aswan-high-dam.jpg", caption: "Aswan High Dam"}
     ],
@@ -611,9 +611,9 @@ const attractions = [
     bestTimeNote: "October to April for ideal weather. December and January are peak season.",
     videoHighlights: ["5-star floating hotels", "Ancient temple excursions", "Spectacular Nile sunsets", "Traditional Nubian performances"],
     related: [
-      {id: "karnak-temple", name: "Karnak Temple", city: "Luxor", img: "../images/Karnak-temple.jpg", rating: "4.9"},
-      {id: "abu-simbel", name: "Abu Simbel", city: "Aswan", img: "../images/attr-abu-simbel.jpg", rating: "4.9"},
-      {id: "valley-of-kings", name: "Valley of the Kings", city: "Luxor", img: "../images/Valley-of-the-Kings.jpg", rating: "4.9"}
+      {id: "edfu-temple", name: "Edfu Temple", city: "Luxor", img: "../images/Edfu-temple.jpg", rating: "4.9"},
+      {id: "hatshepsut-temple", name: "Temple of Hatshepsut", city: "Luxor", img: "../images/Hatshepsut.jpg", rating: "4.7"},
+      {id: "abu-simbel", name: "Abu Simbel", city: "Aswan", img: "../images/attr-abu-simbel.jpg", rating: "4.9"}
     ]
   },
   {
@@ -680,7 +680,7 @@ const attractions = [
     related: [
       {id: "siwa-oasis", name: "Siwa Oasis", city: "Western Desert", img: "../images/hero-siwa.jpg", rating: "4.7"},
       {id: "pyramids-of-giza", name: "Pyramids of Giza", city: "Cairo", img: "../images/hero-pyramids.jpg", rating: "4.9"},
-      {id: "nile-cruises", name: "Nile Cruises", city: "Luxor-Aswan", img: "../Real Moments/PHOTO-2025-12-05-14-30-07(1).jpg", rating: "4.8"}
+      {id: "nile-cruises", name: "Nile Cruises", city: "Luxor-Aswan", img: "../images/nile-cruise.png", rating: "4.8"}
     ]
   },
   {
@@ -1047,7 +1047,7 @@ function buildPage(a) {
     '                    <a href="../index.html">Home</a><a href="../index.html#destinations">Destinations</a><a href="../index.html#about">About Us</a><a href="../index.html#contact">Contact</a>\n' +
     '                </div>\n' +
     '                <div class="footer-col"><h4>Top Attractions</h4>\n' +
-    '                    <a href="pyramids-of-giza.html">Pyramids of Giza</a><a href="karnak-temple.html">Karnak Temple</a><a href="valley-of-kings.html">Valley of the Kings</a><a href="abu-simbel.html">Abu Simbel</a><a href="red-sea-diving.html">Red Sea Diving</a>\n' +
+    '                    <a href="pyramids-of-giza.html">Pyramids of Giza</a><a href="edfu-temple.html">Edfu Temple</a><a href="hatshepsut-temple.html">Hatshepsut Temple</a><a href="abu-simbel.html">Abu Simbel</a><a href="red-sea-diving.html">Red Sea Diving</a>\n' +
     '                </div>\n' +
     '                <div class="footer-col"><h4>Contact Us</h4>\n' +
     '                    <a href="tel:+201070430634"><i class="fas fa-phone"></i> +20 107 043 0634</a>\n' +

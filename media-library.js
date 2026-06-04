@@ -5,56 +5,15 @@
   const PHOTO_FILES = [
     'PHOTO-2025-11-14-00-12-40(1).jpg',
     'PHOTO-2025-11-14-00-12-40(2).jpg',
-    'PHOTO-2025-11-14-00-12-40(3).jpg',
-    'PHOTO-2025-11-26-17-53-53.jpg',
-    'PHOTO-2025-12-05-14-30-03.jpg',
-    'PHOTO-2025-12-05-14-30-06.jpg',
-    'PHOTO-2025-12-05-14-30-07(1).jpg',
-    'PHOTO-2025-12-05-14-30-07(2).jpg',
-    'PHOTO-2025-12-05-14-30-07.jpg',
-    'PHOTO-2025-12-05-14-30-08(1).jpg',
-    'PHOTO-2025-12-05-14-30-08.jpg',
     'PHOTO-2025-12-05-19-29-49(1).jpg',
-    'PHOTO-2025-12-05-19-29-49(2).jpg',
-    'PHOTO-2025-12-05-19-29-49(3).jpg',
-    'PHOTO-2025-12-05-19-29-49.jpg',
-    'PHOTO-2025-12-05-19-29-50(1).jpg',
-    'PHOTO-2025-12-05-19-29-50.jpg',
     'PHOTO-2025-12-09-12-36-35.jpg',
-    'PHOTO-2025-12-10-14-17-50(1).jpg',
-    'PHOTO-2025-12-10-14-17-50(2).jpg',
-    'PHOTO-2025-12-10-14-17-50.jpg',
     'PHOTO-2025-12-12-18-29-35.jpg',
-    'PHOTO-2025-12-22-18-09-50.jpg',
-    'PHOTO-2025-12-28-01-29-03.jpg',
-    'PHOTO-2025-12-28-18-10-52.jpg',
-    'PHOTO-2025-12-28-18-10-59.jpg',
-    'PHOTO-2025-12-28-18-11-13.jpg',
-    'PHOTO-2025-12-28-19-04-53.jpg',
-    'PHOTO-2025-12-30-17-22-43.jpg',
-    'PHOTO-2026-01-14-15-02-17.jpg',
     'PHOTO-2026-01-19-20-26-08(1).jpg',
     'PHOTO-2026-01-19-20-26-08.jpg',
     'PHOTO-2026-01-19-20-26-19.jpg',
-    'PHOTO-2026-01-19-20-26-22.jpg',
-    'PHOTO-2026-01-19-20-26-24.jpg',
-    'PHOTO-2026-01-19-20-26-25(1).jpg',
-    'PHOTO-2026-01-19-20-26-33.jpg',
-    'PHOTO-2026-01-19-20-26-34(1).jpg',
-    'PHOTO-2026-01-19-20-26-34(2).jpg',
     'PHOTO-2026-01-19-20-26-34.jpg',
     'PHOTO-2026-01-19-20-26-35(1).jpg',
-    'PHOTO-2026-01-19-20-26-35(2).jpg',
-    'PHOTO-2026-01-19-20-26-35(3).jpg',
-    'PHOTO-2026-01-19-20-26-35.jpg',
-    'PHOTO-2026-01-19-20-26-36(1).jpg',
-    'PHOTO-2026-01-19-20-26-36(2).jpg',
-    'PHOTO-2026-01-19-20-26-36(3).jpg',
-    'PHOTO-2026-01-19-20-26-36.jpg',
-    'PHOTO-2026-01-19-20-26-37(2).jpg',
-    'PHOTO-2026-01-19-20-26-37.jpg',
-    'PHOTO-2026-02-16-20-13-47.jpg',
-    'PHOTO-2026-03-22-19-04-35.jpg'
+    'PHOTO-2026-01-19-20-26-36(3).jpg'
   ];
 
   const YOUTUBE_VIDEOS = [
@@ -134,31 +93,24 @@
 
   const HOME_CURATED_FILES = [
     'PHOTO-2025-11-14-00-12-40(1).jpg',
-    'PHOTO-2025-12-05-14-30-07(1).jpg',
-    'PHOTO-2025-12-28-18-10-59.jpg'
+    'PHOTO-2025-11-14-00-12-40(2).jpg',
+    'PHOTO-2026-01-19-20-26-36(3).jpg'
   ];
 
   const TITLE_OVERRIDES = {
     'PHOTO-2025-11-14-00-12-40(1).jpg': 'Giza Pyramids Legacy',
     'PHOTO-2025-11-14-00-12-40(2).jpg': 'Karnak Temple Explorers',
-    'PHOTO-2025-11-14-00-12-40(3).jpg': 'Ancient Temple Columns',
-    'PHOTO-2025-12-05-14-30-07(1).jpg': 'Nile Cruise Sundeck',
-    'PHOTO-2025-12-05-19-29-49.jpg': 'Nubian House Welcome',
     'PHOTO-2025-12-09-12-36-35.jpg': 'Abu Simbel Majesty',
     'PHOTO-2025-12-12-18-29-35.jpg': 'Afternoon Bedouin Tea',
-    'PHOTO-2025-12-28-18-10-59.jpg': 'Cairo Bazaar Textures',
-    'PHOTO-2025-12-28-19-04-53.jpg': 'Khan El-Khalili Magic',
-    'PHOTO-2026-01-19-20-26-22.jpg': 'Nile Cruising Joy',
     'PHOTO-2026-01-19-20-26-34.jpg': 'Luxor West Bank Vistas',
     'PHOTO-2026-01-19-20-26-35(1).jpg': 'Colossi of Memnon Grandeur',
-    'PHOTO-2026-01-19-20-26-36(3).jpg': 'Valley of the Kings Trails',
-    'PHOTO-2026-02-16-20-13-47.jpg': 'Sinai Sand Adventures'
+    'PHOTO-2026-01-19-20-26-36(3).jpg': 'Valley of the Kings Trails'
   };
 
   const CAPTION_OVERRIDES = {
     'PHOTO-2025-11-14-00-12-40(1).jpg': 'Our guests sharing a group moment in front of the Pyramids of Giza.',
-    'PHOTO-2025-12-05-14-30-07(1).jpg': 'Sunbathing and enjoying the tranquil views from our luxury cruise deck.',
-    'PHOTO-2025-12-28-18-10-59.jpg': 'Capturing the sensory explosion of spices, lanterns, and colors in Cairo.'
+    'PHOTO-2025-11-14-00-12-40(2).jpg': 'Exploring the magnificent ancient columns of Karnak Temple in Luxor.',
+    'PHOTO-2026-01-19-20-26-36(3).jpg': 'Hiking along the historic trails in the Valley of the Kings.'
   };
 
   const DESTINATION_CONFIG = {

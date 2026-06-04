@@ -81,19 +81,18 @@ const cities = {
             {"icon": "sun", "label": "Best Season", "value": "Oct–Mar"}
         ],
         "video": {"id": "SvxWvnhHYV8", "title": "Journey Through Ancient Luxor", "highlights": ["3,000+ years of history", "Spectacular balloon rides", "Stunning illuminated temples", "Timeless Nile sailing"]},
-        "hero_img": "images/hero-luxor.jpg",
+        "hero_img": "images/luxor temple.jpg",
         "attractions": [
-            {"name": "Valley of the Kings", "img": "images/Valley-of-the-Kings.jpg", "tag": "Must See", "rating": "4.9", "time": "3-4 hours", "price": "$20"},
-            {"name": "Karnak Temple", "img": "images/Karnak-temple.jpg", "tag": "Ancient", "rating": "4.9", "time": "2-3 hours", "price": "$15"},
-            {"name": "Luxor Temple", "img": "images/gallery-luxor-temple.jpg", "tag": "Historic", "rating": "4.7", "time": "1-2 hours", "price": "$10"},
-            {"name": "Temple of Hatshepsut", "img": "images/hero-luxor.jpg", "tag": "Landmark", "rating": "4.7", "time": "1-2 hours", "price": "$10"},
-            {"name": "Nile River Cruise", "img": "Real Moments/PHOTO-2025-12-05-14-30-07(1).jpg", "tag": "Experience", "rating": "4.8", "time": "3-5 days", "price": "$250"}
+            {"name": "Temple of Hatshepsut", "img": "images/Hatshepsut.jpg", "tag": "Landmark", "rating": "4.7", "time": "1-2 hours", "price": "$10"},
+            {"name": "Edfu Temple", "img": "images/Edfu-temple.jpg", "tag": "Ancient", "rating": "4.9", "time": "2-3 hours", "price": "$15"},
+            {"name": "Luxor Temple", "img": "images/luxor temple.jpg", "tag": "Historic", "rating": "4.7", "time": "1-2 hours", "price": "$10"},
+            {"name": "Nile River Cruise", "img": "images/nile-cruise.png", "tag": "Experience", "rating": "4.8", "time": "3-5 days", "price": "$250"}
         ],
         "gallery": [
-            {"src": "images/hero-luxor.jpg", "caption": "Luxor"},
-            {"src": "images/gallery-luxor-temple.jpg", "caption": "Karnak"},
-            {"src": "Real Moments/PHOTO-2026-01-19-20-26-36(3).jpg", "caption": "Valley of Kings"},
-            {"src": "Real Moments/PHOTO-2025-12-05-14-30-07(1).jpg", "caption": "Nile Cruise"}
+            {"src": "images/luxor temple.jpg", "caption": "Luxor Temple"},
+            {"src": "images/Hatshepsut.jpg", "caption": "Hatshepsut Temple"},
+            {"src": "images/Edfu-temple.jpg", "caption": "Edfu Temple"},
+            {"src": "images/nile-cruise.png", "caption": "Nile Cruise"}
         ],
         "tips": [
             {"icon": "🌅", "title": "Best Time", "desc": "Oct-Mar for comfortable exploring."},
@@ -367,7 +366,7 @@ const cities = {
 const cities_meta = [
     {"id": "cairo", "name": "Cairo", "hero": "images/hero-cairo.jpg", "tag": "The City That Never Sleeps"},
     {"id": "alexandria", "name": "Alexandria", "hero": "images/city-alexandria.jpg", "tag": "Pearl of the Mediterranean"},
-    {"id": "luxor", "name": "Luxor", "hero": "images/hero-luxor.jpg", "tag": "World's Greatest Open-Air Museum"},
+    {"id": "luxor", "name": "Luxor", "hero": "images/luxor temple.jpg", "tag": "World's Greatest Open-Air Museum"},
     {"id": "aswan", "name": "Aswan", "hero": "images/hero-aswan.jpg", "tag": "The Jewel of the Nile"},
     {"id": "sharm-el-sheikh", "name": "Sharm El Sheikh", "hero": "images/hero-sharm.jpg", "tag": "Where Desert Meets the Sea"},
     {"id": "hurghada", "name": "Hurghada", "hero": "images/hero-hurghada.jpg", "tag": "Red Sea Paradise"},
