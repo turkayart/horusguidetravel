@@ -1150,6 +1150,7 @@ ul { list-style: none; }
   }
   .dest-hero { min-height: 85vh; }
   .dest-hero-title { font-size: clamp(2.4rem, 10vw, 3.5rem); }
+  .dest-hero-desc { display: none; }
   .dest-hero-content { padding-bottom: 70px; }
   .dest-hero-stats { gap: 10px; }
   .dest-hero-stat { padding: 10px 16px; }
