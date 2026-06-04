@@ -236,9 +236,11 @@ function validateStep(step) {
     case 2: {
       const first = document.getElementById('firstName').value.trim();
       const last = document.getElementById('lastName').value.trim();
-      if (!first || !last) {
+      const travelDate = document.getElementById('travelDate').value.trim();
+      if (!first || !last || !travelDate) {
         if (!first) shakeElement(document.getElementById('firstName'));
         if (!last) shakeElement(document.getElementById('lastName'));
+        if (!travelDate) shakeElement(document.getElementById('travelDate'));
         return false;
       }
       return true;
@@ -298,6 +300,7 @@ function buildReview() {
   const days = document.getElementById('selectDays');
   const firstName = document.getElementById('firstName').value.trim();
   const lastName = document.getElementById('lastName').value.trim();
+  const travelDate = document.getElementById('travelDate').value.trim();
   const email = document.getElementById('email').value.trim();
   const phone = document.getElementById('phone').value.trim();
   const requests = document.getElementById('specialRequests').value.trim();
@@ -343,6 +346,13 @@ function buildReview() {
       <div class="pt-review-content">
         <strong>Duration</strong>
         <span>${days.options[days.selectedIndex].text}</span>
+      </div>
+    </div>
+    <div class="pt-review-section">
+      <div class="pt-review-icon"><i class="fas fa-calendar-check"></i></div>
+      <div class="pt-review-content">
+        <strong>Travel Date</strong>
+        <span>${travelDate}</span>
       </div>
     </div>
     <div class="pt-review-section">
@@ -398,6 +408,7 @@ async function submitForm() {
   
   const firstName = document.getElementById('firstName').value.trim();
   const lastName = document.getElementById('lastName').value.trim();
+  const travelDate = document.getElementById('travelDate').value.trim();
   const email = document.getElementById('email').value.trim();
   const phone = document.getElementById('phone').value.trim();
   const requests = document.getElementById('specialRequests').value.trim();
@@ -417,6 +428,7 @@ async function submitForm() {
   messageText += `🏨 *Accommodation:* ${accommodation}\n`;
   messageText += `👥 *Travelers:* ${peopleText}\n`;
   messageText += `📅 *Duration:* ${daysText}\n`;
+  messageText += `📆 *Travel Date:* ${travelDate}\n`;
   
   if (requests) {
     messageText += `\n✨ *Special Requests:*\n${requests}\n`;
@@ -474,6 +486,7 @@ async function submitForm() {
         accommodation: accommodation,
         travelers: peopleText,
         duration: daysText,
+        travel_date: travelDate,
         special_requests: requests || "None"
       })
     });
