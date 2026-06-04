@@ -420,6 +420,13 @@ async function submitForm() {
   // Prevent double submissions
   if (submitBtn.disabled) return;
 
+  // Validate Privacy Consent Checkbox
+  const consentCheckbox = document.getElementById('privacyConsent');
+  if (consentCheckbox && !consentCheckbox.checked) {
+    shakeElement(consentCheckbox.parentElement);
+    return;
+  }
+
   // Extract all selections
   const dests = Array.from(document.querySelectorAll('input[name="destination"]:checked')).map(c => c.value);
   const budget = document.querySelector('input[name="budget"]:checked')?.value || '—';
@@ -518,7 +525,8 @@ async function submitForm() {
         travelers: peopleText,
         duration: daysText,
         travel_date: travelDate,
-        special_requests: requests || "None"
+        special_requests: requests || "None",
+        privacy_consent: "Consent Given"
       })
     });
 
